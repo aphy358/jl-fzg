@@ -1,0 +1,180 @@
+<div class="firstPage">
+    <div class="navbar">
+        <a href="/" class="jltour-logo fl">
+            <!--<img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1510915233098.png" alt="">-->
+        </a>
+        <div class="navbar-right fr">
+            <ul>
+                <li>
+                    <a class="nav-tab selected-nav" href="/">首页</a>
+                </li>
+                <li>
+                    <a class="nav-tab" href="/user/bookHotel.do" data-track="企业首页_导航栏_房掌柜">房掌柜</a>
+                </li>
+                <li>
+                    <a class="nav-tab" href="http://interface.jladmin.cn:90/hotel/openAbout.html" target="_blank" data-track="企业首页_导航栏_开放平台">开放平台</a>
+                </li>
+                <li>
+                    <a class="nav-tab" href="http://www.jlebk.com/login/login.html" target="_blank" data-track="企业首页_导航栏_EBooking">EBooking</a>
+                </li>
+                <li>
+                    <a class="nav-tab" href="/user/toRegister.do" target="_blank" data-track="企业首页_导航栏_免费注册">免费注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="firstPage-main">
+        <div class="banner clearfix">
+            <ul class="banner-image clearfix">
+                <li class="banner1">
+                    <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1515401733565.jpg" alt="">
+                    <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1512441819258.png" alt="" class="banner1-text">
+                </li>
+                <li class="banner2">
+                    <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1515401816669.jpg" alt="">
+                    <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1512441754250.png" alt="" class="banner2-text">
+                </li>
+            </ul>
+            <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1515401733565.jpg" alt="">
+            <ul class="banner-point">
+                <li pindex="0" class="this-point"></li>
+                <li pindex="1"></li>
+            </ul>
+            <div class="login-background"></div>
+            <div class="login-box">
+                <form id="loginJl">
+                    <h2>房掌柜登录</h2>
+                    <p class="err-msg"></p>
+                    <ul>
+                        <li>
+                            <i class="login-icon login-icon-1"></i>
+                            <input placeholder="企业编号" title="企业编号" name="accountCode" autocomplete="off" emptymsg="* 企业编号不能为空" type="text">
+                        </li>
+                        <li>
+                            <i class="login-icon login-icon-2"></i>
+                            <input placeholder="用户名" title="用户名" name="username" autocomplete="off" emptymsg="* 用户名不能为空" type="text">
+                        </li>
+                        <li>
+                            <i class="login-icon login-icon-3"></i>
+                            <input placeholder="密码" title="密码" name="password" autocomplete="off" emptymsg="* 请输入密码" type="password">
+                        </li>
+                        <li class="yzm-box">
+                            <i class="login-icon login-icon-4"></i>
+                            <input placeholder="请输入验证码" title="请输入验证码" name="checkcode" emptymsg="* 请输入验证码" type="text" autocomplete="off">
+                            <img class="yzm-img" src="/user/getCheckcodeImg.do?time=<%=new Date().getTime()%>" alt=""/>
+                        </li>
+                    </ul>
+                    <button id="loginIn">登录</button>
+                    <div class="login-bottom">
+                        <input id="remberCode" name="rememberMe" type="checkbox" value="true">
+                        <label for="remberCode">记住账号</label>
+                        <a class="find-password" href="#">忘记密码？</a>
+                        <a class="register" href="/user/toRegister.do" target="_blank" data-track="企业首页_登录框_免费注册">免费注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="about-fzg">
+            <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1510911597074.jpg" alt="">
+            <div class="about-fzg-btn">
+                <a href="/user/bookHotel.do" class="to-fzg firstpage-to-fzg" data-track="企业首页_关于房掌柜_进入房掌柜">进入房掌柜</a>
+                <a href="/user/toRegister.do" target="_blank" class="register-fzg" data-track="企业首页_关于房掌柜_申请注册">申请注册</a>
+            </div>
+        </div>
+        <div class="platform">
+            <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1510968815646.jpg" alt="">
+            <div class="platform-btn">
+                <a href="http://interface.jladmin.cn:90/hotel/openAbout.html" target="_blank" class="view-doc" data-track="企业首页_查看API文档">查看API文档</a>
+                <div class="application-background"></div>
+                <a href="/login/html/joinUs.jsp?id=joinUs_1&isLogin=false" target="_blank" class="application" data-track="企业首页_申请合作">申请合作</a>
+            </div>
+        </div>
+        <div class="service">
+            <img src="	https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1510970005170.jpg" alt="">
+            <div class="ghost-btn">
+                <div class="ghost-item">
+                    <div class="ghost-item-img ghost-item-img-1"></div>
+                    <span>服务热线：0755-33397777</span>
+                </div>
+                <div class="ghost-item">
+                    <div class="ghost-item-img ghost-item-img-2"></div>
+                    <span>电话接通率>98%</span>
+                </div>
+                <div class="ghost-item">
+                    <div class="ghost-item-img ghost-item-img-3"></div>
+                    <span>投诉处理满意度>98%</span>
+                </div>
+                <div class="ghost-item">
+                    <div class="ghost-item-img ghost-item-img-4"></div>
+                    <span>有效库存0秒及时确认</span>
+                </div>
+            </div>
+            <div class="service-apply-bg"></div>
+            <a href="/login/html/joinUs.jsp?id=joinUs_1&isLogin=false" target="_blank" class="service-apply" data-track="企业首页_申请合作">申请合作</a>
+        </div>
+        <div class="partner">
+            <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1516345057609.jpg" alt="">
+            <div class="partner-group-bg">
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+                <div class="pre-partner-bg"></div>
+            </div>
+            <div class="partner-group">
+                <div class="pre-partner-box" p-index="1">
+                    <a href="https://www.hongkongdisneyland.com/zh-cn/" target="_blank">
+                        <span class="pre-partner1"></span>
+                        <i class="partner-box-line"></i>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="2">
+                    <a href="https://www.accorhotels.com" target="_blank">
+                        <span class="pre-partner2"></span>
+                        <i class="partner-box-line"></i>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="3">
+                    <a href="https://www.bestwestern.net.cn/" target="_blank">
+                        <span class="pre-partner3"></span>
+                        <i class="partner-box-line"></i>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="4">
+                    <a href="http://www.hilton.com.cn" target="_blank">
+                        <span class="pre-partner4"></span>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="5">
+                    <a href="http://www.ihg.com" target="_blank">
+                        <span class="pre-partner5"></span>
+                        <i class="partner-box-line"></i>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="6">
+                    <a href="http://www.marriott.com" target="_blank">
+                        <span class="pre-partner6"></span>
+                        <i class="partner-box-line"></i>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="7">
+                    <a href="http://www.hkcts.com/" target="_blank">
+                        <span class="pre-partner7"></span>
+                        <i class="partner-box-line"></i>
+                    </a>
+                </div>
+                <div class="pre-partner-box" p-index="8">
+                    <a href="http://www.starwoodhotels.com" target="_blank">
+                        <span class="pre-partner8"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="service-apply-bg"></div>
+            <a href="/login/html/joinUs.jsp?id=joinUs_1&isLogin=false" target="_blank" class="service-apply" data-track="企业首页_申请合作">申请合作</a>
+            <p class="explain">以上为部分合作伙伴，排名不分先后</p>
+        </div>
+    </div>
+</div>

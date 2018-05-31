@@ -1,0 +1,40 @@
+// 页面顶部轮播样式
+.index-banner-wrap{
+	margin-top: -60px;
+	position: relative;
+	
+	@at-root .swiper-container{
+		//position: absolute;
+		width: 100%;
+		height: 520px;
+		min-width: 1400px;
+		overflow: hidden;
+		
+		@at-root .swiper-wrapper{
+			
+			.swiper-slide{
+				position: relative;
+				
+				img{
+					width: 100%;
+				}
+				.fzg-banner-text{
+					position: absolute;
+					width: 456px;
+					height: 104px;
+					top: 180px;
+					left: 50%;
+					margin-left: -228px;
+				}
+			}
+			
+			@at-root .search-box{
+				position: absolute;
+				top: 436px;
+				left: 50%;
+				margin-left: -560px;
+			}
+			
+		}
+	}
+}

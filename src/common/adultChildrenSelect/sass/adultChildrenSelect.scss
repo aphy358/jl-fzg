@@ -1,0 +1,81 @@
+
+// 首页雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+
+// 成人小孩选择面板
+.ac-select-wrap{
+    position: absolute;
+    font-size: 14px;
+    min-width: 376px;
+    min-width: 386px\9;
+    background: white;
+    box-shadow: 0 1px 5px #ababab;
+    overflow: hidden;
+    z-index: 9999;
+
+    @at-root .ac-select-row{
+        margin: 0 10px;
+        padding: 20px 0;
+        overflow: hidden;
+
+        @at-root .ac-select-item-wrap{
+            float: left;
+            
+            &.m-l{
+                margin-left: 30px;
+            }
+
+            @at-root .ac-select-item-label{
+                margin-right: 5px;
+            }
+
+            .select{
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid #aaa;
+                transition: all 0.2s linear 0s;
+                cursor: context-menu;
+
+                &.ac-select-children-age{
+                    width: 60px;
+                }
+
+                &:hover,
+                &:active,
+                &:focus{
+                    border-color: rgb(100, 191, 224);
+                    box-shadow: 0 0 5px rgb(100, 191, 224);
+                }
+            }
+            
+            @at-root .ac-select-note-text{
+                color: #aaa;
+            }
+
+            @at-root .ac-select-info{
+                @include jl_sprites;
+                @include info_logo;
+                position: relative;
+                display: inline-block;
+                top: 2px;
+            }
+            
+            @at-root .ac-select-children-age-wrap{
+                display: inline-block;
+                margin-left: 20px;
+
+                .drag-down-wrap{
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &.row-two{
+            display: none;
+            border-top: 1px dashed #aaa;
+        }
+
+    }
+}

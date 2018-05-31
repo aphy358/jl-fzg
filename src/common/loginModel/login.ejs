@@ -1,0 +1,49 @@
+<!-- 登录模块模板 -->
+<div id="login_layer">
+	<div id="p1_RightTop">
+		<span id="p1_RightTopSpan">会员登录</span>
+		<i id="loginTriangle" class="iconfont icon-triangle-down"></i>
+	</div>
+	
+	<div id="p1_RightBody2">
+		<form>
+			<div class="loginBody" data-flag="2">
+				<p id="validateMsg2" class="hidden">* 请输入验证码</p>
+				<div class="loginBodyRow">
+					<i class="iconfont icon-user"></i>
+					<i class="divider"></i>
+					<input placeholder="公司账号" title="公司账号" class="accountCode" name="account" />
+				</div>
+				<div class="loginBodyRow">
+					<i class="iconfont icon-user"></i>
+					<i class="divider"></i>
+					<input placeholder="用户名" title="用户名" class="username" name="username" />
+				</div>
+				<div class="loginBodyRow">
+					<i class="iconfont icon-password"></i>
+					<i class="divider"></i>
+					<input type="password" placeholder="密码" title="密码" class="password" name="password" />
+				</div>
+				<div class="loginBodyRow">
+					<i class="iconfont icon-varification"></i>
+					<i class="divider"></i>
+					<input class="varificationCode" />
+					<div>
+						<img src="/user/getCheckcodeImg.do?time=<%= new Date().getTime() %>" class="yzmlogin" style="" />
+					</div>
+				</div>
+				<div id="rememberPW">
+					<span>
+						<input id="rememberMe" type="checkbox" />
+						<span>记住我...</span>
+					</span>
+					<a id="forgetPW" href="#"><span>忘记密码？</span></a>
+				</div>
+				<div class="loginBodyRow loginBtnGroup">
+					<a href="javascript:void(0);" class="registerBtn">注册</a>
+					<a href="javascript:void(0);" class="loginBtn submitBtn">登 录</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,126 @@
+//雪碧图
+@import "../../../static/sprites/jl_sprites.scss";
+
+
+body .layui-layer-page .layui-layer-content{
+	overflow: visible;
+}
+
+body{
+	p,span{
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	
+	.calendar-price-wrap{
+		border : none;
+		z-index: 19950311;
+		background-color: white;
+		position: absolute;
+		width: 474px;
+		height: 422px;
+		top: 74px;
+		box-shadow: 0 2px 10px rgba(0,0,0,.3);
+	}
+	
+	.month-switch-bar{
+		top: 10px;
+	}
+	
+	.cp-one-month-wrap{
+		margin: 0;
+	}
+	
+	.cp-month-head{
+		height: 40px;
+		line-height: 40px;
+		background-color: #f1f6f7;
+		font-weight: normal;
+	}
+	
+	.cp-one-month-wrap table{
+		margin: 0 30px;
+	}
+	
+	.cp-month-thead td{
+		width: 58px;
+		height: 42px;
+		font-weight: normal;
+	}
+	
+	.cp-td-inner{
+		width: 58px;
+		height: 58px;
+		background-color: #f7faf9;
+	}
+	
+	.calendar-p-day-num{
+		padding: 0;
+		height: 24px;
+		line-height: 24px;
+	}
+	
+	.calendar-p-price{
+		height: 16px;
+		line-height: 16px;
+		color: #fe0200;
+	}
+	
+	.calendar-p-status{
+		height: 16px;
+		line-height: 16px;
+		transform: none;
+		zoom: 1;
+		letter-spacing : 1px;
+	}
+	
+	.calendar-p-status.green{
+		color: #4bbb92;
+	}
+	
+	.calendar-p-status.red{
+		color: #ff7f7f;
+	}
+	
+	.calendar-p-status.purple{
+		color: #ffae3e;
+	}
+	
+	.cp-td-inner.checkin .calendar-p-status.green,.cp-td-inner.checkout .calendar-p-status.green{
+		color: #ffffff;
+	}
+	
+	.cp-td-inner.checkin .calendar-p-status.purple,.cp-td-inner.checkout .calendar-p-status.purple{
+		color: #ffffff;
+	}
+	
+	.checkin>p,.checkout>p{
+		color: #ffffff;
+	}
+	
+	.cp-td-inner.between-check{
+		background-color: #c0e0ff;
+	}
+	
+	.cp-td-inner.checkin, .cp-td-inner.checkout{
+		background-color: #339afe;
+	}
+	
+	.of-push:after{
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		@include jl_sprites;
+		@include discount;
+	}
+	
+	.of-plane:after{
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		@include jl_sprites;
+		@include give;
+	}
+}

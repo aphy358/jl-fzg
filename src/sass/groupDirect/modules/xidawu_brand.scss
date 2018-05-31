@@ -1,0 +1,29 @@
+@at-root .xidawu-brand{
+	>.brand{
+		>.per-brand{
+			@include xidawu_sprites;
+		}
+	}
+}
+
+@at-root .xidawu-brand-1{
+	
+	>.brand{
+		.brand-logo-1{@include xidawu_01_01;}
+		.brand-logo-2{@include xidawu_01_02;}
+		.brand-logo-3{@include xidawu_01_03;}
+		.brand-logo-4{@include xidawu_01_04;}
+		.brand-logo-5{@include xidawu_01_05;}
+		.brand-logo-6{@include xidawu_01_06;}
+		.brand-logo-7{@include xidawu_01_07;}
+		.brand-logo-8{@include xidawu_01_08;}
+	}
+}
+
+@at-root .xidawu-brand-2{
+	>.brand{
+		.brand-logo-1{@include xidawu_02_01;}
+		.brand-logo-2{@include xidawu_02_02;}
+		.brand-logo-3{@include xidawu_02_03;}
+	}
+}

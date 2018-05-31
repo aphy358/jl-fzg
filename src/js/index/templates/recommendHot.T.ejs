@@ -1,0 +1,24 @@
+
+<!--热门推荐模板-->
+
+<ul class="i-r-t-hotel-group">
+    <% for(var i = 0; i < dataList.length; i++){ var o = dataList[i]; %>
+    <li class="i-r-h-hotel-item">
+        <a href="<%= o.adLink %>" target="_blank" data-track="首页_热门推荐_酒店项">
+            <div class="irt-img-wrap">
+                <img src="<%= o.adImg %>">
+                <i class="irt-gz-icon" data-hotelid="<%= o.hotelId %>"></i>
+                <div class="irh-bottom-line-mask"></div>
+                <div class="irh-bottom-line">
+                    <b><%= o.adTitle %></b>
+                    <!-- <span class="irh-price-wrap">￥<span class="irh-price-num" data-link="<%= o.adLink %>"><%= parseInt(o.minPrice || 0) %></span>起</span> -->
+                </div>
+            </div>
+        </a>
+    </li>
+    <% } %>
+</ul>
+
+<div class="i-recommend-btn">
+    <a class="bottom-one" style="display:none;" data-track="首页_热门推荐_查看全部">查看全部<i class="i-check-more-icon"></i></a>
+</div>

@@ -1,0 +1,38 @@
+//导航栏样式
+@at-root .page-head {
+	width: 1180px;
+	height: 42px;
+	margin: 34px 0 50px;
+	.jl-logo {
+		background: url(../../static/sprites/sprites.png) no-repeat;
+		@include fzg_logo;
+		float: left;
+	}
+	
+	@at-root .user-options {
+		float: right;
+		height: 42px;
+		ul {
+			float: left;
+			li {
+				float: left;
+				line-height: 42px;
+				margin: 0 5px;
+			}
+			.sign-out {
+				display: none;
+				width: 52px;
+				height: 24px;
+				line-height: 20px;
+				text-align: center;
+				border: 2px solid #dcdcdc;
+				margin: 9px 0;
+			}
+			.hot-line {
+				float: left;
+				line-height: 42px;
+				color: #30a5ff;
+			}
+		}
+	}
+}

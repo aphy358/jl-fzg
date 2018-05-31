@@ -1,0 +1,99 @@
+// 成人小孩面板的样式
+
+@at-root .chidren-select-wrap{
+    position: relative;
+    width: 360px;
+    top: -31px;
+    left: 352px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 20px 10px;
+
+    @at-root .children-adult-wrap{
+        overflow: hidden;
+
+        .adult-wrap{
+            margin-right: 30px;
+        }
+
+        li{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+
+            @at-root .children-label{
+                float: left;
+                height: 30px;
+                line-height: 30px;
+                font-weight: 100;
+                margin-right: 5px;
+            }
+
+            @at-root .children-adult-select{
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 5px;
+            }
+
+            @at-root .children-label2{
+                color: #999;
+            }
+        }
+    }
+
+    @at-root .children-list-wrap{
+        margin-top: 20px;
+        border-top: 1px solid #999;
+        padding-top: 20px;
+
+        .children-list{
+            display: inline-block;
+            margin-left: 72px;
+
+            .children-item-wrap{
+                margin-bottom: 5px;
+
+                label{
+                    margin-right: 5px
+                }
+
+                select{
+                    padding-left: 5px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    @at-root .children-btn-group{
+        text-align: center;
+        margin-top: 25px;
+
+        button{
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            width: 50px;
+        }
+
+        @at-root .children-select-cancel{
+            background: #eab2b2;
+            margin-right: 30px;
+
+            &:hover{
+                background: #F36F6F;
+            }
+        }
+
+        @at-root .children-select-confirm{
+            background: #80b5ea;
+            
+            &:hover{
+                background: #3293F3;
+            }
+        }
+    }
+}

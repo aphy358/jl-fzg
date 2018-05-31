@@ -1,0 +1,65 @@
+<div hidden="hidden" id="div_User"></div>
+<input type="hidden" id="promotionType" value="9">
+
+
+
+<!-- 顶部导航栏 -->
+<section class="nd-top">
+    <div class="nd-top-inner-wrap">
+        <ul class="nd-top-inner">
+            <li class="nd-jl-logo"></li>
+            <li class="nd-top-item current" data-target="internalAnchor">国内酒店</li>
+            <li class="nd-top-item" data-target="gatAnchor">港澳台酒店</li>
+            <li class="nd-top-item" data-target="externalAnchor">境外酒店</li>
+            <li class="nd-top-item" data-target="noticeAnchor">活动规则</li>
+        </ul>
+    </div>
+</section>
+
+
+
+<!-- banner部分 -->
+<section class="cr-banner-wrap">
+    <img src="http://image.jladmin.cn/real_1509594730802.jpg" width="100%" alt="">
+    <div class="cr-notice-shadow"></div>
+    <div class="cr-notice-wrap">
+        <div class="cr-notice-inner">
+            <div class="cr-notice-icon"></div>
+            <span>我司产品不允许放在各大团购网站来源的订单，我司将终止与贵司的合作并索取赔付不低于2晚的房费。</span>
+        </div>
+    </div>
+</section>
+
+<!-- 主题内容，包括 国内酒店、港澳台酒店、国外酒店 -->
+<section class="main-content-wrap">
+    
+    <!-- 国内酒店 -->
+    <div id="internalAnchor" class="hotel-region internal">
+        <div class="hotel-region-img internal"></div>
+        <div class="hotel-region-inner">
+            <%= internalHTML %>
+        </div>
+    </div>
+
+    <!-- 港澳台酒店 -->
+    <div id="gatAnchor" class="hotel-region gat">
+        <div class="hotel-region-img gat"></div>
+        <div class="hotel-region-inner">
+            <%= gatHTML %>
+        </div>
+    </div>
+
+    <!-- 国外酒店 -->
+    <div id="externalAnchor" class="hotel-region external">
+        <div class="hotel-region-img external"></div>
+        <div class="hotel-region-inner">
+            <%= externalHTML %>
+        </div>
+        <div class="notice-wrap">
+            <div id="noticeAnchor" class="hotel-region-img halloween-notes">
+                <div id="rescueTTT">0755-33397777。</div>
+            </div>
+        </div>
+    </div>
+
+</section>

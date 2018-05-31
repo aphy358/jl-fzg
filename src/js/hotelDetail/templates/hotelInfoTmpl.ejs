@@ -1,0 +1,96 @@
+
+<!-- 酒店信息 -->
+<div class="hotel-detail-info-inner">
+    <div class="hdi-head">
+        <h1 class="hdi-hotel-name1">
+			<%= o.infoName %>
+			<i class="hli-icon0 icon-star">
+				<%= 
+					~('50,55'.indexOf( o.star )) ? '豪华型' :
+					~('40,45'.indexOf( o.star )) ? '高档型' :
+					~('30,35'.indexOf( o.star )) ? '舒适型' : '经济型'
+				%>
+			</i>
+			<i class="hli-icon<%= o.displayFlag === '1' ? ' icon-jinpai' : o.displayFlag === '2' ? ' icon-tuiguang' : '' %> "></i>
+		</h1>
+		
+		<h2 class="hdi-hotel-name2"><%= o.enName || '' %></h2>
+		
+		<div class="hdi-location">
+			<label>位置：</label>
+			<a title="map" class="hdi-open-map" href="javascript:;" data-link="/biz/hotel/foreignhotel/googleMap.jsp?lon=<%= o.longitude || 0 %>&amp;lat=<%= o.latitude || 0 %>" data-hotelname="<%= o.infoName %>">
+				<span class="hdi-location-text"><%= o.address.replace(/[： 。，！、:.!,]+$/g,'') || '' %></span>
+				<i class="hli-icon icon-location2" data-track="详情页_酒店项_定位"></i>
+			</a>
+		</div>
+		
+		<div class="hdi-lowest-wrap">
+			<!--<div class="hdi-lowest-price">-->
+				<!--￥<span class="hdi-lowest-num"><%= parseInt( (o.minPrice ||0) ) %></span>起-->
+			<!--</div>-->
+			<!--<div class="hdi-lowest-seperator"></div>-->
+			<div class="hdi-gz-wrap">
+				<div class="hdi-gz-inner">
+					<% if (o.hasOwnProperty('isMyFavorite') && o.isMyFavorite === 1){ %>
+					<p><i class="hli-icon icon-gz-on" data-hotelid="<%= o.infoId %>"></i></p>
+					<p class="icon-gz-on-tips">已关注</p>
+					<% }else{ %>
+					<p><i class="hli-icon icon-gz-off" data-hotelid="<%= o.infoId %>"></i></p>
+					<p class="icon-gz-on-tips">未关注</p>
+					<% } %>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div class="hdi-body">
+		<div class="hdi-img-outer">
+			<div class="hdi-img-wrap-big">
+				<img src="<%= o.picSrc.replace(/\/common\/images\/nopic.png/, 'https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1514016068416.png" style="height: 100%;width: auto;margin-left: 60px;') %>" />
+			</div>
+			<div class="hdi-img-wrap-small">
+				<div class="hdi-img-scroll scroll-up" data-track="详情页_酒店信息_图片_上">
+					<div class="hdi-img-scroll-mask"></div>
+					<i class="hli-icon disabled"></i>
+				</div>
+				<div class="hdi-img-scroll scroll-down" data-track="详情页_酒店信息_图片_下">
+					<div class="hdi-img-scroll-mask"></div>
+					<i class="hli-icon"></i>
+				</div>
+				<ul class="hdi-img-small-list">
+					<% for(var i = 0; i < o.picList.length; i++){ var p = o.picList[i]; %>
+					<li class="hdi-img-small-item" data-track="详情页_酒店信息_图片_选择图片">
+						<img src="<%= p.replace(/\/common\/images\/nopic.png/, 'https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1514016068416.png" style="height: 100%;width: auto;margin-left: 26px;') %>" />
+						<div class="hdi-isi-mask<%= i === 0 ? '' : ' hidden' %>"></div>
+					</li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+		<div class="hdi-brief-wrap">
+			<ul class="hdi-brief-list">
+				<li class="hdi-brief-item">
+					<p class="hdi-brief-item-title">
+						<i class="hli-icon icon-jiudianjianjie"></i>
+						<span>酒店简介</span>
+					</p>
+					<p class="hdi-brief-item-content"><%= o.infoDesc || '' %></p>
+				</li>
+				<li class="hdi-brief-item">
+					<p class="hdi-brief-item-title">
+						<i class="hli-icon icon-lianxifangshi"></i>
+						<span>联系方式</span>
+					</p>
+					<p class="hdi-brief-item-content"><%= o.bookingPhone || '' %></p>
+				</li>
+				<li class="hdi-brief-item">
+					<p class="hdi-brief-item-title">
+						<i class="hli-icon icon-tebietixing"></i>
+						<span>特别提示</span>
+					</p>
+					<p class="hdi-brief-item-content"><%= o.indicate || '无' %></p>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>

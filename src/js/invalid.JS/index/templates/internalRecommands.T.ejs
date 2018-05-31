@@ -1,0 +1,8 @@
+<!--房掌柜首页，国内酒店模板-->
+<% for(var i = 0; i < 9; i++) {%>
+<li class="ad-one-wrap <%= (i % 9 === 8 ? 'last-child' : '' ) %>" data-src="<%= arr[i].adLink %>">
+    <img src="<%= arr[i].adImg %>" class="too-width">
+    <div class="ad-one-shadow"></div>
+    <p class="ad-one-text"><%= arr[i].adTitle %></p>
+</li>
+<% } %>

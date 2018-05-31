@@ -1,0 +1,73 @@
+
+
+.tpc-hotel-list{
+    float: left;
+    border: 1px solid #ddd;
+    line-height: 30px;
+    font-size: 12px;
+    color: #555;
+    width: 240px;
+
+    @at-root .tpchl-head{
+        padding: 0 20px 0 10px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+
+        span{
+            &.fr{
+                float: right;
+            }
+        }
+    }
+
+    @at-root .tpchl-wrap{
+        max-height: 600px;
+        overflow-y: auto;
+
+        @at-root .tpchl-row{
+            border-top: 1px solid #ddd;
+            padding: 0 10px;
+            height: 50px;
+            line-height: 50px;
+            cursor: context-menu;
+
+            &:first-child{
+                border-top: none;
+            }
+
+            span{
+                float: left;
+                max-width: 200px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            @at-root .tpchl-status{
+                float: right;
+                width: 12px;
+                height: 12px;
+                background: #339afc;
+                border-radius: 6px;
+                margin-top: 18px;
+
+                &.enable{
+
+                }
+
+                &.disable{
+                    background: #ccc;
+                }
+            }
+
+            &:hover,
+            &.active{
+                background: #76b8f5;
+                color: white;
+            }
+        }
+    }
+}

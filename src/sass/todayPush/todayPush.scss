@@ -1,0 +1,17 @@
+//主体结构样式
+@import "./modules/main.scss";
+
+//统一化样式、共用样式
+@import "./modules/other.scss";
+
+//分页器样式
+//@import "./modules/paging.scss";
+
+//产品列表的样式
+@import "./modules/productList.scss";
+
+//选择条件的样式
+@import "./modules/selection.scss";
+
+//layer弹框的样式重写
+@import "../../common/hotelPriceUtil/sass/tipsReset.scss";

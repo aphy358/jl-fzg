@@ -1,0 +1,11 @@
+
+
+<div class="page-box page-fzgpage">
+	<a href="javascript:;" data-track="公共_分页_上一页" class="page-fzgpage-prev<%= (current === 1 ? ' page-disabled' : '') %>" data-page="<%= current - 1 %>">上一页</a>
+	<%= pageStr %>
+	<a href="javascript:;" data-track="公共_分页_下一页" class="page-fzgpage-next<%= (current === pages ? ' page-disabled' : '') %>" data-page="<%= current + 1 %>">下一页</a>
+	<span class="page-fzgpage-skip">
+		到第<input type="text" class="page-input">页
+		<button type="button" class="page-fzgpage-btn" data-track="公共_分页_确定">确定</button>
+	</span>
+</div>

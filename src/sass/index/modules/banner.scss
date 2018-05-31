@@ -1,0 +1,69 @@
+// 页面顶部轮播样式
+
+
+.index-banner-wrap{
+    margin-top: -60px;
+
+    @at-root .swiper-container{
+        position: absolute;
+        width: 100%;
+        height: 520px;
+        min-width: 1400px;
+        overflow: hidden;
+    
+        @at-root .swiper-wrapper{
+            
+            .swiper-slide{
+                position: relative;
+    
+                img{
+                    width: 100%;
+                }
+                .fzg-banner-text{
+                    position: absolute;
+                    width: 456px;
+                    height: 104px;
+                    top: 180px;
+                    left: 50%;
+                    margin-left: -228px;
+                }
+            }
+        
+        }
+        
+        @at-root .swiper-pagination{
+            .swiper-bar{
+                @include jl_sprites;
+                position: absolute;
+                top: 50%;
+                margin-top: -35px;
+    
+                &.swiper-left{
+                    @include left_b2;
+                    left: 100px;
+    
+                    &:hover{
+                        @include left_b3;
+                    }
+    
+                    &.disabled{
+                        @include left_b1;
+                    }
+                }
+    
+                &.swiper-right{
+                    @include right_b2;
+                    right: 100px;
+    
+                    &:hover{
+                        @include right_b3;
+                    }
+    
+                    &.disabled{
+                        @include right_b1;
+                    }
+                }
+            }
+        }
+    }
+}

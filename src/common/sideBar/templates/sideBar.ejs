@@ -1,0 +1,75 @@
+
+<!-- 侧边栏模板 -->
+<section class="side-bar-wrap">
+    <div class="side-bar-c-b">
+        <ul class="side-bar-group">
+            <li class="side-bar-item side-item-gz" data-page="<%= pageNum %>">
+                <div class="side-bar-inner sidebar-gz"></div>
+            </li>
+            <li class="side-bar-item" data-rank="1">
+                <div class="side-bar-inner sidebar-wxdf"></div>
+                <!--<div class="sidebar-erweima-outer">-->
+                    <!--<div class="sidebar-erweima"></div>-->
+                <!--</div>-->
+            </li>
+            <li class="side-bar-item to-page-top" data-track="公共_侧边栏_返回顶部">
+                <div class="side-bar-inner sidebar-up"></div>
+            </li>
+        </ul>
+
+    </div>
+
+    <ul class="side-content">
+        <li>
+            <div class="sidebar-gz-outer">
+                <div class="sidebar-gz-inner">
+                    <div class="sidebar-gz-title">
+                        <h1>我的关注</h1>
+                        <i class="sidebar-gz-icon-hide"></i>
+                    </div>
+
+                    <% if (concernList.dataList.length <= 0 ){ %>
+                    <div class="sidebar-gz-no-content"></div>
+                    <% }else{ %>
+
+                    <ul class="sidebar-gz-list">
+                        <%
+                        for(var i = 0;i < concernList.dataList.length; i++){
+                            var o = concernList.dataList[i];
+                        %>
+                        <li class="sidebar-gz-item" data-hotelid="<%= o.infoId %>">
+                            <a href="<%= o.detailLink %>" class="sidebar-hotel-link">
+                                <div class="sidebar-gz-content-wrap">
+                                    <div class="sidebar-gz-img">
+                                        <img src="<%= o.picSrc %>" alt="">
+                                    </div>
+                                    <div class="sidebar-gz-info">
+                                        <p class="sidebar-gz-hotel-name"><%= o.infoName %></p>
+                                        <p class="sidebar-gz-hotel-price"><%= o.minPrice ? '￥' + o.minPrice + '起' : '加载中<img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1520825964429.gif" class="price-loading" alt="">' %></p>
+                                        <i class="sidebar-gz-icon icon-gz-on" data-hotelid="<%= o.infoId %>"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <% } %>
+
+                        <% if (concernList.pageTotal > 1 ){ %>
+                        <li class="sidebar-get-more">
+                            加载更多
+                            <i class="get-more-gz"></i>
+                        </li>
+                        <% } %>
+                    </ul>
+                    <% } %>
+                </div>
+            </div>
+            <div class="sidebar-gz-mask"></div>
+        </li>
+        <li class="sidebar-hidden">
+            <div class="sidebar-erweima-outer">
+                <div class="sidebar-erweima"></div>
+            </div>
+        </li>
+        <li></li>
+    </ul>
+</section>

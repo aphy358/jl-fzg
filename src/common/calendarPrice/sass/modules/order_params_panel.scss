@@ -1,0 +1,119 @@
+// 点击 "预定" 按钮时弹出的面板的样式
+
+// 成人小孩面板的样式
+@import './children_select.scss';
+
+
+.order-pp-wrap{
+    padding: 30px 40px;
+    overflow: hidden;
+
+    @at-root .opp-datepick-wrap{
+        float: left;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        border: 1px solid #999;
+
+        .label{
+            color: #999;
+            margin: 0 20px 0 10px;
+        }
+
+        @at-root .oop-date-input{
+            border: none;
+            width: 85px;
+            height: 40px;
+            font-size: 16px;
+
+            &:hover{
+                color: #3399ff;
+            }
+        }
+
+        .label2{
+            color: #999;
+            margin: 0 5px;
+        }
+    }
+    
+    @at-root .plane-price{
+        display: none;
+        height: 42px;
+        line-height: 42px;
+        padding-left: 6px;
+        font-size: 14px;
+        float: left;
+        
+        .overt-num{
+            font-size: 18px;
+            color: #f08200;
+        }
+        
+    }
+    
+    @at-root .total-price{
+        display: none;
+        height: 42px;
+        line-height: 42px;
+        padding-left: 50px;
+        font-size: 14px;
+        float: left;
+        
+        .overt-num{
+            font-size: 18px;
+            color: #f08200;
+        }
+    }
+
+    @at-root .opp-children-str-wrap{
+        float: left;
+        width: 170px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        border: 1px solid #999;
+        margin-left: 10px;
+
+        .label{
+            color: #999;
+            margin: 0 20px 0 10px;
+        }
+
+        input{
+            border: none;
+            width: 105px;
+            height: 40px;
+            font-size: 16px;
+
+            &:hover{
+                color: #3399ff;
+            }
+        }
+    }
+
+    @at-root .nd-order-confirm-btn{
+        float: right;
+        border: none;
+        background: #ffa825;
+        color: white;
+        width: 90px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+        margin-right: 8px;
+
+        &:hover{
+            background: #ff7625;
+            text-decoration: none;
+        }
+    }
+}
+
+// 重写 layer 的相关样式
+.layui-layer-page .layui-layer-content{
+    height: auto!important;
+}

@@ -1,0 +1,149 @@
+<div class="company-message">
+    <h6 class="company-title">企业基本信息</h6>
+
+    <ul class="message-list clearfix">
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required" data-brief="企业名称">企业名称</span>
+            </div>
+            <input name="companyName" type="text" class="fl submit-required" placeholder="请填写正确的公司名称全称" data-brief="企业名称">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">企业所在地</span>
+            </div>
+            <label class="item-r fl">
+                <select name="country" id="country"></select>
+                <select name="province" id="province"></select>
+                <select name="city" id="city"></select>
+            </label>
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">企业地址</span>
+            </div>
+            <input name="companyAddress" type="text" class="fl submit-required" placeholder="请填写正确的公司办公地址" data-brief="公司地址">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title">企业电话</span>
+            </div>
+            <input
+                    name="companyPhone" type="text" class="fl"
+                    placeholder="请填写正确格式，如075533397777"
+                    data-brief="企业电话"
+                    data-short="电话号"
+                    data-type="tel">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">企业传真</span>
+            </div>
+            <input
+                    name="companyFax" type="text" class="fl submit-required"
+                    placeholder="请填写正确格式，如075533397777"
+                    data-brief="企业传真"
+                    data-short="传真号"
+                    data-type="fax">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">收单方式</span>
+            </div>
+            <label class="item-r fl">
+                <select name="sdway" id="sdway" class="submit-required fl">
+                    <option value="0" data-type="direct">直连</option>
+                    <option value="1" data-type="email" data-brief="邮箱信息">Email</option>
+                    <option value="2" data-type="fax" data-brief="传真信息">传真</option>
+                    <option value="3" data-type="mobile" data-brief="手机号码">手机</option>
+                </select>
+                <input name="sdway" type="text" class="sdway-message fl">
+            </label>
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">收单时间</span>
+            </div>
+            <label class="item-r">
+                <span class="start-time">开始时间</span>
+                <select name="starttime" id="starttime" class="submit-required">
+                    <option value="0">00:00</option>
+                    <option value="1">01:00</option>
+                    <option value="2">02:00</option>
+                    <option value="3">03:00</option>
+                    <option value="4">04:00</option>
+                    <option value="5">05:00</option>
+                    <option value="6">06:00</option>
+                    <option value="7">07:00</option>
+                    <option value="8">08:00</option>
+                    <option value="9">09:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                    <option value="22">22:00</option>
+                    <option value="23">23:00</option>
+                    <option value="24">24:00</option>
+                </select>
+                <span class="end-time">结束时间</span>
+                <select name="endtime" id="endtime" class="submit-required">
+                    <option value="0">00:00</option>
+                    <option value="1">01:00</option>
+                    <option value="2">02:00</option>
+                    <option value="3">03:00</option>
+                    <option value="4">04:00</option>
+                    <option value="5">05:00</option>
+                    <option value="6">06:00</option>
+                    <option value="7">07:00</option>
+                    <option value="8">08:00</option>
+                    <option value="9">09:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                    <option value="22">22:00</option>
+                    <option value="23">23:00</option>
+                    <option value="24" selected>24:00</option>
+                </select>
+            </label>
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">收单适用星期</span>
+            </div>
+            <ul class="item-r fl">
+                <li class="sdweek">1</li>
+                <li class="sdweek">2</li>
+                <li class="sdweek">3</li>
+                <li class="sdweek">4</li>
+                <li class="sdweek">5</li>
+                <li class="sdweek">6</li>
+                <li class="sdweek">7</li>
+            </ul>
+            <p class="warning"></p>
+        </li>
+    </ul>
+</div>

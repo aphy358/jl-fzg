@@ -1,0 +1,43 @@
+
+.tool-page-optline{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+
+    @at-root .tp-opt-btn{
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        color: #216baf;
+        background: #ddd;
+        font-size: 14px;
+        margin-right: 10px;
+        transition: all 0.2s linear 0s;
+
+        &.enable{
+            color: white;
+            background: #339afc;
+
+            &:hover{
+                background: #216baf;
+            }
+        }
+    }
+
+    @at-root .tp-opt-span{
+        font-size: 12px;
+        color: #999;
+
+        @at-root .tp-opt-time{
+
+        }
+    }
+
+    a{
+        float: right;
+        color: orange;
+        font-size: 14px;
+        line-height: 30px;
+    }
+}

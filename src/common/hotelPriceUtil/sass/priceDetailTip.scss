@@ -1,0 +1,45 @@
+
+// priceDetailTip
+
+.hli-price-detail-wrap{
+    
+    table{
+        width: 100%;
+        
+        tr{
+            
+            th,
+            td{
+                height: 30px;
+                text-align: center;
+                background: white;
+                border: solid 1px #fde8c7;
+
+                .red{
+                    color: #ff6666;
+                }
+
+                .purple{
+                    color: #ffa825;
+                }
+
+                .orange{
+                    color: orange;
+                }
+
+                .blue{
+                    color: #3366cc;
+                }
+
+                .green{
+                    color: #4cba92;
+                }
+            }
+    
+            th{
+                //background-color: #fffff3;
+                font-weight: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+
+
+
+.hli-package-confirm-wrap{
+    padding: 0 10px;
+
+    @at-root .hli-package-btn-wrap{
+        padding: 30px 50px 0;
+        margin-bottom: -10px;
+        text-align: center;
+        overflow: hidden;
+
+        @at-root .hli-package-btn{
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            background: #339afc;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: none;
+                background: #216baf;
+            }
+            
+            &.disabled{
+                background: #dddddd;
+            }
+        }
+    }
+}

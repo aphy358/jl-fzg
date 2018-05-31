@@ -1,0 +1,66 @@
+.banner{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  @at-root .banner-image{
+    display: block;
+    width: 100%;
+    position: relative;
+    >li{
+      width: 100%;
+      float: left;
+      position: absolute;
+      z-index: 19;
+      >img{
+        display: block;
+        width: 100%;
+      }
+    }
+    >.banner1{
+      z-index: 10;
+      >.banner1-text{
+        position: absolute;
+        z-index: 11;
+        width: 47%;
+        height: 16%;
+        top: 32%;
+        right: 38%;
+      }
+    }
+    >.banner2{
+      z-index: 1;
+      >.banner2-text{
+        position: absolute;
+        z-index: 11;
+        width: 37%;
+        height: 20%;
+        top: 36%;
+        right: 38%;
+      }
+    }
+  }
+  img{
+    width: 100%;
+    display: block;
+  }
+  @at-root .banner-point{
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    bottom: 60px;
+    z-index: 20;
+    >li{
+      width: 80px;
+      height: 10px;
+      float: left;
+      background-color: #fff;
+      opacity: 0.3;
+      filter:alpha(opacity=30);
+      margin: 0 20px;
+    }
+    >.this-point{
+      opacity: 0.8;
+      filter:alpha(opacity=80);
+    }
+  }
+}

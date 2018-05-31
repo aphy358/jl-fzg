@@ -1,0 +1,66 @@
+html{
+  width: 100%;
+  body{
+    width: 100%;
+    @at-root .firstPage{
+      width: 100%;
+      min-width:1000px;
+
+      *{
+        box-sizing: border-box;
+      }
+
+      @at-root .navbar{
+        min-width:1000px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 80px;
+        border-bottom: 1px solid #CCCCCC;
+        >a{
+          display: inline-block;
+          //width: 170px;
+          //height: 32px;
+          margin: 24px 60px;
+          height:35px;
+          width:181px;
+          background: url("https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1510915233098.png")no-repeat;
+          background-position: -1861px 0;
+        }
+        @at-root .navbar-right{
+          margin-right: 30px;
+          >ul{
+            >li{
+              float: left;
+              >a{
+                display: inline-block;
+                font-size: 18px;
+                color: #cccccc;
+                line-height: 80px;
+                padding: 0 17px;
+                margin: 0 13px;
+                position: relative;
+              }
+              .selected-nav{
+                color: #ffffff;
+              }
+              .selected-nav:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                margin-left: -35px;
+                bottom: 0;
+                width: 70px;
+                height: 4px;
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

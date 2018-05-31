@@ -1,0 +1,37 @@
+
+$baseBlue: #33A6FF;                         // 页面基础蓝色，比如一些蓝色按钮、导航栏的蓝色等。
+$darkenBlue: darken($baseBlue, 10%);          // 深蓝，一般用于蓝色按钮悬浮时的颜色加深处理。
+$baseGreen: #008b8b;                        // 基础绿，比如城市选择面板的title
+$lightenGreen: lighten($baseGreen, 10%);      // 淡绿，比如城市选择面板的 title 的 active 颜色
+$darkenGreen: darken($baseGreen, 10%);        // 深绿，比如城市选择面板的 title 的 active 颜色
+$wxRed: #ff6c67;                            // 顶部“微信版”图标底色
+$gray-3: #333;
+$gray-6: #666;
+$gray-9: #999;
+$gray-a: #aaa;
+$gray-b: #bbb;
+$gray-e2: #E2E2E2;
+$gray-f3: #F3F3F3;
+
+
+// banner 变量
+$swiperBulletBg: #002452;                   // swiper 分页按钮背景色
+
+
+// 城市选择框 变量
+$citySelectTitleBorder: bisque;             // 城市选择框 title 边框
+
+// header 部分涉及到的变量
+$erweimaBoxBg: #e4e7eb;                     // 二维码框背景色
+$erweimaBoxInner: #b8b8b8;                  // 二维码内边框颜色
+$white: white;
+
+
+// footer 变量
+$footerBg: #3d434c;                         // footer 背景色
+$footerText: #A7AFAC;                       // footer 一条条链接的字体颜色
+$footerBottom: #1D1F24;                     // footer 最底部的背景颜色
+
+
+// login 变量
+$loginRowBorder: #eceef4;                   // 登录框，行底边框颜色

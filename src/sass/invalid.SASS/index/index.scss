@@ -1,0 +1,18 @@
+
+//引入公共资源
+@import "../base.scss";                     //基础样式
+@import "../sprites.scss";                  //雪碧图样式
+
+
+//引入页面内部各个小模块的样式
+@import "./modules/search.scss";            //搜索框部分样式
+@import "./modules/banner.scss";            //轮播区域样式
+@import "./modules/ads.scss";               //主体广告的样式，包含 “当季热销”、“国内酒店”、“国际酒店”、“景点门票”、“促销特卖” 等...
+@import "./modules/hot-sales.scss";         //“当季热销” 样式
+@import "./modules/hotel-recommands.scss";  //“国内酒店”、“国际酒店”  样式
+@import "./modules/ticket.scss";            //“景点门票” 样式
+@import "./modules/promotion.scss";         //“促销特卖” 样式
+@import "./modules/top-sales.scss";         //“本月热销” 样式
+
+//引入城市选择框样式
+@import "../../common/selectCity/selectCity.scss";

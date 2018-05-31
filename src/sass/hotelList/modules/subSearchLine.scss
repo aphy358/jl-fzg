@@ -1,0 +1,69 @@
+
+
+.sub-search-line-wrap{
+    font-size: 14px;
+    width: 1200px;
+    height: 50px;
+    line-height: 30px;
+    background: white;
+    margin: 10px auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #dadada;
+    font-size: 14px;
+
+    @at-root .ssl-hotel-num{
+        font-size: 20px;
+        color: #fea925;
+        margin: 0 2px;
+    }
+
+    @at-root .ssl-search-wrap{
+        float: right;
+        border: solid 1px #a9c2da;
+        transition: all 0.2s linear 0s;
+        
+        &:hover,
+        &:active,
+        &:focus{
+            border-color: rgb(100, 191, 224);
+            box-shadow: 0 0 5px rgb(100, 191, 224);
+        }
+
+        > *{
+            float: left;
+        }
+
+        @at-root .ssl-search-input{
+            border: none;
+            width: 320px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        @at-root .ssl-search-btn{
+            width: 100px;
+            height: 28px;
+            font-size: 16px;
+            color: #339afc;
+            border: none;
+            border-left: solid 1px #a9c2da;
+            transition: all 0.2s linear 0s;
+            
+            &:hover{
+                color: #1a6be8;
+                text-shadow: 0 0 1px;
+            }
+
+            @at-root .ssl-search-icon{
+                @include jl_sprites;
+                @include search;
+                display: inline-block;
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}

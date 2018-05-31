@@ -1,0 +1,48 @@
+<span>入住信息</span>
+<div class="stay-msg">
+
+  <% for(var j = 0; j < content.roomNum; j++){ %>
+
+    <div class="guest-group clearfix">
+        <% for(var i = 0; i < content.hotelPrice.maxPersonNum; i++){
+        	var b = i === 0;j
+        	var isDemostic = content.staticInfo.country == 70007 ? true : false;
+        %>
+        <div class="guest <%= b ? 'guest-required' : ''%>">
+            <p class="guest-order">住客 <%= i + 1 %> :</p>
+
+            <div class="guest-i-b">
+                <input class="first-name" name="surname" data-required=<%= b ? "required" : "false" %> type="text" placeholder='姓<%= b ? "（必填）" : "" %><%= isDemostic ? "，例如\"张\"" : "（英文/拼音)"%>' >
+                <p class="error-msg-outer">
+                    <i class="icon-warning"></i>
+                    <span class="warning-txt">该项不能为空</span>
+                </p>
+            </div>
+
+            <div class="guest-i-b">
+                <input class="last-name" name="userName" data-required=<%= b ? "required" : "false" %> type="text" placeholder='名<%= b ? "（必填）" : "" %><%= isDemostic ? "，例如\"小明\"" : "（英文/拼音)"%>' >
+                <p class="error-msg-outer">
+                    <i class="icon-warning"></i>
+                    <span class="warning-txt">该项不能为空</span>
+                </p>
+            </div>
+
+            <div class="guest-i-b">
+                <div class="nation-box">
+                    <input class="nationality-msg" name="countryId" data-required=<%= b ? "required" : "false" %> type="text" placeholder="护照国籍<%= b ? ' 必填' : '' %>" value="<%= b ? '中国' : ''%>" data-cid="<%= b ? '70007' : ''%>" >
+                    <div class="national-result-wrap">
+                        <div class="national-result-mask"></div>
+                        <ul class="search-result"></ul>
+                    </div>
+                    <p class="error-msg-outer">
+                        <i class="icon-warning"></i>
+                        <span class="warning-txt">该项不能为空</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+
+  <% } %>
+</div>

@@ -1,0 +1,44 @@
+//主体样式
+html {
+	font-size: 14px;
+	color: #969696;
+	body {
+		.main {
+			width: 1180px;
+			margin: 0 auto;
+			overflow: hidden;
+			@at-root .page-content {
+				@at-root .order-content {
+					width: 1180px;
+					@at-root .content-left {
+						float: left;
+						width: 856px;
+						border-top: 1px solid #d7e8f5;
+						border-left: 1px solid #d7e8f5;
+						border-right: 1px solid #d7e8f5;
+						font-size: 14px;
+						@at-root #orderForm {
+							> ul {
+								> li {
+									width: 856px;
+									float: left;
+									border-bottom: 1px solid #d7e8f5;
+									color: #7d8080;
+									> span {
+										display: block;
+										float: left;
+										background-color: #fff;
+										width: 100px;
+										line-height: 50px;
+										text-align: center;
+										color: black;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+
+<!-- 单个酒店项 -->
+<% for(var i = 0; i < list.length; i++){ var o = list[i]; %>
+<div class="nd-hotel-item">
+    <!-- 酒店项左边的图片部分 -->
+    <div class="nd-hotel-img-wrap">
+        <div class="img-outer">
+            <img src="<%= o.hotelImg %>" alt="">
+        </div>
+    </div>
+    <!-- 酒店项右边的详情部分 -->
+    <div class="nd-hotel-detail-wrap">
+        <div class="nd-hotel-brief-wrap">
+            <p class="nd-hname1"><%= o.hotelName1 %></p>
+            <p class="nd-hname2"><%= o.hotelName2 %></p>
+            <div class="nd-hotel-star-wrap">
+                星级：
+                <ul>
+                    <li class="nd-star star-<%= o.star > 10 ? 'full' : o.star > 5  ? 'half' : 'empty' %>"></li>
+                    <li class="nd-star star-<%= o.star > 20 ? 'full' : o.star > 15 ? 'half' : 'empty' %>"></li>
+                    <li class="nd-star star-<%= o.star > 30 ? 'full' : o.star > 25 ? 'half' : 'empty' %>"></li>
+                    <li class="nd-star star-<%= o.star > 40 ? 'full' : o.star > 35 ? 'half' : 'empty' %>"></li>
+                    <li class="nd-star star-<%= o.star > 50 ? 'full' : o.star > 45 ? 'half' : 'empty' %>"></li>
+                </ul>
+            </div>
+            <div>位置：<%= o.location %></div>
+            <div class="lowest-price-wrap">
+                ￥<span><%= o.lowestPrice %></span>起
+            </div>
+            <a href="#" target="_blank" class="nd-hotel-detail-link" data-hotelid="<%= o.hotelId %>" data-citytype="<%= o.cityType %>">
+                <button class="nd-hotel-detail-btn">查看详情</button>
+            </a>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th width="8%"></th>
+                    <th width="12%"></th>
+                    <th width="12%"></th>
+                    <th width="12%"></th>
+                    <th width="12%"></th>
+                    <th width="12%"></th>
+                    <th width="80"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var j = 0; j < o.roomTypes.length; j++){ var p = o.roomTypes[j]; %>
+                <tr class="nd-roomtype-price-row">
+                    <td><%= p.roomName %><%= p.gift ? '<span class="gift-pop" data-gift="' + p.gift + '"></span>' : '' %></td>
+                    <td><%= p.breakfastName %></td>
+                    <td class="nd-bed-breakfast-td">
+                        <p><%= p.bedAndBreakfast.split('[')[0] %></p>
+                        <p><%= p.bedAndBreakfast.split('[')[1] ? ('[' + p.bedAndBreakfast.split('[')[1]) : '' %></p>
+                    </td>
+                    <td><span class="book-type"><%= p.orderType %></span></td>
+                    <td><span class="cancel-type"><%= p.cancelType %></span></td>
+                    <td><span class="nd-roomtype-price-pre"></span></td>
+                    <td>线下<span class="currency">￥</span><span class="nd-roomtype-price"></span></td>
+                    <td class="nd-order-btn-wrap">
+                        <button class="nd-hotel-order-btn" 
+                                data-hotelid="<%= o.hotelId %>" 
+                                data-supplierid="<%= p.supplierId %>" 
+                                data-roomid="<%= p.roomId %>" 
+                                data-ratetype="<%= p.rateType %>" 
+                                data-startdate="<%= p.startDate %>" 
+                                data-enddate="<%= p.endDate %>"
+                                data-breakFastId="<%= p.breakFastId %>"
+                                data-paymentType="<%= p.paymentType %>"
+                                data-citytype="<%= o.cityType %>" >
+                            预定
+                        </button>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<% } %>

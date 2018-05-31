@@ -1,0 +1,20 @@
+.main{
+	width: 1200px;
+	margin: 0 auto;
+	
+	*{
+		box-sizing: border-box;
+	}
+}
+
+
+
+//重置搜索框酒店集团下拉菜单的样式
+body .my-select-list{
+	width: 106px !important;
+}
+
+.drag-down-wrap input, .drag-down-wrap div, my-select{
+	height: 50px;
+	line-height: 50px;
+}

@@ -1,0 +1,140 @@
+//杂费信息
+@at-root .other-msg {
+	width: 756px;
+	float: left;
+	background-color: #f7fcfd;
+	ul {
+		width: 100%;
+		float: left;
+		li {
+			display: inline-block;
+			float: left;
+			height: 50px;
+			line-height: 50px;
+			margin: 0 20px;
+			color: #7d8080;
+		}
+		.open-detail-msg {
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			text-align: center;
+			margin: 16px 0;
+			color: #5db2ee;
+			border: 1px solid #5db2ee;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+}
+
+
+@at-root .open-add-msg {
+	width: 756px;
+	float: left;
+	background-color: #f7fcfd;
+	display: none;
+	.add-msg-head {
+		width: 100%;
+		font-size: 12px;
+		padding-left: 20px;
+		height: 50px;
+		line-height: 50px;
+		color: #f49647;
+	}
+	
+	@at-root .add-msg-option {
+		width: 100%;
+		padding-left: 20px;
+		height: 50px;
+		line-height: 50px;
+		ul {
+			width: 100%;
+			float: left;
+			li {
+				display: inline-block;
+				float: left;
+				height: 50px;
+				line-height: 50px;
+				margin: 0 20px 0 0;
+				color: #7d8080;
+				input, select, option {
+					width: 100px;
+					height: 30px;
+					padding-left: 10px;
+					margin: 10px 0;
+					line-height: 30px;
+				}
+				select {
+					vertical-align: baseline;
+				}
+				button {
+					width: 100px;
+					height: 30px;
+				}
+			}
+			.add-item {
+				width: 16px;
+				height: 16px;
+				line-height: 16px;
+				text-align: center;
+				margin: 16px 0;
+				color: #5db2ee;
+				border: 1px solid #5db2ee;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+		}
+		
+		@at-root .msg-item-box {
+			width: 100%;
+			float: left;
+			
+			.msg-item {
+				position: relative;
+				width: 400px;
+				padding: 0 20px;
+				margin: 10px 0;
+				height: 30px;
+				line-height: 30px;
+				background-color: #fff;
+				color: #55b6fe;
+				border: 1px solid #dcdfdf;
+				i {
+					padding: 0 4px;
+				}
+				.del-msg-item {
+					display: inline-block;
+					font-size: 12px;
+					color: #000;
+					cursor: pointer;
+					font-weight: normal;
+					opacity: 0.5;
+					filter: alpha(Opacity=50);
+					
+					&:hover {
+						opacity: 1;
+						filter: alpha(Opacity=100);
+					}
+					
+					&.layui-layer-close1 {
+						display: inline-block;
+						position: absolute;
+						top: 8px;
+						right: 5px;
+						width: 16px;
+						height: 16px;
+						_overflow: hidden;
+						background-position: 1px -40px;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+
+.breakfast-msg-box, .bed-msg-box, .network-msg-box {
+	display: none;
+}

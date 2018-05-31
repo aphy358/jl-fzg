@@ -1,0 +1,18 @@
+<div class="select-user">
+    <span>有权限的客户</span>
+    <label for="">
+        <select name="operateUser" id="operateUser">
+            <option value="" disabled selected>请选择</option>
+            <% for (var i = 0; i < dataList.length; i++) { %>
+            <option value="<%= dataList[i].distributorId %>"><%= dataList[i].allName%></option>
+            <% } %>
+        </select>
+    </label>
+</div>
+
+
+<p class="add-or-del-user">
+    <span class="add-user">新增</span>
+    <span>/</span>
+    <span class="del-user">删除客户</span>
+</p>

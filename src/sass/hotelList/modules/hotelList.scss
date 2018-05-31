@@ -1,0 +1,342 @@
+
+
+.hotel-list-auto-hide{
+    display: none;
+
+    @at-root .hotel-list-no-data{
+        overflow: hidden;
+        width: 405px;
+        margin: 40px auto;
+        color: #666;
+    
+        @at-root .hlnd-icon{
+            @include jl_sprites;
+            @include meiyoujiudian;
+    
+            float: left;
+            margin-right: 30px;
+        }
+    
+        @at-root .hlnd-span1{
+            font-size: 16px;
+            padding: 27px 0 10px;
+        }
+    
+        @at-root .hlnd-span2{
+    
+        }
+    }
+
+    @at-root .pianxin-tuijian{
+        font-size: 14px;
+        width: 1200px;
+        height: 50px;
+        line-height: 30px;
+        background: white;
+        margin: 10px auto;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #dadada;
+        font-size: 14px;
+        overflow: hidden;
+
+        @at-root .pianxin-icon{
+            @include jl_sprites;
+            @include pianxin;
+    
+            float: left;
+            margin-right: 10px;
+            margin-top: -3px;
+        }
+    }
+}
+
+.hotel-list-outer{
+    min-height: 200px;
+    
+    @at-root .hl-list{
+        width: 1200px;
+        margin: auto;
+        
+        @at-root .hl-item{
+            background: white;
+            margin: 20px 0;
+            box-sizing: border-box;
+            box-shadow: 0 0 5px #dadada;
+            
+            @at-root .hli-info-wrap{
+                font-size: 15px;
+                padding: 20px;
+                
+                > *{
+                    float: left;
+                    height: 160px;
+                }
+                
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                
+                @at-root .hli-img{
+                    width: 280px;
+                    overflow: hidden;
+                    
+                    img{
+                        float: left;
+                        width: 100%;
+                        min-height: 100%;
+                    }
+                }
+                
+                @at-root .hli-info{
+                    width: 700px;
+                    margin: 0 20px;
+                    
+                    @at-root .hli-hotel-name-wrap{
+                        a{
+                            text-decoration: none;
+                        }
+                        
+                        @at-root .hli-hotel-name1{
+                            display: inline-block;
+                            font-weight: normal;
+                            font-size: 20px;
+                            color: #339afc;
+                        }
+                        
+                        @at-root .hli-hotel-name2{
+                            display: inline-block;
+                            color: #666666;
+                            font-weight: normal;
+                        }
+                    }
+                    
+                    @at-root .hli-location{
+                        margin: 30px 0 20px;
+                        
+                        label{
+
+                        }
+                        
+                        @at-root .hli-location-text{
+                            color: #333333;
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                    @at-root .hli-notice-wrap{
+                        
+                        > *{
+                            float: left;
+                        }
+                        
+                        &:after{
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                        
+                        label{
+                            color: black;
+                            font-weight: bold;
+                            margin-left: 5px;
+                        }
+                        
+                        @at-root .hli-notice-text{
+                            display: inline-block;
+                            width: 590px;
+                            height: 22px;
+                            cursor: context-menu;
+
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+                }
+                
+                @at-root .hli-check-detail{
+                    float: right;
+                    position: relative;
+                    width: 130px;
+                    
+                    @at-root .hli-check-gz-icon{
+                        position: absolute;
+                        top: 0;
+                        right: 20px;
+                    }
+                    
+                    @at-root .hli-lowest-price-wrap{
+                        position: absolute;
+                        top: 30px;
+                        right: 0;
+                        width: 280px;
+                        color: red;
+                        font-size: 16px;
+                        text-align: right;
+                        
+                        @at-root .hli-lowest-price{
+                            font-size: 26px;
+                            margin: 0 2px;
+                        }
+                    }
+                    
+                    @at-root .hli-check-detail-btn{
+                        position: absolute;
+                        bottom: 25px;
+                        left: 0;
+                        width: 130px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        font-size: 18px;
+                        color: #339afc;
+                        border: solid 1px #339afc;
+                        border-radius: 5px;
+                        letter-spacing: 1px;
+                        text-decoration: none!important;
+                        transition: all 0.2s linear;
+
+                        &:hover{
+                            color: darken($color: #339afc, $amount: 10%);
+                            border-color: darken($color: #339afc, $amount: 10%);
+                            box-shadow: 0 0 5px #339afc;
+                        }
+                    }
+                }
+            }
+            
+            @at-root .progress-outer{
+                position: relative;
+                box-shadow: 0 0 5px #dadada;
+                border: solid 1px #d0d0d0;
+                margin: 0 20px 10px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            @at-root .hli-price-list-outer{
+                display: none;
+
+                @at-root .hli-price-list-wrap{
+                    margin: 0 20px;
+                    overflow: hidden;
+    
+                    @at-root .fzg-loading-wrap{
+                        max-width: 1200px;
+                        margin: auto;
+                        padding: 15px 0;
+                        border-top: solid 1px #ddd;
+                        background: white;
+    
+                        img{
+                            display: block;
+                            margin: auto;
+                        }
+                    }
+    
+                    @at-root .hli-error-msg{
+                        text-align: center;
+                        color: red;
+                        font-size: 16px;
+                        padding: 15px;
+                        border-top: solid 1px #ddd;
+                    }
+                }
+            }
+
+            @at-root .hli-expand-wrap{
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #339afc;
+                background: #f4fbfe;
+                border-top: solid 1px #ddd;
+                box-sizing: border-box;
+                cursor: context-menu;
+                
+                &.fix-bottom{
+                    position: fixed;
+                    bottom: 0;
+                    width: 1200px;
+                    box-shadow: 0 0 5px #dadada;
+                    z-index: 9999;
+                }
+            }
+        }
+    }
+    
+    @at-root .hli-icon{
+        @include jl_sprites;
+        display: inline-block;
+        position: relative;
+        
+        @at-root .icon-star{
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            font-size: 12px;
+            font-style: normal;
+            background: #7eb6ec;
+            color: white;
+            width: 50px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 3px;
+        }
+        
+        &.icon-jinpai{
+            @include jinpai;
+            top: 3px;
+        }
+        
+        &.icon-tuiguang{
+            @include tuiguang;
+            top: 3px;
+        }
+        
+        &.icon-location2{
+            @include location2;
+            top: 3px;
+        }
+        
+        &.icon-notice{
+            @include specialNotice;
+            top: 1px;
+        }
+        
+        &.icon-down{
+            @include triangle_blue_down;
+            top: -1px;
+
+            &:before{
+                content: none;
+            }
+        }
+        
+        &.icon-up{
+            @include triangle_blue_up;
+            top: -1px;
+
+            &:before{
+                content: none;
+            }
+        }
+    }
+}
+
+
+.hotel-list-page-outer{
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+    
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}

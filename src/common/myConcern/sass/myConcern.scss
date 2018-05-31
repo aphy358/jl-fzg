@@ -1,0 +1,15 @@
+// 雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+//layer弹框的样式重写
+@import "../../../common/hotelPriceUtil/sass/tipsReset.scss";
+
+.icon-gz-off{
+	@include jl_sprites;
+	@include gz4;
+}
+
+.icon-gz-on{
+	@include jl_sprites;
+	@include gz3;
+}

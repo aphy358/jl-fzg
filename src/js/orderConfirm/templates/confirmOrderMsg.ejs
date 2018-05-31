@@ -1,0 +1,98 @@
+<!--确认订单信息-->
+<div class="confirm-order-msg">
+  <h5 class="palce-can-move">确认订单信息</h5>
+  <div class="final-order-msg">
+    <ul>
+      <li>
+        <span>预定酒店</span>
+        <p><%= hotelName %></p>
+      </li>
+      <li>
+        <span>房型</span>
+        <p><%= roomName %>[<%= breakFastName %>]</p>
+      </li>
+      <li>
+        <span>入住日期</span>
+        <p><%= startDate %> 日到 <%= endDate %> 日</p>
+      </li>
+      <li>
+        <span>预定房间数</span>
+        <p><%= roomNum %>间</p>
+      </li>
+      <% if(bedNum != 0){ %>
+      <li>
+        <span>加床信息</span>
+        <p class="extra-add"><%= bedNum %>张 (<%= addBedMsg %>)</p>
+      </li>
+      <% } %>
+      <% if(breakfastNum != 0){ %>
+      <li>
+        <span>加早信息</span>
+        <p class="extra-add"><%= breakfastNum %>份 (<%= addBreakfastMsg %>)</p>
+      </li>
+      <% } %>
+      <% if(networkNum != 0){ %>
+      <li>
+        <span>加宽带信息</span>
+        <p class="extra-add"><%= networkNum %>份(<%= addNetworkMsg %>)</p>
+      </li>
+      <% } %>
+      <li>
+        <span>入住人</span>
+        <p>
+          <% for(var i = 0;i < guestArr.length;i ++){ %>
+          <%=decodeURIComponent(guestArr[i].surname)%>&nbsp;<%=decodeURIComponent(guestArr[i].aftername)%>
+          <%if(!guestArr[i].national){%>
+          ;
+          <%}%>
+          <% if(guestArr[i].national){ %>
+          [<%=decodeURIComponent(guestArr[i].national)%>];
+          <% } %>
+          <% } %>
+        </p>
+      </li>
+      <li>
+        <span>确认方式</span>
+        <% if( checkType === '电子邮件确认' ){ %>
+        <p><%=checkType%> : <%=voucherEmail%></p>
+        <% }else if( checkType === '传真确认' ){ %>
+        <p><%=checkType%> : <%=voucherFax%></p>
+        <% }else if( checkType === '短信确认' ){ %>
+        <p><%=checkType%> : <%=voucherMobile%></p>
+        <% }else{ %>
+        <p><%=checkType%></p>
+        <% } %>
+      </li>
+      <li>
+        <span>支付方式</span>
+        <% if(paymentType ==0){ %>
+            <% if(paymentTerm == 0 && paymentTermSon == 0){ %>
+                <p>单结 (使用预收款<%=willUsedBalance || 0%>元, 需支付<%=userNeedPay%>元)</p>
+            <% }else{ %>
+                <p><%= paymentTermName[Number(paymentTermSon) + 1] %></p>
+            <% } %>
+        <% } %>
+      </li>
+      <% if(specialReq){ %>
+      <li>
+        <span>特殊需求</span>
+        <p class="special-request">
+          <%= specialReq.split('specialReq=').join('') %>
+        </p>
+      </li>
+      <% } %>
+      <li>
+        <span>取消条款</span>
+        <p><%= cancellationDesc %></p>
+      </li>
+      <li>
+        <span>订单价格</span>
+        <p>RMB <b class="total-price"><%= userTotalPay %></b> 元</p>
+      </li>
+    </ul>
+  </div>
+  <div class="confirm-msg-bot">
+    <button class="confirm-order">确认</button>
+    <button class="cancel-order">取消</button>
+  </div>
+</div>

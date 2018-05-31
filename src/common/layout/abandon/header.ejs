@@ -1,0 +1,57 @@
+
+<header class="index-top-wrap">
+    <div class="index-top">
+        <div class="sprites fzg_logo"></div>
+        
+        <div class="contact-us-wrap">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <div class="sprites dianhua"></div>
+                </div>
+                <div class="contact-text">
+                    <div>7 x 24客服电话</div>
+                    <div class="darken-blue">0755-33397777</div>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <div class="sprites weixinban"></div>
+                    <div class="erweima-box">
+                        <div class="erweima-box-top"></div>
+                        <div class="erweima-box-inner">
+                            <div class="erweima-box-erweima"></div>
+                            <div class="text2">扫一扫，微信打开</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-text">
+                    <div>关注微信</div>
+                    <div>随时预定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="fzg_nav">
+    <div class="fzg-nav-inner">
+        <div class="fzg-nav-wrap">
+            <ul class="fzg-nav-ul">
+                <% for(var i = 0; i < bannerItems.length; i++){ var item = bannerItems[i] %>
+                <li class="<%= i === 0 ? 'current' : '' %>">
+					<a class="banner-link" href="<%= item.href %>"><span class="nav-span"><%= item.content %></span></a>
+				</li>
+                <li class="divider <%= (i >= bannerItems.length - 1) ? 'hidden' : '' %>"></li>
+                <% } %>
+            </ul>
+        </div>
+        
+        <div>
+            <ul class="fzg-login-reg">
+                <li><a href="./login.html">登录</a></li>
+                <li class="divider "></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

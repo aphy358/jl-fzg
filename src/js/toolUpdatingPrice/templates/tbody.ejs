@@ -1,0 +1,57 @@
+
+<% for(var i = 0; i < roomList.length; i++){ var o = roomList[i], rateTypeLengh = o.rateTypeForGroupHelperDtoList.length %>
+
+    <% for(var j = 0; j < rateTypeLengh; j++){ var p = o.rateTypeForGroupHelperDtoList[j] %>
+
+    <tr class="hotel-price-tr">
+        <% if(j === 0){ %>
+        <td class="" rowspan="<%= rateTypeLengh %>">
+            <span class="hp-roomName">
+                <%= o.roomName %>
+            </span>
+        </td>
+        <% } %>
+
+        <td>
+            <p><%= p.rateTypeName %></p>
+        </td>
+
+        <% for(var k = 0; k < p.priceList.length; k++){ var q = p.priceList[k] %>
+            <% if(q){ var m = q.roomTypePriceModel %>
+            <td>
+                <a href="javascript:;" class="hp-order-btn" target="_blank"
+                    data-startDate="<%= q.dateStr %>"
+                    data-endDate="<%= q.endDate %>"
+                    data-type="<%= countryType %>"
+                    data-supplierId="<%= m.supplierId %>" 
+                    data-hotelId="<%= m.hotelId %>" 
+                    data-roomId="<%= m.roomId %>"
+                    data-breakFastId="<%= m.breakFastId %>" 
+                    data-paymentType="<%= m.paymentType %>" 
+                    data-rateType="<%= m.rateType %>" 
+                    data-marketingStr="isHasMarketing=0" >
+                    
+                    <span class="hidden nightlyPriceList"><%= window.JSON.stringify(m.nightlyPriceList) %></span>
+                    <span class="hidden hotelPriceStrs"><%= encodeURIComponent( window.JSON.stringify(m) ) %></span>
+
+                    <p>价：<%= m.totalPriceRMB %></p>
+                    <p>预：<span class="cancel-order-term" data-tip="<%= q.orderTermTip %>"><%= q.orderTerm %></span></p>
+                    <p>取：<span class="cancel-order-term" data-tip="<%= m.cancellationDesc %>"><%= m.cancellationType === 1 ? '可取消' : '不可取消' %></span></p>
+                </a>
+            </td>
+            <% }else{ %>
+            <td class="bg-gray">
+                <div>
+                    <p>价格有问题</p>
+                    <p>请稍后刷新</p>
+                    <p style="color:#339afc">建议先下架</p>
+                </div>
+            </td>
+            <% } %>
+        <% } %>
+        
+    </tr>
+
+    <% } %>
+
+<% } %>

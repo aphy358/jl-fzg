@@ -1,0 +1,52 @@
+// 主题内容样式，包括 "国内酒店"、"港澳台酒店"、"国外酒店"
+
+// 酒店左边图片部分的样式
+@import './nd_hotel_img.scss';
+
+// 每个酒店右边详情部分的样式
+@import './nd_hotel_detail.scss';
+
+.main-content-wrap{
+	background-color: #f5bd89;
+	padding-top: 25px;
+	
+	
+	@at-root .hotel-region{
+		overflow: hidden;
+		
+		@at-root .hotel-region-inner{
+			width: 1180px;
+			margin: 30px auto 60px;
+			
+			@at-root .nd-hotel-item{
+				background: white;
+				overflow: hidden;
+				margin-bottom: 30px;
+				border: 1px solid #cccccc;
+				//border-radius: 5px;
+				
+				&:hover{
+					//border: 3px solid #7ec0c3;
+					box-shadow: 0 0 10px #d5d1a9;
+					//transform: translateY(-8px);
+					//transition: .1s ease-in;
+				}
+			}
+		}
+	}
+}
+
+
+//清除浮动
+.clearfix {
+	zoom: 1
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+

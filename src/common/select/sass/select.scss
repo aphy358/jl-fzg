@@ -1,0 +1,22 @@
+
+.my-select-list{
+    position: absolute;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    box-shadow: 0 1px 5px #ababab;
+    overflow: hidden;
+    z-index: 9999;
+
+    li{
+        line-height: 25px;
+        padding: 0 10px;
+        cursor: context-menu;
+        
+        &:hover,
+        &.selected{
+            color: white;
+            background-color: #3399ff!important;
+        }
+    }
+}

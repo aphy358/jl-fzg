@@ -1,0 +1,52 @@
+// 引入公共资源
+
+
+// 雪碧图样式
+@import "../../static/sprites/jl_sprites.scss";
+@import "./modules/topNav.scss";
+@import "./modules/searchLine.scss";
+@import "./modules/advancedSearch.scss";
+@import "./modules/subSearchLine.scss";
+@import "./modules/hotelList.scss";
+
+
+body {
+    background: #f6f6f6;
+    color: #333333;
+//  user-select: none;
+}
+
+
+// 兼容 IE 8 样式
+.search-line-wrap,
+.a-s-inner,
+.sub-search-line-wrap,
+.hl-item,
+.a-s-expand-btn {
+    border: solid 1px #e3e3e3;
+    box-sizing: border-box;
+}
+
+.top-nav-wrap {
+    border-bottom: solid 1px #e3e3e3;
+}
+
+.a-s-inner-mask {
+    bottom: 1px;
+}
+
+@media only screen and (min-width: 0px) {
+    .search-line-wrap,
+    .a-s-inner,
+    .sub-search-line-wrap,
+    .hl-item,
+    .a-s-expand-btn {
+        border: none;
+    }
+    .top-nav-wrap {
+        border-bottom: none;
+    }
+    .a-s-inner-mask {
+        bottom: 0px;
+    }
+}

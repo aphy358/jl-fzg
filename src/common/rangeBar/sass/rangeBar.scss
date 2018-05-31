@@ -1,0 +1,55 @@
+// range 样式
+
+// 首页雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+
+.i-s-range-bar{
+	border-bottom: solid 4px #ccc;
+	margin: 18px;
+	position: relative;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+	.range-line{
+		position: absolute;
+		top: 0;
+		border-bottom: solid 4px #339afc;
+
+		@at-root .range-bar{
+			@include jl_sprites;
+			position: absolute;
+			top: -7px;
+	
+			&.range-left{
+				@include price_bar1;
+				margin-left: -18px;
+	
+				div{
+					text-align: right;
+					left: -47px;
+				}
+			}
+	
+			&.range-right{
+				@include price_bar2;
+	
+				div{
+				}
+			}
+	
+			div{
+				position: absolute;
+				color: #333;
+				text-shadow: 0 0 1px #339afc;
+				width: 65px;
+				font-style: normal;
+				top: 20px;
+				cursor: context-menu;
+			}
+		}
+	}
+
+}

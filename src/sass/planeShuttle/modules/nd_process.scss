@@ -1,0 +1,61 @@
+@at-root .booking-process{
+	height: 340px;
+	color: #ffffff;
+	overflow: hidden;
+	
+	@at-root .process-title{
+		width: 950px;
+		height: 30px;
+		text-align: center;
+		margin: 126px auto 74px;
+		
+		.t-l-before{
+			display: block;
+			width: 260px;
+			background: linear-gradient(to right, rgba(192, 168, 53, 0.16), rgba(192, 168, 53, 0.59), #c0a825);
+			height: 2px;
+			margin: 14px 10px;
+			float: left;
+			box-shadow: 0 0 20px #f0ff07;
+		}
+		
+		.p-t-text{
+			font-size: 30px;
+			float: left;
+			height: 30px;
+			line-height: 30px;
+		}
+		
+		.t-l-after{
+			display: block;
+			width: 260px;
+			background: linear-gradient(to left, rgba(192, 168, 53, 0.16), rgba(192, 168, 53, 0.59), #c0a825);
+			height: 2px;
+			margin: 14px 10px;
+			float: left;
+			box-shadow: 0 0 20px #f0ff07;
+		}
+	}
+	
+	@at-root .flow-chart{
+		width: 950px;
+		text-align: center;
+		margin: 74px auto 0;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: Consolas;
+		
+		.per-process{
+			font-size: 14px;
+			height: 40px;
+			line-height: 38px;
+			padding: 0 10px;
+			margin: 0 10px 0 0;
+			color: #ffffff;
+			background-color: #222524;
+			border: 1px solid #fff4b1;
+			border-radius: 4px;
+			
+		}
+	}
+}

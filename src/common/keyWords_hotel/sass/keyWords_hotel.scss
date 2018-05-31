@@ -1,0 +1,62 @@
+
+// 城市关键字选择面板
+.key-word-hotel-wrap{
+    position: absolute;
+    font-size: 14px;
+    color: #333333;
+    background: white;
+    box-shadow: 0 1px 5px #ababab;
+    overflow: hidden;
+    z-index: 9999;
+
+    @at-root .kwh-inner{
+        min-width: 350px;
+        margin: 20px;
+
+        @at-root .kwh-no-content{
+            color: red;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        @at-root .kwh-block{
+
+            @at-root .kwh-block-title{
+                color: #339afc;
+                font-size: 15px;
+                border-bottom: solid 1px #339afc;
+                font-weight: bold;
+            }
+    
+            @at-root .kwh-block-content-list{
+                font-size: 14px;
+                margin: 10px 0;
+
+                @at-root .kwh-block-content-item{
+                    line-height: 25px;
+                    cursor: context-menu;
+
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        color: #333;
+                    }
+
+                    &:hover{
+                        background: #cce3ff;
+                    }
+
+                    .key{
+                        color: orange;
+                    }
+
+                    .area{
+                        color: #aaa;
+                        float: right;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

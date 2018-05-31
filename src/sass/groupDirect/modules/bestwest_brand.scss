@@ -1,0 +1,21 @@
+@at-root .bestwest-brand{
+	>.brand{
+		.per-brand{
+			@include bestwest_sprites;
+		}
+	}
+}
+
+@at-root .bestwest-brand-1{
+	
+	>.brand{
+		.brand-logo-1{@include bestwest_01_01;}
+		.brand-logo-2{@include bestwest_01_02;}
+		.brand-logo-3{@include bestwest_01_03;}
+		.brand-logo-4{@include bestwest_01_04;}
+		.brand-logo-5{@include bestwest_01_05;}
+		.brand-logo-6{@include bestwest_01_06;}
+		.brand-logo-7{@include bestwest_01_07;}
+		.brand-logo-8{@include bestwest_01_08;}
+	}
+}

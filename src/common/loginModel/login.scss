@@ -1,0 +1,214 @@
+
+.layui-layer-setwin .layui-layer-close2 {
+	right: -13px!important;
+	top: -13px!important;
+}
+
+#login_layer{
+	position:relative;
+	left:8px;
+	width:274px;
+	height:350px;
+	overflow:hidden;
+}
+
+#validateMsg1,#validateMsg2{ color: red; height: 30px; line-height: 30px; font-size: 14px; margin-left: 40px; margin-bottom: -12px; }
+
+#p1_RightBody2{
+	height: 300px;
+    border: 1px solid #32A7FF;
+    bottom: -16px;
+    position: relative;
+}
+
+#p1_RightTopSpan{
+    position: relative;
+    left: 10px;
+    top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #533d11;
+}
+
+#loginTriangle{
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color: #32A7FF;
+}
+    
+#p1_RightBody1{
+	height: 380px;
+    border: 1px solid #32A7FF;
+    bottom: -16px;
+    position: relative;
+}
+
+.loginBody{
+	height: 277px;
+	padding: 0 15px;
+	border-bottom: 1px solid #32A7FF;
+}
+
+#login_layer .loginBody{
+	height: 292px;
+	border-bottom: none;
+}
+
+.loginBodyRow{
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #D1DEE6;
+	margin-top: 12px;
+}
+
+#login_layer .loginBodyRow{
+	margin-top: 15px;
+}
+
+.loginBodyRow i,.loginBodyRow input{
+	float: left;
+}
+
+.loginBodyRow .iconfont{
+	color: #fd912e;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.loginBodyRow input{
+	background: white;
+	width: 185px;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 10px;
+	font-size: 14px;
+	border: none;
+}
+
+input.varificationCode{
+	width: 123px;
+}
+
+.yzmlogin {
+    height: 34px;
+}
+
+#varificationImg{
+    position: relative;
+	width: 100px;
+    height: 34px;
+    left: 140px;
+    background: #c6d3da;
+}
+
+#rememberPW{
+    font-size: 14px;
+    line-height: 14px;
+    margin: 12px 10px;
+}
+
+#forgetPW{
+	float: right;
+}
+
+.loginBtnGroup{
+	border: none;	
+	text-align: center;
+}
+
+
+a.registerBtn{
+	display: inline-block;
+    line-height: 40px;
+	background: rgb(239, 162, 100);
+    width: 100px;
+    height: 40px;
+    color: #FFFFFF;
+	font-size: 16px;
+}
+
+a.loginBtn{
+	display: inline-block;
+	line-height: 40px;
+    float: right;
+    width: 122px;
+    height: 40px;
+    color: #FFFFFF;
+	font-size: 16px;
+    background: rgb(120, 187, 118);
+    padding-left: 0px;
+}
+
+a.userCenterBtn{
+	display: inline-block;
+	line-height: 40px;
+    background: rgba(15,113,95,.7);
+    width: 100px;
+    height: 40px;
+    color: #FFFFFF;
+	font-size: 16px;
+}
+
+a.logoutBtn{
+	display: inline-block;
+	line-height: 40px;
+    float: right;
+    width: 122px;
+    height: 40px;
+    color: #FFFFFF;
+	font-size: 16px;
+    background: rgba(225,101,0,.7);
+    padding-left: 0px;
+}
+
+
+.loginedRow{
+    font-size: 14px;
+    margin-top: 30px;
+    padding-left: 55px;
+}
+
+#loginName{
+	font-size: 15px;
+    font-weight: bold;
+    color: #F38302;
+}
+
+#loginBody2{
+	font-size: 14px;
+	color: #533d0f;
+    text-align: center;    
+    padding-top: 22px;
+}
+
+#loginBody2 div{
+	margin-bottom: 10px;	
+}
+
+.loginBodyRow .divider{
+	width: 1px;
+    height: 18px;
+    padding-left: 0;
+    margin: 8px 0 0;
+    background-color: #cecfca;
+    clear: none;
+    border: none;
+}
+
+
+a.registerBtn:hover {
+	background: #E16500;
+}
+
+a.loginBtn:hover {
+	background: #437d41;
+}
+
+a.userCenterBtn:hover {
+	background: #0f715f;
+}
+
+a.logoutBtn:hover {
+	background: #E16500;
+}

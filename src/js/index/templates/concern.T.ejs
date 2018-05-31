@@ -1,0 +1,30 @@
+<!-- 我的关注 -->
+<% if (!concernList.length){ %>
+<div class="no-content"></div>
+<% }else{ %>
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(var i = 0; i < concernList.length; i++){ var o = concernList[i]; %>
+    <% if(o.infoName){ %>
+    <tr data-hotelid="<%= o.infoId %>">
+        <td>
+            <a href="<%= o.detailLink %>"
+               target="_blank"
+               class="i-c-o-link-item index-concern-link <%= o.hasOwnProperty('detailLink') ? '' : 'hotel-no-link' %>"
+               data-track="index_order_concern_link">
+                <%= o.cityName ? o.cityName + ' | ' : '' %><%= o.infoName %>
+            </a>
+        </td>
+        <td lastChild><%= o.minPrice ? '<span class="i-concern-price">￥' + o.minPrice + '</span>起' : '加载中<img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1520825964429.gif" class="price-loading" alt="">' %></td>
+    </tr>
+    <% } %>
+    <% } %>
+    </tbody>
+</table>
+<% } %>

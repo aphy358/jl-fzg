@@ -1,0 +1,23 @@
+@import "../base.scss";
+
+// 雪碧图样式
+@import "./modules/nd_sprites.scss";
+
+// banner样式
+@import "./modules/cr-banner.scss";
+
+// 主题内容样式，包括 "国内酒店"、"港澳台酒店"、"国外酒店"
+@import "./modules/nd_main.scss";
+
+
+body{
+	min-width: 1400px;
+}
+
+.fzg_nav{
+	display: none;
+}
+
+.footer-wrap{
+	margin-top: 0;
+}

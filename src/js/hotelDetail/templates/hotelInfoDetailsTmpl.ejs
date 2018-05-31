@@ -1,0 +1,42 @@
+
+<!--酒店信息详情-->
+<div class="hotel-detail-inner">
+	<h1 class="hotel-detail-title">酒店详情</h1>
+	<ul class="hotel-detail-list">
+		<li class="hotel-detail-item">
+			<label class="hotel-detail-label">
+				<i class="hli-icon icon-tebietixing"></i>
+				特别提示
+			</label>
+			<p class="hotel-detail-content"><%= o.indicate || '无' %></p>
+		</li>
+		<!--<li class="hotel-detail-item">
+			<label class="hotel-detail-label">
+				<i class="hli-icon icon-jiudianjianjie"></i>
+				温馨提示
+			</label>
+			<p class="hotel-detail-content">该酒店产品不可以放到美团网站上售卖，如有返现，订单给予取消并照常收款，第三人入住需要加收底三个人入住费用；wifi免费；酒店客房即公共区域一律禁止吸烟；住房需注意创作，价格使用 9间即一下，适用于中国市场</p>
+		</li>-->
+		<li class="hotel-detail-item">
+			<label class="hotel-detail-label">
+				<i class="hli-icon icon-lianxifangshi"></i>
+				联系方式
+			</label>
+			<p class="hotel-detail-content"><%= o.bookingPhone|| '' %></p>
+		</li>
+		<li class="hotel-detail-item">
+			<label class="hotel-detail-label">
+				<i class="hli-icon icon-jiudiansheshi"></i>
+				酒店设施
+			</label>
+			<p class="hotel-detail-content"><%= o.facilities ? o.facilities.split('|').join('、') : '' %></p>
+		</li>
+		<li class="hotel-detail-item">
+			<label class="hotel-detail-label">
+				<i class="hli-icon icon-jiudianjianjie"></i>
+				酒店简介
+			</label>
+			<p class="hotel-detail-content"><%= o.infoDesc || '' %></p>
+		</li>
+	</ul>
+</div>

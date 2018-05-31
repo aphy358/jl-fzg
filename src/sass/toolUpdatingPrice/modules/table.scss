@@ -1,0 +1,54 @@
+
+.hotel-price-table {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-top: none;
+    margin-bottom: 20px;
+
+    @at-root .hotel-price-thead th {
+        position: relative;
+        font-size: 12px;
+        color: #333;
+        height: 40px;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+        background: #f4fbfe;
+        font-weight: normal;
+    }
+
+    @at-root .hotel-price-tr td {
+        position: relative;
+        font-size: 12px;
+        height: 50px;
+        border: 1px solid #e3e3e3;
+        color: #555;
+
+        >*{
+            padding: 10px;
+        }
+
+        a{
+            color: #555;
+            float: left;
+            width: calc(100% - 20px);
+            height: 100%;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+        &.bg-gray{
+            background: #eee;
+
+            p{
+                text-align: center;
+            }
+        }
+
+        .cancel-order-term{
+            cursor: context-menu;
+            text-decoration: underline;
+        }
+    }
+}

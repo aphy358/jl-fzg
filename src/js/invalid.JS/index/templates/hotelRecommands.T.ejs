@@ -1,0 +1,45 @@
+
+<!--国内酒店、国际酒店（酒店推荐）-->
+
+<!--顶部tab切换-->
+<div class="ads-title-wrap">
+    <div class="ads-title-bline"></div>
+    <ul>
+        <li class="ads-title-item current" data-for="internal">国内酒店<i></i></li>
+        <li class="ads-title-item" data-for="external">国际酒店<i></i></li>
+    </ul>
+    <div class="ads-more-wrap">
+        <div>更多</div>
+        <div class="ads-more-icon"></div>
+    </div>
+</div>
+
+<!--国内酒店-->
+<div class="toggle-show" data-target="internal">
+    <ul class="ads-sub-title-wrap">
+        <li class="ads-sub-title-item current">深圳</li>
+        <li class="ads-sub-title-item">珠海</li>
+        <li class="ads-sub-title-item">香港</li>
+        <li class="ads-sub-title-item">东莞</li>
+        <li class="ads-sub-title-item">上海</li>
+        <li class="ads-sub-title-item">中山</li>
+    </ul>
+
+    <ul id="internalRecommandsWrap" class="ads-inner-wrap hotel-recommands">
+        <% for(var i = 0; i < 9; i++) {%>
+        <li class="ad-one-wrap <%= (i % 9 === 8 ? 'last-child' : '' ) %>" data-src="<%= arr[i].adLink %>">
+            <img src="<%= arr[i].adImg %>" class="too-width">
+            <div class="ad-one-shadow"></div>
+            <p class="ad-one-text"><%= arr[i].adTitle %></p>
+        </li>
+        <% } %>
+    </ul>
+</div>
+
+<!--国际酒店-->
+<div class="toggle-show hidden" data-target="external">
+    
+    <ul class="ads-sub-title-wrap"></ul>
+
+    <ul id="externalRecommandsWrap" class="ads-inner-wrap hotel-recommands"></ul>
+</div>

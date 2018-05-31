@@ -1,0 +1,18 @@
+@import "../base.scss";
+
+// 雪碧图样式
+@import "./modules/nd_sprites.scss";
+
+// 页面顶部导航栏样式
+@import "./modules/nd_top.scss";
+
+// 主题内容样式，包括 "国内酒店"、"港澳台酒店"、"国外酒店"
+@import "./modules/nd_main.scss";
+
+// 底部提示标签样式
+@import "./modules/nd_notice.scss";
+
+
+body{
+	min-width: 1400px;
+}

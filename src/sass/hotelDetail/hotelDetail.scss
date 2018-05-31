@@ -1,0 +1,22 @@
+// 引入公共资源
+
+
+// 雪碧图样式
+@import "../../static/sprites/jl_sprites.scss";
+
+@import "./modules/icons.scss";
+@import "./modules/topNav.scss";
+@import "./modules/hotelInfo.scss";
+@import "./modules/searchLine.scss";
+@import "./modules/priceTable.scss";
+@import "./modules/hotelInfoDetails.scss";
+
+
+
+body {
+    background: #f6f6f6;
+    color: #333333;
+    font-size: 14px;
+}
+
+

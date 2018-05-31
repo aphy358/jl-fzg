@@ -1,0 +1,28 @@
+.operate-staff{
+	.per-line{
+		display: block;
+		width: 300px;
+		float: left;
+		
+		@at-root .per-prefix{
+			float: left;
+			width: 60px;
+			line-height: 40px;
+		}
+		
+		>p{
+			float: left;
+			width: 230px;
+			line-height: 40px;
+			margin-left: 10px;
+		}
+		
+		@at-root #staffList{
+			margin: 5px 0 5px 10px;
+			height: 30px;
+			line-height: 30px;
+			padding-left: 10px;
+			float: left;
+		}
+	}
+}

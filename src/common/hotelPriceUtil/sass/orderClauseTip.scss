@@ -1,0 +1,23 @@
+
+
+.hli-order-clause-wrap{
+    
+    .hli-order-clause-list{
+        
+        @at-root .hli-order-clause-item{
+            margin-top: 10px;
+            
+            &:first-child{
+                margin-top: 0;
+            }
+            
+            h2{
+                
+            }
+            
+            p{
+                
+            }
+        }
+    }
+}

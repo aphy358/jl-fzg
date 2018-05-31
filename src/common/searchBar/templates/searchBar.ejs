@@ -1,0 +1,87 @@
+
+
+<!-- banner 区搜索栏模板 -->
+<section class="search-outer">
+    <div class="index-search-wrap">
+        <div class="i-s-row-one-wrap">
+            <div class="i-s-bg-one"></div>
+            <div class="i-s-row-one">
+                <% if (hotelGroup) { %>
+                <div class="i-s-hotel-group">
+                    <div class="drag-down-wrap">
+                        <my-select class="i-s-group-select" unselectable="on" data-value="69" data-track="公共_搜索栏_集团">万豪</my-select>
+                        <i class="drag-down"></i>
+                    </div>
+                </div>
+                <% } %>
+
+                <ul class="i-s-origin-group">
+                    <li><span switch name="i-s-origin-switch" class="i-s-origin-switch" data-src="kwc-block-0" data-val="0" data-track="公共_搜索栏_区域_国内" checked>国内</span></li>
+                    <li><span switch name="i-s-origin-switch" class="i-s-origin-switch" data-src="kwc-block-2" data-val="2" data-track="公共_搜索栏_区域_港澳台">港澳台</span></li>
+                    <li><span switch name="i-s-origin-switch" class="i-s-origin-switch" data-src="kwc-block-3" data-val="3" data-track="公共_搜索栏_区域_境外">境外</span></li>
+                </ul>
+    
+                <div class="i-s-keyword">
+                    <i class="i-s-keyword-icon"></i>
+                    <input type="text" class="i-s-keyword-input" placeholder="城市/酒店名称" title="城市/酒店名称" data-track="公共_搜索栏_关键字">
+                </div>
+    
+                <div class="i-s-gap"></div>
+    
+                <div class="i-s-dates">
+                    <i class="i-s-dates-icon"></i>
+                    <input type="text" class="i-s-dates-input my-calendar-input" placeholder="入住离店日期" unselectable='on' readonly title="入住离店日期">
+                </div>
+    
+                <button class="i-s-search-btn" data-track="公共_搜索栏_搜索">搜索</button>
+            </div>
+        </div>
+
+        <div class="i-s-row-two-wrap hidden">
+            <div class="i-s-bg-two"></div>
+            <div class="i-s-row-two">
+                <div class="i-s-label-pair">
+                    <label>间数</label>
+                    <div class="drag-down-wrap">
+                        <!-- <input type="text" class="i-s-room-num" unselectable="on" readonly value="" data-value="1"> -->
+                        <my-select class="i-s-room-num" unselectable="on" data-value="1" data-track="公共_搜索栏_间数">1间</my-select>
+                        <i class="drag-down"></i>
+                    </div>
+                </div>
+
+                <ul class="i-s-label-pair">
+                    <label>酒店等级</label>
+                    <div class="drag-down-wrap">
+                        <input type="text" class="i-s-star" placeholder="酒店等级" unselectable='on' readonly data-track="公共_酒店等级">
+                        <i class="drag-down"></i>
+                    </div>
+                </ul>
+                
+                <div class="i-s-label-pair hidden" id="index-adult-children">
+                    <label>入住人数</label>
+                    <div class="drag-down-wrap">
+                        <input type="text" class="i-s-adult-children" value="2成人，0小孩" unselectable='on' readonly>
+                        <i class="drag-down"></i>
+                    </div>
+                </div>
+                
+                <div class="i-s-label-pair">
+                    <label>价格区间</label>
+                    <div class="i-s-range-outer"></div>
+                </div>
+                
+                <div class="i-s-label-pair" lastChild>
+                    <label><input type="checkbox" class="i-s-confirm-now" data-track="公共_搜索栏_立即确认"><span>立即确认</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="i-s-row-slide-bar-wrap">
+            <div class="i-s-row-slide-bar-bg"></div>
+            <div class="i-s-row-slide-bar" data-track="公共_搜索栏_高级搜索条件">
+                高级搜索条件
+                <i class="slide-bar down"></i>
+            </div>
+        </div>
+    </div>
+</section>

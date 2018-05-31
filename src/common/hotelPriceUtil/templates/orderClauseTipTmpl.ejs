@@ -1,0 +1,12 @@
+<!--预订条款 tip 模板-->
+
+<div class="hli-order-clause-wrap">
+	<ul class="hli-order-clause-list">
+		<% for (var i = 0; i < clauses.length; i++) { var clause = clauses[i] %>
+		<li class="hli-order-clause-item">
+			<h2><%= clause.name %></h2>
+			<p><%= clause.tip %></p>
+		</li>
+		<% } %>
+	</ul>
+</div>

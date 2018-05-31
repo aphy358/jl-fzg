@@ -1,0 +1,32 @@
+<div class="login-box">
+    <form id="loginJl">
+        <!--<h2>房掌柜登录</h2>-->
+        <ul>
+            <li>
+                <i class="login-icon login-icon-1"></i>
+                <input placeholder="企业编号" id="accountCode" title="企业编号" name="accountCode" autocomplete="off" emptymsg="* 企业编号不能为空" type="text">
+            </li>
+            <li>
+                <i class="login-icon login-icon-2"></i>
+                <input placeholder="用户名" id="username" title="用户名" name="username" autocomplete="off" emptymsg="* 用户名不能为空" type="text">
+            </li>
+            <li>
+                <i class="login-icon login-icon-3"></i>
+                <input placeholder="密码" id="password" title="密码" name="password" autocomplete="off" emptymsg="* 请输入密码" type="password">
+            </li>
+            <li class="yzm-box">
+                <i class="login-icon login-icon-4"></i>
+                <input placeholder="请输入验证码" id="checkcode" title="请输入验证码" name="checkcode" emptymsg="* 请输入验证码" type="text" autocomplete="off">
+                <img class="yzm-img" src="/user/getCheckcodeImg.do?time=<%=new Date().getTime()%>" alt=""/>
+            </li>
+        </ul>
+        <p class="err-msg"></p>
+        <button id="loginIn">登录</button>
+        <div class="login-bottom">
+            <input id="remberCode" name="rememberMe" type="checkbox" value="true">
+            <label for="remberCode">记住账号</label>
+            <a class="find-password" href="#">忘记密码？</a>
+            <a class="register" href="/user/toRegister.do" target="_blank" data-track="房掌柜首页_登录框_免费注册">免费注册</a>
+        </div>
+    </form>
+</div>

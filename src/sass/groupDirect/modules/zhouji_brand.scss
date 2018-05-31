@@ -1,0 +1,31 @@
+@at-root .zhouji-brand{
+	>.brand{
+		>.per-brand{
+			@include zhouji_sprites;
+		}
+	}
+}
+
+@at-root .zhouji-brand-1{
+	
+	>.brand{
+		.brand-logo-1{@include zhouji_01_01;}
+		.brand-logo-2{@include zhouji_01_02;}
+		.brand-logo-3{@include zhouji_01_03;}
+		.brand-logo-4{@include zhouji_01_04;}
+		.brand-logo-5{@include zhouji_01_05;}
+		.brand-logo-6{@include zhouji_01_06;}
+		.brand-logo-7{@include zhouji_01_07;}
+		.brand-logo-8{@include zhouji_01_08;}
+	}
+}
+
+@at-root .zhouji-brand-2{
+	>.brand{
+		.brand-logo-1{@include zhouji_02_01;}
+		.brand-logo-2{@include zhouji_02_02;}
+		.brand-logo-3{@include zhouji_02_03;}
+		.brand-logo-4{@include zhouji_02_04;}
+		.brand-logo-5{@include zhouji_02_05;}
+	}
+}

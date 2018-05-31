@@ -1,0 +1,32 @@
+<button class="page-start">首页</button>
+<button class="last-page">上一页</button>
+<div class="paging-list-box">
+
+    <ul class="paging-list">
+
+        <% for (var pN = 0; pN < pagingNum; pN++) {
+
+        	if (pN == 0){ %>
+
+        <li class="paging-selected"><a href="javascript:void(0)"><%= (pN + 1) %></a></li>
+
+        <% }else{ %>
+
+
+        <li><a href="javascript:void(0)"><%= (pN + 1) %></a></li>
+
+        <% }
+
+        }
+        %>
+    </ul>
+</div>
+
+<button class="next-page">下一页</button>
+<button class="page-end">尾页</button>
+<label class="to-page-box">
+    到第
+    <input type="text" class="to-page"/>
+    页
+</label>
+<button class="go-to-page">确定</button>

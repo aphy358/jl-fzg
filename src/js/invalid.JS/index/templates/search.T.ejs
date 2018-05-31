@@ -1,0 +1,85 @@
+<!--该文件为首页搜索框部分（不包括它下面的banner轮播区）-->
+
+<div class="search-box">
+	<ul class="s-tab">
+		<li class="s-tab-item current" data-for="s-hotel">
+			<div class="sprites sp-jiudian"></div>
+			<div class="s-tab-text">酒店</div>
+		</li>
+		<li class="s-tab-item" data-for="s-ticket">
+			<div class="sprites sp-menpiao"></div>
+			<div class="s-tab-text">门票</div>
+		</li>
+		<li class="s-tab-item" data-for="s-wx">
+			<div class="sprites sp-shoujiban"></div>
+			<div class="s-tab-text">手机版</div>
+		</li>
+		<li class="p-h"></li>
+	</ul>
+	<div class="s-box-wrap">
+		<!--酒店搜索框-->
+		<div class="s-box current" data-target="s-hotel">
+			<div class="sbox-hotel">
+				<div class="sbox-hotel-tab">
+					<div class="s-h-bline"></div>
+					<div class="s-h-item current">国内酒店<i></i></div>
+					<div class="s-h-item">国际酒店<i></i></div>
+				</div>
+				<div class="sbox-hotel-item">
+					<div class="s-h-i-title">目的地</div>
+					<div class="s-h-i-input">
+						<input class="aim-city" type="text" value="深圳市">
+						<div class="select-city"></div>
+					</div>
+				</div>
+				<div class="sbox-hotel-item">
+					<div class="s-h-i-title">入住</div>
+					<div class="s-h-i-input date">
+						<input class="start" type="text" value="2017-06-18">
+						<div class="sprites sp-rili"></div>
+					</div>
+					<div class="s-h-i-title">退房</div>
+					<div class="s-h-i-input date">
+						<input class="end" type="text" value="2017-06-19">
+						<div class="sprites sp-rili"></div>
+					</div>
+				</div>
+				<div class="sbox-hotel-item">
+					<div class="s-h-i-title">关键字</div>
+					<div class="s-h-i-input">
+						<input type="text" placeholder="位置 / 酒店名 / 品牌">
+					</div>
+				</div>
+				<div class="sbox-hotel-item">
+					<div class="s-h-i-title"></div>
+					<div class="s-h-i-input">
+						<div class="s-h-submit">
+							<div class="sprites sp-sousuo"></div>
+							搜索
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--门票搜索框-->
+		<div class="s-box" data-target="s-ticket"></div>
+
+		<!--手机二维码显示框-->
+		<div class="s-box" data-target="s-wx">
+			<div class="sbox-wx">
+				<div class="sbox-erweima-wrap">
+					<div class="border b1"></div>
+					<div class="border b2"></div>
+					<div class="border b3"></div>
+					<div class="border b4"></div>
+					<div class="sbox-erweima"></div>
+				</div>
+
+				<div class="sbox-wx-text">手机预订更方便、更快捷</div>
+
+				<div class="sbox-wx-bg"></div>
+			</div>
+		</div>
+	</div>
+</div>

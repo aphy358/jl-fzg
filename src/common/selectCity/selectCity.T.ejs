@@ -1,0 +1,41 @@
+<div class="select-city-box">
+	<div class="select-city-top">
+		<p>支持中文/拼音/简拼输入</p>
+		<i class="del-select-city">X</i>
+	</div>
+	<div class="select-city-mid">
+		<ul>
+			<li class="s-city-title hot-city active">热门</li>
+			<% for(key in arr.citys){ %>
+			<li class="s-city-title"><%= key %></li>
+			<% } %>
+		</ul>
+	</div>
+	<div class="select-city-bot clearfix">
+		<ul class="city-group">
+			<!-- 热门城市模板 -->
+			<li class="select-city-item hot-city active" data-key="热门">
+				<ul>
+					<% for(var i = 0; i < arr.inlandHotCitys.length; i++){ var item = arr.inlandHotCitys[i]   %>
+					<li class="city-item" data-citytype="<%= item.t %>" data-cityid="<%= item.i %>"><%= item.n %></li>
+					<% } %>
+				</ul>
+			</li>
+
+			<!-- 其他城市模板，下面定义的 block 表示的是如 ‘ABCD’、‘EFGHI’、‘JKLM’ 这样的块... -->
+			<% for(key in arr.citys){ var block = arr.citys[key] %>
+			<li class="select-city-item" data-key="<%= key %>">
+				<% for(var i = 0; i < block.length; i++){ %>
+				<span><%= block[i].w %></span>
+				<ul>
+					<% for(var j = 0; j < block[i].item.length; j++){ var cItem = block[i].item[j]   %>
+					<li class="city-item" data-citytype="<%= cItem.t %>" data-cityid="<%= cItem.i %>"><%= cItem.n %></li>
+					<% } %>
+				</ul>
+				<% } %>
+			</li>
+			<% } %>
+		</ul>
+		
+	</div>
+</div>

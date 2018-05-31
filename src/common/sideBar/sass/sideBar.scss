@@ -1,0 +1,119 @@
+// 首页雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+// 我的关注
+@import "./modules/gz.scss";
+
+.side-bar-wrap{
+    position: fixed;
+    top: 0;
+    right: 0;
+    //bottom: 150px;
+    color: #333333;
+    z-index: 9999;
+    height: 100%;
+    // opacity: .9;
+    // filter: alpha(opacity=90);
+
+    &:hover{
+        // opacity: 1!important;
+        // filter: alpha(opacity=100)!important;
+    }
+    
+    @at-root .side-bar-c-b{
+        height: 100%;
+        width: 36px;
+        background-color: #eee;
+        overflow: hidden;
+        z-index: 10000;
+        position: relative;
+    
+        @at-root .side-bar-group{
+            width: 36px;
+            height: 236px;
+            position: absolute;
+            top: 50%;
+            margin-top: -118px;
+        
+            @at-root .side-bar-item{
+                position: relative;
+                //float: left;
+                width: 36px;
+                background-color: #eee;
+                padding: 15px 0;
+            
+            
+            
+                @at-root .side-bar-inner{
+                    @include jl_sprites;
+                    margin: auto;
+                
+                    &.sidebar-gz{
+                        @include gz2;
+                    }
+                
+                    &.sidebar-wxdf{
+                        @include wxdf2;
+                    }
+                
+                    &.sidebar-up{
+                        @include fhdb2;
+                    }
+                }
+            
+            
+                &:hover{
+                    background-color: #3399ff;
+                
+                    .side-bar-inner{
+                        &.sidebar-gz{
+                            @include gz1;
+                        }
+                    
+                        &.sidebar-wxdf{
+                            @include wxdf1;
+                        }
+                    
+                        &.sidebar-up{
+                            @include fhdb1;
+                        }
+                    }
+                
+                    .sidebar-erweima-outer{
+                        display: block;
+                    }
+                
+                    //.sidebar-gz-outer{
+                    //    display: block;
+                    //}
+                }
+            
+            }
+        }
+    }
+    
+    @at-root .side-content{
+        .sidebar-hidden{
+            display: none;
+    
+            @at-root .sidebar-erweima-outer{
+                position: absolute;
+                //display: none;
+                padding: 20px 10px;
+                //top: -80px;
+                top: 50%;
+                margin-top: -120px;
+                right: 40px;
+                background: white;
+                box-shadow: 0 0 5px gray;
+                z-index: 60;
+        
+                .sidebar-erweima{
+                    @include jl_sprites;
+                    @include sideBar_erweima;
+                }
+            }
+        }
+        
+    }
+}

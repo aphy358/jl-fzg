@@ -1,0 +1,241 @@
+
+// hotelInfo
+
+.hotel-detail-info-outer{
+    background: white;
+    box-shadow: 0 0 5px #ddd;
+    
+    @at-root .hotel-detail-info-inner{
+        color: #666666;
+        width: 1200px;
+        margin: auto;
+        padding: 20px 0;
+        
+        @at-root .hdi-head{
+            position: relative;
+            
+            @at-root .hdi-hotel-name1{
+                font-size: 20px;
+                color: #339afc;
+                
+                i{
+                    margin-left: 5px;
+                }
+            }
+            
+            @at-root .hdi-hotel-name2{
+                color: #666666;
+                font-weight: normal;
+            }
+            
+            @at-root .hdi-location{
+                margin: 5px 0;
+                max-width: 800px;
+                
+                label{
+
+                }
+                
+                @at-root .hdi-location-text{
+                    color: #333333;
+                    text-decoration: underline;
+                }
+            }
+            
+            @at-root .hdi-lowest-wrap{
+                position: absolute;
+                 //width: 400px;
+                width: 200px;
+                height: 60px;
+                line-height: 60px;
+                top: 10px;
+                right: 0;
+                color: red;
+                
+                > *{
+                    float: left;
+                }
+                
+                @at-root .hdi-lowest-price{
+                    //display: none;
+                    width: 200px;
+                    text-align: center;
+                    
+                    @at-root .hdi-lowest-num{
+                        font-size: 30px;
+                        margin: 0 3px;
+                        letter-spacing: 1px;
+                    }
+                }
+                
+                @at-root .hdi-lowest-seperator{
+                    width: 1px;
+                    height: 60px;
+                    background: #ccc;
+                    
+                }
+                
+                @at-root .hdi-gz-wrap{
+                    width: 199px;
+                    
+                    @at-root .hdi-gz-inner{
+                        width: 45px;
+                        text-align: center;
+                        color: #666;
+                        line-height: 20px;
+                        margin: 4px auto;
+                        
+                        p{
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+        @at-root .hdi-body{
+            margin-top: 10px;
+            overflow: hidden;
+            
+            @at-root .hdi-img-outer{
+                float: left;
+                width: 765px;
+                margin-right: 20px;
+                
+                @at-root .hdi-img-wrap-big{
+                    float: left;
+                    width: 600px;
+                    height: 400px;
+                    margin-right: 5px;
+                    overflow: hidden;
+                    
+                    img{
+                        float: left;
+                        width: 100%;
+                        min-height: 100%;
+                    }
+                }
+                
+                @at-root .hdi-img-wrap-small{
+                    position: relative;
+                    float: left;
+                    width: 160px;
+                    height: 400px;
+                    overflow: hidden;
+                    
+                    @at-root .hdi-img-scroll{
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        z-index: 9;
+                        
+                        @at-root .hdi-img-scroll-mask{
+                            height: 30px;
+                            background: black;
+                            opacity: 0.5;
+                            filter: alpha(opacity=50);
+                        }
+                        
+                        i{
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            margin-left: -10px;
+                            margin-top: 9px;
+                        }
+                        
+                        &.scroll-up{
+                            top: 0;
+                            
+                            i{
+                                @include swipeUp2;
+                                
+                                &.disabled{
+                                    @include swipeUp1
+                                }
+                            }
+                        }
+                        
+                        &.scroll-down{
+                            bottom: 0;
+                            
+                            i{
+                                @include swipeDown2;
+                                
+                                &.disabled{
+                                    @include swipeDown1
+                                }
+                            }
+                        }
+                    }
+                        
+                    @at-root .hdi-img-small-list{
+                        
+                        @at-root .hdi-img-small-item{
+                            float: left;
+                            width: 160px;
+                            height: 110px;
+                            margin-top: 5px;
+                            overflow: hidden;
+                            
+                            &:first-child{
+                                margin-top: 0;
+                            }
+                            
+                            img{
+                                float: left;
+                                width: 100%;
+                                min-height: 100%;
+                            }
+                            
+                            .hdi-isi-mask{
+                                position: relative;
+                                border: solid 3px #339afc;
+                                height: 110px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @at-root .hdi-brief-wrap{
+                float: left;
+                width: 415px;
+                height: 400px;
+                border: solid 1px #e3e3e3;
+                box-sizing: border-box;
+                padding: 20px;
+                overflow-y: auto;
+                
+                @at-root .hdi-brief-list{
+                    
+                    @at-root .hdi-brief-item{
+                        
+                        @at-root .hdi-brief-item-title{
+                            height: 26px;
+                            line-height: 26px;
+                            color: #339afc;
+                            margin-bottom: 5px;
+                            
+                            .hli-icon{
+                                float: left;
+                                margin-right: 10px;
+                            }
+                            
+                            span{
+                                font-size: 18px;
+                            }
+                        }
+                        
+                        @at-root .hdi-brief-item-content{
+                            font-size: 15px;
+                            margin-bottom: 15px;
+                            padding-left: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

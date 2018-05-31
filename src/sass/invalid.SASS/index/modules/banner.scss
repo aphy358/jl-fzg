@@ -1,0 +1,63 @@
+
+//该文件为首页轮播区域样式
+
+//覆盖图片轮播分页按钮的样式
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction{
+    width: 480px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: 100px;
+}
+.swiper-pagination-bullet{
+    width: 24px;
+    height: 6px;
+    border-radius: 0;
+    background: $swiperBulletBg;
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+.swiper-pagination-bullet-active{
+    background: white;
+}
+    
+
+.banner-wrap{
+    overflow: hidden;
+
+    @at-root .swiper-container {
+        height: 376px;
+
+        img{
+            cursor: context-menu;
+            -webkit-transition: margin-left 400ms ease-out;
+            -moz-transition: margin-left 400ms ease-out;
+            -ms-transition: margin-left 400ms ease-out;
+            -o-transition: margin-left 400ms ease-out;
+            transition: margin-left 400ms ease-out;
+        }
+    }    
+}
+
+@media screen and (max-width: 1550px){
+    .swiper-slide-active img{
+        margin-left: -25px;
+    }
+}
+@media screen and (max-width: 1500px){
+    .swiper-slide-active img{
+        margin-left: -50px;
+    }
+}
+@media screen and (max-width: 1450px){
+    .swiper-slide-active img{
+        margin-left: -75px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .swiper-slide-active img{
+        margin-left: -100px;
+    }
+}

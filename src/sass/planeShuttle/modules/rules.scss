@@ -1,0 +1,52 @@
+.activity-rules{
+	color: #ffffff;
+	width: 1020px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	
+	@at-root .rules-title{
+		width: 780px;
+		height: 30px;
+		text-align: center;
+		margin: 100px auto 74px;
+		
+		.t-l-before{
+			display: block;
+			width: 260px;
+			background: linear-gradient(to right, rgba(192, 168, 53, 0.2), rgba(192, 168, 53, 0.59), #c0a825);
+			height: 2px;
+			margin: 14px 30px;
+			float: left;
+			box-shadow: 0 0 20px #f0ff07;
+		}
+		
+		.p-t-text{
+			font-size: 30px;
+			float: left;
+			height: 30px;
+			line-height: 30px;
+		}
+		
+		.t-l-after{
+			display: block;
+			width: 260px;
+			background: linear-gradient(to left, rgba(192, 168, 53, 0.2), rgba(192, 168, 53, 0.59), #c0a825);
+			height: 2px;
+			margin: 14px 30px;
+			float: left;
+			box-shadow: 0 0 20px #f0ff07;
+		}
+	}
+	
+	@at-root .rules-text{
+		width: 1000px;
+		font-size: 16px;
+		margin: 0 auto 60px;
+		line-height: 40px;
+		
+		.need-indent{
+			text-indent: 100px;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+<!-- 订单管理 -->
+<% if( !orderList.length ){ %>
+<div class="no-content"></div>
+<% }else{ %>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i = 0; i < orderList.length; i++){ var o = orderList[i]; %>
+        <tr>
+            <td><a href="<%= o.orderLink %>" target="_blank" class="i-c-o-link-item" data-track="首页_订单管理_订单编号"><%= o.orderCode %></a></td>
+            <td><a href="<%= o.link || 'javascript:;' %>" target="_blank" class="i-c-o-link-item index-order-hotel-link" data-track="首页_订单管理_酒店名称"><%= o.itemName %></a></td>
+            <td><%= o.beginDate %> - <%= o.endDate %></td>
+            <td>
+                <%= o.innerStatusText + ' / ' + o.paymentStatusText %>
+            </td>
+            <td lastChild>
+                <% if( o.downloadLink ){ %>
+                <a href="<%= o.downloadLink %> " target="_blank"><span class="i-o-download">下载入住房券</span></a>
+                <% } %>
+                <a href="<%= o.orderLink %>" target="_blank" data-track="首页_订单管理_查看"><span class="i-o-check">查看</span></a>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+<% } %>

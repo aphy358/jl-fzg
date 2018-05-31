@@ -1,0 +1,134 @@
+.main{
+	width: 900px;
+	margin: 50px auto;
+	border: 1px solid #c1c1c1;
+	
+	@at-root .wechat-pay-head{
+		width: 100%;
+		height: 94px;
+		border: 1px solid #e8e8e8;
+		background-color: #F2F2F2;
+		padding: 0 30px;
+		box-sizing: border-box;
+		
+		
+		@at-root .order-msg{
+			margin: 21px 0;
+			float: left;
+			font-size: 14px;
+			>li{
+				height: 26px;
+				line-height: 26px;
+			}
+		}
+		
+		
+		@at-root .order-payable{
+			float: right;
+			line-height: 94px;
+			padding-right: 30px;
+			font-size: 14px;
+			font-weight: normal;
+			
+			.total-money{
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
+	}
+	
+	
+	@at-root .wechat-pay-main{
+		margin: 40px 40px 90px;
+		
+		@at-root .select-pay-way{
+			height: 40px;
+			line-height: 40px;
+			
+			>li{
+				width: 160px;
+				border: 1px solid #b1b1b1;
+				border-bottom: none;
+				border-radius: 6px 6px 0 0;
+				text-align: center;
+				position: relative;
+				
+				&.selected{
+					&:after{
+						content: '';
+						width: 160px;
+						height: 1px;
+						background-color: #fff;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+		
+		
+		@at-root .erweima-box{
+			width: 820px;
+			height: 500px;
+			border: 1px solid #b1b1b1;
+			
+			
+			.wechat-pay-logo{
+				@include jl_sprites;
+				@include wepay_logo;
+				margin: 20px 0 0 40px;
+			}
+			
+			.wechat-pay-erweima{
+				display: block;
+				width: 260px;
+				height: 260px;
+				margin: 0 auto 20px;
+			}
+			
+			.erweima-means{
+				@include jl_sprites;
+				@include wepay_means;
+				margin: 0 auto;
+			}
+			
+			.pay-success{
+				display: block;
+				margin: 50px auto;
+				height: 77px;
+				line-height: 77px;
+				text-align: center;
+				font-size: 50px;
+				color: #00c285;
+				
+				>i{
+					display: inline-block;
+					@include jl_sprites;
+					@include submit_success;
+					vertical-align: middle;
+					margin: 0 30px;
+				}
+			}
+			
+			
+			.pay-success-yes{
+				display: block;
+				width: 140px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 16px;
+				background-color: #fea925;
+				color: white;
+				border-radius: 4px;
+				margin: 0 auto;
+				box-shadow: 2px 2px 10px #a26609;
+				cursor: pointer;
+				
+				&:hover{
+					background-color: #feb261;
+				}
+			}
+		}
+	}
+}

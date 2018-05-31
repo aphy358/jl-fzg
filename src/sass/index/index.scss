@@ -1,0 +1,38 @@
+
+// 引入公共资源
+
+// 基础样式
+@import "../base.scss";
+
+// 雪碧图样式
+@import "../sprites.scss";
+
+// 雪碧图样式
+@import "../../static/sprites/jl_sprites.scss";
+
+
+// 顶部轮播样式
+@import "./modules/banner.scss";
+
+// 通知栏
+@import "./modules/notice.scss";
+
+// 我的关注、订单管理
+@import "./modules/concernAndOrder.scss";
+
+// 今日主推
+@import "./modules/recommendToday.scss";
+
+// 热门推荐
+@import "./modules/recommendHot.scss";
+
+
+
+body{
+    background: #f6f6f6;
+}
+@at-root .i-t-n-bg{
+    background: black!important;
+    opacity: 0.6;
+    filter: Alpha(opacity=60);
+}

@@ -1,0 +1,21 @@
+<!-- 城市关键字模板 -->
+<section class="key-word-city-wrap">
+    <div class="kwc-inner">
+        <div class="kwc-history">
+            <div class="kwc-history-title">
+                <span>历史搜索</span>
+                <button class="kwc-history-clear" data-track="公共_关键字_城市面板_清空历史">清空</button>
+            </div>
+            <ul class="kwc-city-block"></ul>
+        </div>
+
+        <!-- 国内城市 -->
+        <div switch name="kwc-block" data-for="kwc-block-0" class="kwc-block-outer" checked><%= internalPanel %></div>
+
+        <!-- 港澳台城市 -->
+        <div switch name="kwc-block" data-for="kwc-block-2" class="kwc-block-outer"><%= gatPanel %></div>
+
+        <!-- 国外城市 -->
+        <div switch name="kwc-block" data-for="kwc-block-3" class="kwc-block-outer"><%= externalPanel %></div>
+    </div>
+</section>

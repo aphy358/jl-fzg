@@ -1,0 +1,48 @@
+
+<!--今日主推模板-->
+
+<ul class="i-r-switch-group">
+    <% for(var i = 0; i < mainPushCityDtoList.length; i++){ var o = mainPushCityDtoList[i]; %>
+    <li><button switch name="i-r-switch-btn" class="i-r-switch-btn" data-track="首页_今日主推_城市切换" data-src="i-r-switch-btn<%= o.cityName %>" <%= i === 0 ? 'checked' : '' %> ><%= o.cityName %></button></li>
+    <% } %>
+</ul>
+
+<ul>
+    <% for(var i = 0; i < mainPushCityDtoList.length; i++){ var o = mainPushCityDtoList[i]; %>
+    <li switch name="i-r-switch-hotels" class="i-r-switch-hotels" data-for="i-r-switch-btn<%= o.cityName %>" <%= i === 0 ? 'checked' : '' %> >
+        <% if(o.mainPushProductDtoList && o.mainPushProductDtoList.length > 4){ %>
+        <div>
+            <i class="switch-bar switch-left disabled" data-track="首页_今日主推_切换_左"></i>
+            <i class="switch-bar switch-right" data-track="首页_今日主推_切换_右"></i>
+        </div>
+        <% } %>
+        <ul class="i-r-t-hotel-group">
+            <% for(var j = 0; o.mainPushProductDtoList && j < o.mainPushProductDtoList.length; j++){ var p = o.mainPushProductDtoList[j]; %>
+            <li class="i-r-t-hotel-item <%= j > 3 ? 'hidden' : 'shown' %>">
+                <a href="<%= p.detailLink %>" target="_blank" data-track="首页_今日主推_酒店项">
+                    <div class="irt-img-wrap">
+                        <img src="<%= p.picSrc %>" alt="" <%= p.picSrc === '/common/images/nopic.png' ? 'style="width: auto;margin-left: 32px;"' : '' %> >
+                        <% if(p.remark){ %>
+                        <!-- <i class="irt-img-tag-icon"><%= p.remark %></i> -->
+                        <% } %>
+                        <i class="irt-gz-icon" data-hotelid="<%= p.infoId %>"></i>
+                    </div>
+                    <div class="irt-row-one">
+                        <b><%= p.infoName %></b>
+                        <span class="irt-order-btn" data-cityid="<%= o.cityId %>" data-hotelid="<%= p.infoId %>" data-suppId="<%= p.suppId %>" data-roomid="<%= p.roomType %>" data-pricetypeid="<%= p.priceType %>" >立即预订</span>
+                    </div>
+                    <!-- <div class="irt-row-two">
+                        <label>携程最低价：<span>￥<%= p.netLowestPrice %></span></label>
+                        <label class="fr">捷旅今日价：<span class="oranged"></span></label>
+                    </div> -->
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </li>
+    <% } %>
+</ul>
+
+<div class="i-recommend-btn">
+    <a href="/mainPush/toTodayPush.do" target="_blank" class="" data-track="首页_今日主推_查看全部">查看全部<i class="i-check-more-icon"></i></a>
+</div>

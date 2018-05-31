@@ -1,0 +1,22 @@
+<!--价格详情弹出框模板-->
+
+<div class="hli-price-detail-wrap">
+	<table>
+		<thead>
+			<tr>
+				<th>日期</th>
+				<th>价格【房态】</th>
+				<th>预订间数</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for(var i = 0; i < list.length; i++){ var o = list[i]; %>
+			<tr>
+				<td><%= o.date %></td>
+				<td>￥<%= o.salePrice %> /间 【<%= o.statusText %>】</td>
+				<td><%= o.occupancyStock %>间</td>
+			</tr>
+			<% } %>
+		</tbody>
+	</table>
+</div>

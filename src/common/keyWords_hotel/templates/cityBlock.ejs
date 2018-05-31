@@ -1,0 +1,11 @@
+<!-- 酒店关键字模板城市部分 -->
+<div class="kwh-block-title">城市</div>
+<ul class="kwh-block-content-list city">
+    <% for(var i = 0; i < dataList.length; i++){ var o = dataList[i]; %>
+    <li class="kwh-block-content-item city" data-cityname="<%= o.aname %>" data-citytype="<%= o.type %>" data-cityid="<%= o.cityid %>" data-track="公共_关键字_酒店面板_城市项">     
+        <%= o.cityStr %>
+        <span class="area"><%= o.countryName %></span>
+        <span class="area"><%= o.provinceName %></span>
+    </li>
+    <% } %>
+</ul>

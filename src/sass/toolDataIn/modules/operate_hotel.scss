@@ -1,0 +1,36 @@
+.operate-hotel{
+	height: 100px;
+	line-height: 100px;
+	
+	.i-s-origin-switch{
+		vertical-align: middle;
+	}
+	
+	
+	@at-root .select-hotel{
+		width: 300px;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 10px;
+		margin-left: 20px;
+		
+		&:hover{
+			border-color: #64bfe0;
+			box-shadow: 0 0 5px #64bfe0;
+		}
+	}
+	
+	@at-root .add-hotel{
+		height: 30px;
+		line-height: 30px;
+		padding: 0 20px;
+		margin-left: 30px;
+		color: #ffffff;
+		border-radius: 4px;
+		background-color: #ffa725;
+		
+		&:hover{
+			background-color: #ff7625;
+		}
+	}
+}

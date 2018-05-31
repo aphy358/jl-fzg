@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+input, option, select {
+	box-sizing: border-box;
+	border: 1px solid #c5dbec;
+}
+
+input[type=text]::-ms-clear {
+	display: none;
+}
+
+button {
+	border: none;
+}
+
+i {
+	font-style: normal;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+//清除浮动
+.clearfix {
+	zoom: 1
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}

@@ -1,0 +1,8 @@
+<option value="">全部</option>
+<% for (var i = 0; i < dataList.length; i++) {
+  var o = dataList[i];
+%>
+
+<option value="<%= o.customerUserId %>"><%= o.customerUserName %></option>
+
+<% } %>

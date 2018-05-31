@@ -1,0 +1,18 @@
+// 每个酒店左边图片部分的样式
+@at-root .nd-hotel-img-wrap{
+    float: left;
+    position: relative;
+    margin: 10px;
+
+    .img-outer{
+        width: 300px;
+        height: 280px;
+        overflow: hidden;
+
+        img{
+            float: left;
+            width: 300px;
+            min-height: 280px;
+        }
+    }
+}

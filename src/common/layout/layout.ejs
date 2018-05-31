@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta name="renderer" content="webkit" />
+    <link rel="shortcut icon" href="<%= staticConfig.img.favicon %>" />
+    <link rel="bookmark" href="<%= staticConfig.img.favicon %>" type="image/x-icon"　/>
+
+    <title><%= pageTitle %></title>
+
+    <!--[if lt IE 10]>
+        <script src="<%= staticConfig.js.html5shiv %>"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!--[if lt IE 9]>
+        <script src="<%= staticConfig.js.es5_shim %>"></script>
+        <script src="<%= staticConfig.js.es5_sham %>"></script>
+    <![endif]-->
+
+    <!--引入页面头部，导航栏-->
+    <%= header %>
+
+    <main>
+        <!--引入页面主体-->
+        <%= content %>
+    </main>
+
+    <!--引入页面页脚部分-->
+    <%= footer %>
+
+    <!--加载jquery及其插件-->
+    <script src="<%= staticConfig.js.jquery %>"></script>
+
+    <!--百度统计代码-->
+    <script>
+        var _hmt=_hmt||[];(function(){var b=document.createElement("script");b.src="https://hm.baidu.com/hm.js?b0101da8489c5e5fd2ddfc868c939bbf";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();$(document).delegate("input[data-track], select[data-track], my-select[data-track]","change",function(a){trackFun($(this),"change")});$(document).delegate("[data-track]:not(select):not(input):not(my-select):not(.no-track-click), input[type='button'][data-track], input[type='submit'][data-track]","click",function(a){trackFun($(this),"click")});$(document).delegate("[data-track]","draged",function(a){trackFun($(this),"draged")});function trackFun(c,b){var a=c.attr("data-track");window._hmt&&window._hmt.push(["_trackEvent",a,b])}$(document).delegate("[switch]","click",function(c){var d=$(this);var b=d.attr("name");$("[name='"+b+"']").removeAttr("checked");d.attr("checked","checked");var a=d.attr("data-src");if(a){$("*[data-for='"+a+"']").click()}});
+        $(document).delegate('input[readonly]', 'focus', function () {this.blur();});
+    </script>
+
+</body>
+
+</html>

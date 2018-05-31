@@ -1,0 +1,329 @@
+//该文件为首页搜索框样式
+
+//搜索框
+.search-outer{
+    width: 1180px;
+    margin: auto;
+    height: 1px;
+    margin-top: -1px;
+}
+.search-box{
+    position: absolute;
+    width: 590px;
+    height: 296px;
+    top: 152px;
+    background: $white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    opacity: .9;
+    filter: alpha(opacity=90);
+
+    //搜索框左边的tab，酒店、门票、手机版的切换
+    @at-root .s-tab{
+        width: 110px;
+        height: 296px;
+        background: $gray-f3;
+        float: left;
+        overflow: hidden;
+
+        li{
+            background: $gray-f3;
+            border-right: 1px solid $gray-e2;
+            overflow: hidden;
+            *vertical-align: top;
+
+            .sprites{
+                @include sprites;
+                margin-top: 1px;
+
+                &.sp-jiudian{
+                    @include jiudian1;
+                }
+                &.sp-menpiao{
+                    @include menpiao1;
+                }
+                &.sp-shoujiban{
+                    @include shouji1;
+                }
+            }
+
+            &.s-tab-item{
+                font-size: 15px;
+                color: $gray-3;
+                padding: 20px;
+                border-bottom: 1px solid $gray-e2;
+                cursor: pointer;
+
+                &.current, &:hover{
+                    color: $baseBlue;
+                    background: $white;
+                    border-right: none;
+
+                    .sp-jiudian{
+                        @include jiudian2;
+                    }
+                    .sp-menpiao{
+                        @include menpiao2;
+                    }
+                    .sp-shoujiban{
+                        @include shouji2;
+                    }
+                }
+            }
+
+            > div{
+                float: left;
+                *zoom: 1;
+            }
+
+            .s-tab-text{
+                min-width: 45px;
+                height: 19px;
+            }
+
+            .sprites{
+                margin-right: 6px;
+            }
+
+            // 占位li，只为展示一个右边框
+            &.p-h{
+                height: 120px;
+            }
+        }
+    }
+
+    //搜索框右边的搜索内容编辑框
+    @at-root .s-box-wrap{
+        display: inline-block;
+        width: 480px;
+        height: 296px;
+        overflow: hidden;
+
+        @at-root .s-box{
+            height: 296px;
+            color: $gray-3;
+            font-size: 15px;
+            display: none;
+
+            &.current{
+                display: block;
+            }
+
+            @at-root .sbox-hotel{
+                margin: 20px 30px 0;
+
+                @at-root .sbox-hotel-tab{
+                    height: 32px;
+                    overflow: hidden;
+                    position: relative;
+
+                    .s-h-item{
+                        position: relative;
+                        float: left;
+                        padding: 0 15px 8px;
+                        cursor: pointer;
+                        *zoom: 1;
+
+                        i{
+                            display: none;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -4px;
+                            bottom: 0;
+                            width: 0;
+                            height: 0;
+                            overflow: hidden;
+                            line-height: 0;
+                            font-size: 0;
+                            vertical-align: middle;
+                            border-bottom: 4px solid $baseBlue;
+                            border-top: 0 none;
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                        }
+
+                        &.current{
+                            color: $baseBlue;
+                            border-bottom: 2px solid $baseBlue;
+
+                            i{
+                                display: block;
+                            }
+                        }
+
+                        &:hover{
+                            color: $baseBlue;
+                        }
+
+                    }
+                    .s-h-bline{
+                        width: 100%;
+                        border-bottom: 2px solid $gray-a;
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        height: 0;      //在IE7下，一个空div会有一个默认高度
+                        z-index: -1;
+                    }
+                }
+
+                @at-root .sbox-hotel-item{
+                    margin-top: 16px;
+                    overflow: hidden;
+
+                    > div{
+                        float: left;
+                        *zoom: 1;
+                    }
+                    @at-root .s-h-i-title{
+                        width: 60px;
+                        height: 35px;
+                        line-height: 35px;
+                        color: $gray-6;
+                        text-align: right;
+                        margin-right: 10px;
+                    }
+
+                    @at-root .s-h-i-input{
+                        width: 350px;
+                        width: calc(100% - 70px);
+
+                        input{
+                            padding-left: 6px;
+                            height: 33px;
+                            width: 342px;
+                            line-height: 2.2\9;
+                            border-radius: 5px;
+                            border: 1px solid $gray-9;
+                        }
+
+                        &.date{
+                            width: 140px;
+                            overflow: hidden;
+                            position: relative;
+
+                            input{
+                                width: 132px;
+                            }
+
+                            .sprites{
+                                &.sp-rili{
+                                    @include rili;
+                                    position: absolute;
+                                    right: 5px;
+                                    top: 10px;
+                                }
+                            }
+
+                        }
+
+                        @at-root .s-h-submit{
+                            width: 156px;
+                            height: 35px;
+                            line-height: 35px;
+                            font-size: 16px;
+                            text-align: center;
+                            color: $white;
+                            border-radius: 5px;
+                            background: $baseBlue;
+                            position: absolute;
+                            bottom: 30px;
+                            cursor: pointer;
+
+                            &:hover{
+                                background: $darkenBlue;
+                            }
+
+                            .sp-sousuo{
+                                @include sousuo;
+                                display: inline-block;
+                                *display: inline;
+                                *zoom: 1;
+                                margin-right: 5px;
+                                position: relative;
+                                top: 3px;
+                                *top: 0;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            @at-root .sbox-wx{
+                height: 296px;
+                position: relative;
+
+                @at-root .sbox-erweima-wrap{
+                    position: relative;
+                    width: 150px;
+                    height: 150px;
+                    left: 150px;
+                    top: 50px;
+
+                    .border{
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                    }
+                    .b1{
+                        top: 0;
+                        left: 0;
+                        border-top: 2px solid $gray-b;
+                        border-left: 2px solid $gray-b;
+                    }
+                    .b2{
+                        top: 0;
+                        right: 0;
+                        border-top: 2px solid $gray-b;
+                        border-right: 2px solid $gray-b;
+                    }
+                    .b3{
+                        bottom: 0;
+                        left: 0;
+                        border-bottom: 2px solid $gray-b;
+                        border-left: 2px solid $gray-b;
+                    }
+                    .b4{
+                        bottom: 0;
+                        right: 0;
+                        border-bottom: 2px solid $gray-b;
+                        border-right: 2px solid $gray-b;
+                    }
+
+                    @at-root .sbox-erweima{
+                        @include sprites;
+                        @include erweima130;
+                        margin: auto;
+                        position: relative;
+                        top: 10px;
+                    }
+                }
+
+                @at-root .sbox-wx-text{
+                    color: $wxRed;
+                    font-size: 12px;
+                    position: absolute;
+                    left: 310px;
+                    top: 55px;
+                    letter-spacing: 1px;
+                    writing-mode: vertical-rl;
+                    width: 10px\9;
+                    line-height: 14px\9;
+                }
+
+                @at-root .sbox-wx-bg{
+                    @include sprites;
+                    @include shoujiban_bg;
+
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+
+        }
+        
+    }
+}

@@ -1,0 +1,68 @@
+@import "../base.scss";
+//基础样式
+@import "../sprites.scss"; //雪碧图样式
+//iconfont
+@import "../../static/fonts/iconfont.css";
+
+// 雪碧图样式
+@import "../../static/sprites/jl_sprites.scss";
+
+
+//重置样式
+@import "../common/reset.scss";
+
+
+//主体样式
+@import "./modules/main.scss";
+
+
+//导航栏样式
+@import "./modules/header.scss";
+
+
+//内容头部样式
+@import "./modules/content_head.scss";
+
+
+//马来西亚政府提示和费用明细部分
+@import "./modules/warning.scss";
+
+
+//预订信息
+@import "./modules/order_msg.scss";
+
+
+//杂费信息
+@import "./modules/other_msg.scss";
+
+
+//入住信息
+@import "./modules/stay_msg.scss";
+
+
+//个性化要求
+@import "./modules/personal_requirement.scss";
+
+
+//确认方式
+@import "./modules/confirm_way.scss";
+
+
+//结算信息
+@import "./modules/balance_msg.scss";
+
+
+//温馨提示
+@import "./modules/kindly_tips.scss";
+
+
+//“下一步，支付”
+@import "./modules/payment_confirm.scss";
+
+
+//页面右半部分
+@import "./modules/content_right.scss";
+
+
+//订单确认信息
+@import "./modules/confirm_order_msg.scss";

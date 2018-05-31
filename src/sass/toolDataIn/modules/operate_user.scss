@@ -1,0 +1,51 @@
+.operate-user{
+	height: 80px;
+	line-height: 80px;
+	
+	
+	@at-root .select-user{
+		float: left;
+		
+		#operateUser{
+			padding: 8px;
+			cursor: pointer;
+			
+			&:hover{
+				border-color: #64bfe0;
+				box-shadow: 0 0 5px #64bfe0;
+			}
+			
+			>option{
+				//height: 30px;
+				//line-height: 30px;
+				//padding: 10px 0;
+			}
+			
+		}
+	}
+	
+	
+	@at-root .add-or-del-user{
+		float: right;
+		cursor: pointer;
+		font-size: 14px;
+		
+		.add-user{
+			color: red;
+			&:hover{
+				color: #ffa725;
+				text-decoration: underline;
+			}
+		}
+		
+		.del-user{
+			color: red;
+			margin-right: 20px;
+			&:hover{
+				color: #ffa725;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+

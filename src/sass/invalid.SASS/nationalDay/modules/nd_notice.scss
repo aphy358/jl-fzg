@@ -1,0 +1,32 @@
+// 底部提示标签样式
+.nd-notice-wrap{
+	margin: 20px auto -20px;
+
+	@at-root .nd-notice-img{
+		@include nd_sprites_old;
+		@include nd-bottom-bg;
+		margin: auto;
+
+		@at-root .nd-notice-text{
+			font-size: 14px;
+			color: 666;
+			padding-top: 48px;
+
+			h1{
+				font-size: 30px;
+				font-weight: 100;
+				text-align: center;
+				color: #3399ff;
+			}
+
+			p{
+				width: 650px;
+				padding-left: 120px;
+			}
+
+			.orange{
+				color: orange;
+			}
+		}
+	}
+}

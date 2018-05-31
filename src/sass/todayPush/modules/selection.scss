@@ -1,0 +1,37 @@
+.condition-select{
+	line-height: 50px;
+	.city-select{
+		margin-top: 10px;
+		.city-condition{
+			float: left;
+			display: inline-block;
+			width: 54px;
+			padding: 0 10px;
+			text-align: right;
+			color: #999999;
+			font-weight: bold;
+		}
+		.unlimit{
+			float: left;
+			display: inline-block;
+			margin: 0 50px;
+			cursor: pointer;
+		}
+		.city-list{
+			display: block;
+			line-height: 50px;
+			margin-left: 200px;
+			li{
+				float: left;
+				height: 24px;
+				line-height: 24px;
+				margin: 13px 5px;
+				padding: 0 10px;
+				cursor: pointer;
+			}
+			.city-selected{
+				background-color: #cbe3ff;
+			}
+		}
+	}
+}

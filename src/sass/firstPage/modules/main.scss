@@ -1,0 +1,148 @@
+.firstPage-main{
+  width: 100%;
+  @at-root .about-fzg{
+    width: 100%;
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+    }
+    @at-root .about-fzg-btn{
+      position: absolute;
+      bottom: 134px;
+      left: 32%;
+      font-size: 14px;
+      .to-fzg{
+        display: inline-block;
+        text-align: center;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        background-color: transparent;
+        border: 1px solid #999999;
+        color: #999999;
+        border-radius: 6px;
+        margin-right: 60px;
+        &:hover{
+          background-color: #ffa825;
+          border: none;
+          color: #ffffff;
+        }
+      }
+      .register-fzg{
+        display: inline-block;
+        text-align: center;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        background-color: transparent;
+        color: #999999;
+        border: 1px solid #999999;
+        border-radius: 6px;
+        &:hover{
+          background-color: #3399ff;
+          border: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  @at-root .platform{
+    width: 100%;
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+    }
+    @at-root .platform-btn{
+      position: absolute;
+      bottom: 134px;
+      left: 50%;
+      margin-left: -180px;
+      width: 360px;
+      font-size: 14px;
+      .view-doc{
+        display: inline-block;
+        text-align: center;
+        float: left;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        border-radius: 6px;
+        margin-right: 60px;
+        &:hover{
+          background-color: #ffa825;
+          border: none;
+          color: #ffffff;
+        }
+      }
+      .application-background{
+        float: left;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        position: relative;
+      }
+      .application{
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        background-color: transparent;
+        border-radius: 6px;
+        color: #ffffff;
+        &:hover{
+          background-color: #3399ff;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+*{
+  font-family: "Microsoft YaHei";
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+a,a:hover{
+  text-decoration: none;
+}
+input,button{
+  border: none;
+}
+b,i{
+  font-weight: normal;
+  font-style: normal;
+}
+//清除浮动
+.clearfix:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1
+}
+
+.footer-wrap{
+  margin-top: 0;
+}

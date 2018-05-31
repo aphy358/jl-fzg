@@ -1,0 +1,6 @@
+<!-- 自定义 select 面板 -->
+<ul class="my-select-list">
+    <% for(var i = 0; i < options.length; i++){ var option = options[i]; %>
+    <li data-value="<%= option.value %>" class="<%= option.attr %>" ><%= option.text %></li>
+    <% } %>
+</ul>

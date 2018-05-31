@@ -1,0 +1,131 @@
+// 每个酒店右边详情部分的样式
+@at-root .nd-hotel-detail-wrap{
+    width: 830px;
+    float: left;
+    font-size: 14px;
+    color: #333333;
+    margin: 10px 20px 10px 10px;
+
+    @at-root .nd-hotel-brief-wrap{
+        position: relative;
+        border-bottom: 1px solid darkgray;
+        padding-bottom: 15px;
+
+        @at-root .nd-hname1{
+            font-size: 18px;
+            color: #3399ff;
+        }
+    
+        @at-root .nd-hname2{
+            font-size: 14px;
+            color: #666;
+        }
+    
+        @at-root .nd-hotel-star-wrap{
+            margin-top: 15px;
+
+            ul{
+                display: inline-block;
+                position: relative;
+                top: 1px;
+
+                @at-root .nd-star{
+                    @include nd_sprites;
+                    float: left;
+    
+                    &.star-empty{
+                        @include star-empty;
+                    }
+    
+                    &.star-half{
+                        @include star-half;
+                    }
+    
+                    &.star-full{
+                        @include star-full;
+                    }
+                }
+            }
+        }
+    
+        @at-root .nd-hotel-detail-btn{
+            position: absolute;
+            top: 30px;
+            right: 0;
+            font-size: 18px;
+            color: #f08200;
+            border: 2px solid #f08200;
+            border-radius: 10px;
+            padding: 10px 20px;
+            letter-spacing: 1px;
+
+            &:hover{
+                color: #d27303;
+                border: 2px solid #d27303;
+            }
+        }
+    }
+    
+    table{
+        width: 100%;
+
+        @at-root .nd-roomtype-price-row{
+            height: 44px;
+            border-bottom: 1px solid darkgray;
+
+            @at-root .nd-bed-breakfast-td{
+
+                p{
+                    text-align: center;
+                    line-height: 15px;
+                }
+            }
+            .cancel-type, .book-type{
+                &:hover{
+                    color: #3399ff;
+                    cursor: context-menu;
+                    text-decoration: underline;
+                }
+            }
+
+            .currency{
+                color: red;
+                font-size: 12px;
+            }
+
+            @at-root .nd-roomtype-price-pre{
+                color: gray;
+                text-decoration: line-through;
+            }
+            
+            @at-root .nd-roomtype-price{
+                color: red;
+                font-size: 16px;
+            }
+    
+            @at-root .nd-order-btn-wrap{
+                text-align: right;
+    
+                @at-root .nd-hotel-order-btn{
+                    color: white;
+                    background: #f08200;
+                    font-size: 16px;
+                    width: 80px;
+                    text-align: center;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 3px 0;
+        
+                    &.disabled, &.disabled:hover{
+                        background: #aaa;
+                    }
+        
+                    &:hover{
+                        background: #d27303;
+                    }
+                }
+            }
+
+        }
+    }
+}

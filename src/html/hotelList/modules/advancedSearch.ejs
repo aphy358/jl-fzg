@@ -1,0 +1,132 @@
+
+<div class="advanced-search-wrap">
+    <div class="a-s-inner">
+        <div class="a-s-row">
+            <label class="a-s-label">位置区域</label>
+            <div class="a-s-item no-limit-wrap">
+                <span class="no-limit zone-biz active">不限</span>
+            </div>
+            <div class="a-s-item a-s-zone-biz" data-code="a-s-zone" data-track="列表页_高级搜索_行政区">
+                <span class="a-s-item-wrap">行政区<i class="drag-down"></i></span>
+                <div class="area-biz-mask"></div>
+            </div>
+            <div class="a-s-item a-s-zone-biz" data-code="a-s-biz" data-track="列表页_高级搜索_商业圈">
+                <span class="a-s-item-wrap">商业圈<i class="drag-down"></i></span>
+                <div class="area-biz-mask"></div>
+            </div>
+            <ul class="a-s-zone-biz-list" data-for="a-s-zone"></ul>
+            <ul class="a-s-zone-biz-list" data-for="a-s-biz"></ul>
+        </div>
+    
+        <div class="a-s-row">
+            <label class="a-s-label">价格区间</label>
+            <div class="a-s-item no-limit-wrap">
+                <span id="noLimitPriceRange" class="no-limit active">不限</span>
+            </div>
+            <ul class="a-s-list">
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_200元以下" data-value="0-199">200元以下</label></li>
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_200-300元" data-value="200-299">200-300元</label></li>
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_300-500元" data-value="300-499">300-500元</label></li>
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_500-800元" data-value="500-799">500-800元</label></li>
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_800-1500元" data-value="800-1499">800-1500元</label></li>
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_1500-3000元" data-value="1500-2999">1500-3000元</label></li>
+                <li class="a-s-item"><label><input type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-track="列表页_高级搜索_价格_3000元以上" data-value="3000-29999">3000元以上</label></li>
+                <li class="a-s-item hidden"><label><input id="cusPriceRange" type="radio" name="priceRange" class="a-s-checkbox" data-attr="priceRange" data-code="asi-price-v" data-value=""><span></span></label></li>
+            </ul>
+
+            <div class="search-item-price-wrap">
+                <input class="search-line-price" id="slp_1" value="" placeholder="最低价" title="最低价">
+                <i class="search-line-seperator"></i>
+                <input class="search-line-price" id="slp_2" value="" placeholder="最高价" title="最高价">
+            </div>
+
+            <span class="search-line-price-btn" data-track="列表页_高级搜索_价格区间_确定">确定</span>
+        </div>
+    
+        <div class="a-s-row">
+            <label class="a-s-label">酒店等级</label>
+            <div class="a-s-item no-limit-wrap">
+                <span class="no-limit active">不限</span>
+            </div>
+            <ul class="a-s-list">
+                <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="star" data-code="asi-star-v1" data-track="列表页_高级搜索_星级_二星级及以下" data-value="10,15,20,25">二星级及以下/经济</label></li>
+                <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="star" data-code="asi-star-v2" data-track="列表页_高级搜索_星级_三星级" data-value="30,35">三星级/舒适</label></li>
+                <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="star" data-code="asi-star-v3" data-track="列表页_高级搜索_星级_四星级" data-value="40,45">四星级/高档</label></li>
+                <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="star" data-code="asi-star-v4" data-track="列表页_高级搜索_星级_五星级" data-value="50,55">五星级/豪华</label></li>
+            </ul>
+        </div>
+    
+        <div class="a-s-toggle-show">
+            <div class="a-s-row">
+                <label class="a-s-label">确认时间</label>
+                <div class="a-s-item no-limit-wrap">
+                    <span class="no-limit active">不限</span>
+                </div>
+                <!-- 该条件不用传到后台，是用作在前端筛选数据用的 -->
+                <ul class="a-s-list">
+                    <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="immediate" data-code="asi-confirm-v1" data-track="列表页_高级搜索_确认时间_立即确认" data-value="XS-1">立即确认</label></li>
+                    <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="immediate" data-code="asi-confirm-v2" data-track="列表页_高级搜索_确认时间_60秒确认" data-value="XS-2">60秒确认</label></li>
+                    <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="immediate" data-code="asi-confirm-v3" data-track="列表页_高级搜索_确认时间_待查" data-value="XS-0">待查</label></li>
+                </ul>
+            </div>
+
+			<div class="a-s-row">
+                <label class="a-s-label">可否取消</label>
+                <div class="a-s-item no-limit-wrap">
+                    <span class="no-limit active">不限</span>
+                </div>
+                <!-- 该条件不用传到后台，是用作在前端筛选数据用的 -->
+                <ul class="a-s-list">
+                    <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="canceltype" data-code="asi-canceltype-v1" data-track="列表页_高级搜索_取消_可取消" data-value="canceltype-0">可取消</label></li>
+                    <li class="a-s-item"><label><input type="checkbox" class="a-s-checkbox" data-attr="canceltype" data-code="asi-canceltype-v2" data-track="列表页_高级搜索_取消_不可取消" data-value="canceltype-1">不可取消</label></li>
+                </ul>
+            </div>
+            
+            <div class="a-s-row">
+                <label class="a-s-label">酒店集团</label>
+                <div class="a-s-item no-limit-wrap">
+                    <span id="noLimitHotelGroup" class="no-limit active">不限</span>
+                </div>
+                <div class="a-s-item a-s-zone-biz" data-code="a-s-hotelgroup" style="width: 75px;" data-track="列表页_高级搜索_酒店集团">
+                    <span class="a-s-item-wrap">酒店集团<i class="drag-down"></i></span>
+                    <div class="area-biz-mask"></div>
+                </div>
+                
+                <ul class="a-s-zone-biz-list" data-for="a-s-hotelgroup">
+                    <div class="hgroup-more">
+                        <span class="a-s-item-wrap">
+                            <span class="hgroup-more-span">更多</span><i class="slide-bar down" style="margin-right: -5px;top:-2px;"></i></span>
+                        <div class="area-biz-mask"></div>
+                    </div>
+                </ul>
+            </div>
+            
+            <div class="a-s-row">
+                <label class="a-s-label">特殊要求</label>
+                <div class="a-s-item no-limit-wrap">
+                    <span class="no-limit active">不限</span>
+                </div>
+                <div class="a-s-item a-s-zone-biz" data-code="a-s-requirements" style="width: 75px;" data-track="列表页_高级搜索_特殊要求">
+	                <span class="a-s-item-wrap">更多要求<i class="drag-down"></i></span>
+	                <div class="area-biz-mask"></div>
+	            </div>
+	            <ul class="a-s-zone-biz-list" data-for="a-s-requirements">
+	                <li class="a-s-item hidden"><label><input type="checkbox" class="a-s-checkbox" data-code="asi-requirements-v0">占位</label></li>
+	            </ul>
+            </div>
+        </div>
+
+        <div class="a-s-inner-mask"></div>
+    </div>
+
+    <div class="a-s-expand-btn" data-track="列表页_高级搜索_高级搜索条件">
+        <div class="mask"></div>
+        高级搜索条件
+        <i class="slide-bar down"></i>
+    </div>
+</div>
+
+<div class="advanced-search-selected-wrap hidden">
+    <ul class="a-s-s-list"></ul>
+    <button class="a-s-s-btn" data-track="列表页_高级搜索_清空条件">清空条件</button>
+</div>

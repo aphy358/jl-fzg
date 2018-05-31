@@ -1,0 +1,21 @@
+<%
+for (var i = 0; i < dataList.length; i++) {
+    var item = dataList[i];
+%>
+<tr class="per-product">
+    <td class="tb-city">
+        <span><%= item.cityName %></span>
+    </td>
+    <td class="tb-hotel">
+        <span><%= item.infoName %></span>
+    </td>
+    <td class="tb-cityid">
+        <span><%= item.infoId %></span>
+    </td>
+    <td class="tb-option">
+        <button data-hotelid="<%= item.infoId %>">
+            删除
+        </button>
+    </td>
+</tr>
+<% } %>

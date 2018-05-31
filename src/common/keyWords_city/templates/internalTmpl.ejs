@@ -1,0 +1,20 @@
+<ul>
+	<!-- 城市模板，下面定义的 block 表示的是如 'ABCD'、'EFGHI'、'JKLM' 这样的块... -->
+	<% for(key in internalCities){ var block = internalCities[key] %>
+	<li class="kwc-internal-block">
+		<label><%= key %></label>
+		<ul>
+			<% for(var i = 0; i < block.length; i++){ %>
+			<li>
+				<label><%= block[i].w %></label>
+				<ul>
+					<% for(var j = 0; j < block[i].item.length; j++){ var cItem = block[i].item[j]   %>
+					<li class="city-item" data-citytype="<%= cItem.t %>" data-cityid="<%= cItem.i %>"><%= cItem.n %></li>
+					<% } %>
+				</ul>
+			</li>
+			<% } %>
+		</ul>
+	</li>
+	<% } %>
+</ul>

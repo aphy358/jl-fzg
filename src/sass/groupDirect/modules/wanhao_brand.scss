@@ -1,0 +1,66 @@
+@at-root .wanhao-brand{
+	>.brand{
+		.per-brand{
+			@include wanhao_sprites;
+		}
+	}
+}
+
+@at-root .wanhao-brand-1{
+	
+	>.brand{
+		.brand-logo-1{@include wanhao_01_01;}
+		.brand-logo-2{@include wanhao_01_02;}
+		.brand-logo-3{@include wanhao_01_03;}
+		.brand-logo-4{@include wanhao_01_04;}
+		.brand-logo-5{@include wanhao_01_05;}
+		.brand-logo-6{@include wanhao_01_06;}
+		.brand-logo-7{@include wanhao_01_07;}
+		.brand-logo-8{@include wanhao_01_08;}
+	}
+}
+
+@at-root .wanhao-brand-2{
+	>.brand{
+		.brand-logo-1{@include wanhao_02_01;}
+		.brand-logo-2{@include wanhao_02_02;}
+		.brand-logo-3{@include wanhao_02_03;}
+		.brand-logo-4{@include wanhao_02_04;}
+		.brand-logo-5{@include wanhao_02_05;}
+		.brand-logo-6{@include wanhao_02_06;}
+		.brand-logo-7{@include wanhao_02_07;}
+		.brand-logo-8{@include wanhao_02_08;}
+	}
+}
+
+@at-root .wanhao-brand-3{
+	>.brand{
+		.brand-logo-1{@include wanhao_03_01;}
+		.brand-logo-2{@include wanhao_03_02;}
+		.brand-logo-3{@include wanhao_03_03;}
+		.brand-logo-4{@include wanhao_03_04;}
+		.brand-logo-5{@include wanhao_03_05;}
+		.brand-logo-6{@include wanhao_03_06;}
+		.brand-logo-7{@include wanhao_03_07;}
+		.brand-logo-8{@include wanhao_03_08;}
+	}
+}
+
+
+@at-root .wanhao-brand-4{
+	>.brand{
+		.brand-logo-1{@include wanhao_04_01;}
+		.brand-logo-2{@include wanhao_04_02;}
+		.brand-logo-3{@include wanhao_04_03;}
+		.brand-logo-4{@include wanhao_04_04;}
+	}
+}
+
+
+@at-root .wanhao-brand-5{
+	>.brand{
+		.brand-logo-1{@include wanhao_05_01;}
+		.brand-logo-2{@include wanhao_05_02;}
+		.brand-logo-3{@include wanhao_05_03;}
+	}
+}

@@ -1,0 +1,147 @@
+// 雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+.login-box{
+	width: 360px;
+	height: 392px;
+	background-color: #fff;
+	padding-top: 30px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	font-family: consolas, 'lucida console', monaco, 'courier new', courier, monospace, mono, serif;
+	#loginJl{
+		>h2{
+			font-size: 20px;
+			font-weight: normal;
+			text-align: center;
+			height: 20px;
+			line-height: 20px;
+		}
+		>.err-msg{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			color: #c50f0f;
+			text-indent: 90px;
+			//font-size: 14px;
+		}
+		>ul{
+			width: 260px;
+			margin: 0 auto;
+			>li{
+				display: block;
+				width: 100%;
+				height: 60px;
+				border-bottom: 1px solid #cccccc;
+				
+				&.li-error{
+					border-bottom: 1px solid red;
+				}
+				
+				>input{
+					display: inline-block;
+					border: none;
+					width: 180px;
+					height: 30px;
+					float: left;
+					line-height: 30px;
+					margin: 26px 0 0;
+					padding-left: 20px;
+					overflow: hidden;
+					font-size: 14px;
+				}
+				>i{
+					float: left;
+					display: inline-block;
+					margin: 30px 9px 10px;
+					@include jl_sprites;
+				}
+				.login-icon-1{
+					@include company_number;
+				}
+				.login-icon-2{
+					@include user_name;
+				}
+				.login-icon-3{
+					@include password;
+				}
+				.login-icon-4{
+					@include identify_code;
+				}
+			}
+			.yzm-box{
+				height: 60px;
+				line-height: 60px;
+				border-bottom: 1px solid #999999;
+				>input{
+					float: left;
+					display: inline-block;
+					height: 30px;
+					line-height: 30px;
+					margin-top: 26px;
+					font-size: 14px;
+					width: 140px;
+					padding-left: 12px;
+				}
+				>img{
+					float: left;
+					display: block;
+					width: 60px;
+					height: 30px;
+					margin-top: 22px;
+				}
+			}
+		}
+		#loginIn{
+			display: block;
+			width: 260px;
+			height: 40px;
+			line-height: 40px;
+			background-color: #ffa825;
+			color: #ffffff;
+			text-align: center;
+			border-radius: 4px;
+			margin: 0 auto 10px;
+			font-size: 16px;
+			letter-spacing: 15px;
+			border: none;
+			cursor: pointer;
+			&:hover {
+				background-color: #ff8400;
+			}
+		}
+		.login-bottom{
+			margin: 0 auto;
+			width: 260px;
+			height: 14px;
+			line-height: 14px;
+			>input{
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				vertical-align: middle;
+				margin-bottom: 2px;
+			}
+			>label{
+				display: inline-block;
+				line-height: 14px;
+			}
+			>a{
+				float: right;
+				display: inline-block;
+				line-height: 14px;
+				margin: 0 6px;
+			}
+			.find-password{
+				color: #000;
+				margin: 0;
+			}
+			.register{
+				color: #ffa825;
+			}
+		}
+	}
+}
+
+body .layui-layer{
+	//border-radius: 8px;
+}

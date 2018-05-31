@@ -1,0 +1,32 @@
+<!-- 一个月的字符串模板 -->
+<div class="calendar-one-month-wrap current" data-month="<%= month %>">
+    <h1 class="calendar-month-head no-track-click" data-track="公共_日历_拖拽"><%= head %></h1>
+    <table>
+        <thead class="calendar-month-thead">
+            <tr>
+                <th class="weekend">日</th>
+                <th>一</th>
+                <th>二</th>
+                <th>三</th>
+                <th>四</th>
+                <th>五</th>
+                <th class="weekend">六</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i < 6; i++){ %>
+            <tr class="calendar-row">
+                <% for(var j = 0; j < 7; j++){ var td = tdArr[i * 7 + j]; %>
+                <td class="<%= td.isWeekend ? 'weekend' : '' %>">
+                    <div class="calendar-td-inner<%= td.isValidDay ? '' : ' day-grayed' %>" data-day="<%= td.dayStr %>" data-track="公共_日历_选择日期">
+                        <p class="calendar-day-num">
+                            <%= parseInt(td.dayStr.split('/')[2]) %>
+                        </p>
+                    </div>
+                </td>
+                <% } %>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>

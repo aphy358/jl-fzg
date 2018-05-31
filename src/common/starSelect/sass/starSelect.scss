@@ -1,0 +1,24 @@
+
+.i-s-star-select-wrap{
+    position: absolute;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    padding: 10px 15px;
+    box-shadow: 0 1px 5px #ababab;
+    overflow: hidden;
+    z-index: 9999;
+
+    li{
+        line-height: 25px;
+
+        label{
+
+            input{
+                position: relative;
+                top: 2px;
+                margin-right: 3px;
+            }
+        }
+    }
+}

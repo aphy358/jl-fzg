@@ -1,0 +1,85 @@
+
+
+.nearby-outer{
+    background: white;
+    
+    @at-root .nearby-wrap{
+        width: 1200px;
+        font-size: 15px;
+        padding: 20px 10px;
+        margin: 20px auto 0;
+
+        @at-root .nearby-title{
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+        }
+        
+        @at-root .nearby-hotel-list{
+            width: 1220px;
+            height: 500px;
+            padding: 20px;
+            margin-left: -20px;
+            overflow: hidden;
+            
+            @at-root .nearby-hotel-item{
+                float: left;
+                width: 285px;
+                height: 240px;
+                margin: 0 20px 20px 0;
+                border: 1px solid #e3e3e3;
+                box-sizing: border-box;
+                transition: all .2s linear;
+                
+                a{
+                    text-decoration: none;
+                }
+                
+                &:hover{
+                    box-shadow: 0 0 10px rgba(82, 80, 84, .9);
+                    transform: translate3d(-2px, -2px, 0)
+                }
+                
+                @at-root .nbhi-img{
+                    position: relative;
+                    height: 200px;
+                    overflow: hidden;
+                
+                    img{
+                        float: left;
+                        width: 100%;
+                        min-height: 100%;
+                    }
+                    
+                    @at-root .nbhi-price-wrap{
+                        position: absolute;
+                        left: 0;
+                        bottom: 10px;
+                        width: 100px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        color: orange;
+                        font-size: 14px;
+                        background: black;
+                        opacity: .7;
+                        filter: alpha(opacity=70);
+                    
+                        @at-root .nbhi-price-num{
+                            font-size: 20px;
+                            margin: 0 2px;
+                        }
+                    }
+                }
+                
+                @at-root .nbhi-hotel-name{
+                    height: 40px;
+                    line-height: 40px;
+                    padding-left: 10px;
+                    font-size: 16px;
+                    color: #339afc;
+                }
+            }
+        }
+    }
+}

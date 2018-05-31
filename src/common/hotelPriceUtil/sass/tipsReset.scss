@@ -1,0 +1,50 @@
+
+
+// 重置 layer.tips 的样式
+.layui-layer-tips i.layui-layer-TipsT,
+.layui-layer-tips i.layui-layer-TipsB{
+    border-color: transparent!important;
+    border-style: solid!important;
+    margin-left: -10px!important;
+    border-right-color: transparent!important;
+    left: 30px!important;
+}
+
+.layui-layer-tips i.layui-layer-TipsT{
+    border-top-color: orange!important;
+    border-width: 10px 10px 0!important;
+    bottom: -10px!important;
+}
+.layui-layer-tips i.layui-layer-TipsB{
+    border-bottom-color: orange!important;
+    border-width: 0 10px 10px!important;
+    top: -10px!important;
+}
+
+.layui-layer-tips i.layui-layer-TipsT:after,
+.layui-layer-tips i.layui-layer-TipsB:after{
+    content: ''!important;
+    position: absolute!important;
+    border-color: transparent!important;
+    border-style: solid!important;
+    margin-left: -10px!important;
+}
+
+.layui-layer-tips i.layui-layer-TipsT:after{
+    border-top-color: #FFFFF3!important;
+    border-width: 10px 10px 0!important;
+    bottom: 1px!important;
+}
+
+.layui-layer-tips i.layui-layer-TipsB:after{
+    border-bottom-color: #FFFFF3!important;
+    border-width: 0 10px 10px!important;
+    top: 1px!important;
+}
+
+.layui-layer-tips .layui-layer-content{
+    border: solid 1px #e5c799;
+    box-shadow: none!important;
+    color: #333333!important;
+    padding: 10px 15px!important;
+}

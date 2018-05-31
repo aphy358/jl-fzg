@@ -1,0 +1,36 @@
+<span>加宽带</span>
+<div class="other-msg">
+	<ul>
+		<li>
+			￥ <%= data[0][0].price %>
+			/间/晚
+		</li>
+		<li class="open-detail-msg">+</li>
+	</ul>
+</div>
+<div class="open-add-msg">
+	<div class="add-msg-head">
+		￥
+		<%= data[0][0].price %>
+		/ 间 / 日
+	</div>
+	<div class="add-msg-option">
+		<ul>
+			<li>
+				<input class="network-start start-date" type="text" value="<%= startDate %>">
+			</li>
+			<li>至</li>
+			<li>
+				<input class="network-end end-date" type="text" value="<%= endDate %>">
+			</li>
+      <li>
+        <select class="network-num add-num add-type" name="bed-num" id="bed-num">
+          <% for(var i=0;i< roomNum;i++){ %>
+          <option value="<%= i+1 %>" ofType="-1"><%= i+1 %></option>
+          <% } %>
+        </select>
+      </li>
+			<li class="add-network add-item" add-category="add-network" data-str="<%= encodeURI( JSON.stringify(data) ) %>" add-type="宽带">+</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<div hidden="hidden" id="div_User"></div>
+<input type="hidden" id="promotionType" value="7">
+
+
+<!-- banner部分 -->
+<section class="cr-banner-wrap">
+    <img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1526541000083.jpg" width="100%" alt="">
+    <div class="cr-notice-shadow"></div>
+    <div class="cr-notice-wrap">
+        <div class="cr-notice-inner">
+            <div class="cr-notice-icon"></div>
+            <span>各位同行好，因我司产品不允许放在各大团购网站上售卖，如被检测到是团购网站上来源的订单，我司将终止与贵司合作并索取不低于2晚房费的赔付。请各位同行配合，谢谢！</span>
+        </div>
+    </div>
+</section>
+
+<!-- 活动酒店 -->
+<section class="main-content-wrap">
+    <!--预订流程-->
+    <div class="area-nav">
+        <ul class="area-nav-ul clearfix">
+            <li class="hk selected" data-area="hk"></li>
+            <li class="aomen" data-area="aomen"></li>
+        </ul>
+    </div>
+
+    <div class="hotel-region internal">
+        <div class="hotel-region-inner shown" data-area="hk">
+            <%= hkHTML %>
+        </div>
+
+        <div class="hotel-region-inner hidden" data-area="aomen">
+            <%= aomenHTML %>
+        </div>
+    </div>
+
+    <%= rulesHTML %>
+
+</section>

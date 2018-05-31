@@ -1,0 +1,54 @@
+// 页面顶部导航栏样式
+.nd-top{
+    height: 110px;
+
+    @at-root .nd-top-inner-wrap{
+        width: 100%;
+        height: 110px;
+        position: fixed;
+        background: white;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        @at-root .nd-top-inner{
+            overflow: hidden;
+            width: 1102px;
+            margin: auto;
+    
+            @at-root .nd-jl-logo{
+                @include nd_sprites;
+                @include nd-jl-logo;
+                float: left;
+                margin: 35px 40px;
+            }
+    
+            @at-root .nd-top-item{
+                float: left;
+                font-size: 28px;
+                color: #666;
+                margin: 23px 10px;
+                padding: 8px 25px;
+                letter-spacing: 2px;
+                border: 3px solid white;
+                cursor: context-menu;
+    
+                &.current, &:hover{
+                    color: #EB8300;
+                    border: 3px solid #EB8300;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    @at-root .nd-top-img-wrap{
+        margin-top: 110px;
+        overflow: hidden;
+
+        img{
+            float: left;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+
+// 首页雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+.fixed{
+    position: fixed!important;
+}
+
+.calendar-wrap{
+    display: inline-block;
+    position: absolute;
+    padding-right: 15px;
+    box-shadow: 0 1px 5px #ababab;
+    overflow: hidden;
+    background: white;
+    min-width: 745px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 9999;
+
+    @at-root .calendar-head-bg{
+        position: absolute;
+        width: 100%;
+        min-width: 745px;
+        height: 45px;
+        background: #f5f5f5;
+        cursor: all-scroll;
+        z-index: -1;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            background: #cccccc;
+            height: 220px;
+            left: 50%;
+            top: 68px;
+        }
+    }
+
+    @at-root .month-switch-bar-wrap{
+        position: absolute;
+        width: 100%;
+
+        @at-root .month-switch-bar{
+            @include jl_sprites;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 15px;
+            opacity: .7;
+            filter: Alpha(opacity=70);
+            z-index: 999;
+            
+            &.month-left{
+                @include left_10;
+                left: 30px;
+
+                &:hover{
+                    @include left_11;
+                }
+            }
+
+            &.month-right{
+                @include right_10;
+                right: 30px;
+
+                &:hover{
+                    @include right_11;
+                }
+            }
+        }
+    }
+
+    @at-root .calendar-one-month-wrap{
+        position: relative;
+        width: 350px;
+        float: left;
+        margin: 15px 0 15px 15px;
+
+        @at-root .calendar-month-head{
+            font-size: 18px;
+            color: #333333;
+            text-align: center;
+            position: relative;
+            top: -5px;
+            cursor: all-scroll;
+        }
+
+        table{
+
+            .weekend{
+                color: red;
+            }
+
+            @at-root .calendar-month-thead{
+                th{
+                    text-align: center;
+                    font-weight: bold;
+                    width: 50px;
+                    height: 46px;
+                }
+            }
+
+            @at-root .calendar-row{
+
+                td{
+                    font-size: 12px;
+                    height: 35px;
+                    text-align: center;
+                    
+                    >*{
+                        cursor: context-menu;
+                    }
+
+                    @at-root .calendar-td-inner{
+                        position: relative;
+                        padding: 8px 0;
+
+                        &.between-check{
+                            background: #C1E0FF;
+                        }
+
+                        &.checkin, &.checkout{
+                            @include jl_sprites;
+                            color: white;
+                            background-color: #C1E0FF;
+
+                            .calendar-p-status{
+                                &.green{
+                                    color: #65f165;
+                                }
+                            }
+                        }
+
+                        &.checkin{
+                            @include cshapLeft;
+                            height: auto;
+                        }
+
+                        &.checkout{
+                            @include cshapRight;
+                            height: auto;
+                        }
+
+                        &.day-grayed,
+                        &.tmp-grayed{
+                            color: #aaaaaa;
+                        }
+
+                        @at-root .calendar-p-price{
+                            line-height: 8px;
+                        }
+
+                        @at-root .calendar-p-status{
+                            line-height: 18px;
+                            transform: scale(.9);
+                            zoom: .9;
+
+                            &.green{
+                                color: #31a531;
+                            }
+
+                            &.red{
+                                color: red;
+                            }
+
+                            &.purple{
+                                color: #AA13AA;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

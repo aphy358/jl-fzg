@@ -1,0 +1,18 @@
+<div class="select-city-mid">
+	<ul>
+		<li class="city-active hot-btn">热门</li>
+		<% for(var i=0;i< citysGroup.length;i++){ %>
+		<li><%= citysGroup[i] %></li>
+		<% } %>
+	</ul>
+</div>
+<div class="select-city-bot clearfix">
+	<div class="hot-city">
+		<ul>
+			<% for(var i=0;i< hotCitys.length;i++){ %>
+			<li><%= hotCitys[i] %></li>
+			<% } %>
+		</ul>
+	</div>
+</div>
+

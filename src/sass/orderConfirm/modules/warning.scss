@@ -1,0 +1,82 @@
+//费用明细部分
+@at-root .warning{
+	width: 860px;
+	height: 24px;
+	line-height: 24px;
+	color: #000;
+	margin-top: 4px;
+	background-color: #ffffb8;
+	.warning-icon{
+		margin: 2px 0;
+		float: left;
+		@include jl_sprites;
+		@include warning;
+	}
+	.warning-dialog{
+		float: left;
+		font-size: 14px;
+	}
+	.warning-detail{
+		padding-left: 10px;
+		font-size: 12px;
+		float: left;
+		position: relative;
+		.warning-in{
+			float: left;
+			color: #7698e5;
+			cursor: pointer;
+		}
+		@at-root .cost-detail{
+			padding: 5px;
+			
+			h5{
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			h6{
+				font-weight: bold;
+				margin-top: 10px;
+			}
+		}
+		.arrow-icon{
+			position: absolute;
+			bottom: 17px;
+			left: 18px;
+			display: none;
+			width: 0;
+			height: 0;
+			border-top: 15px solid #a2a2a2;
+			border-left: 15px dashed transparent;
+			border-right: 15px dashed transparent;
+			&::after{
+				content: "";
+				position: absolute;
+				bottom: 1px;
+				left: -15px;
+				display: block;
+				width: 0;
+				height: 0;
+				border-top: 15px solid white;
+				border-left: 15px dashed transparent;
+				border-right: 15px dashed transparent;
+			}
+		}
+	}
+}
+
+
+//马来西亚政府提示
+@at-root .special-cue{
+	width: 1180px;
+	height: 30px;
+	background-color: #ecf8ff;
+	line-height: 30px;
+	padding-left: 18px;
+	i{
+		color: #fb640c;
+	}
+	p{
+		color: #fbbb76;
+	}
+}

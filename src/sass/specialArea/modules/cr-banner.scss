@@ -1,0 +1,46 @@
+
+@import "../../sprites.scss";
+
+.cr-banner-wrap{
+    position: relative;
+    overflow: hidden;
+    //height: 600px;
+
+    img{
+        float: left;
+    }
+
+    @at-root .cr-notice-shadow{
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 0;
+        background: black;
+        opacity: .3;
+        filter: Alpha(opacity=30);
+    }
+
+    @at-root .cr-notice-wrap{
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        top: 0;
+    
+        @at-root .cr-notice-inner{
+            color: white;
+            width: 1180px;
+            margin: auto;
+    
+            @at-root .cr-notice-icon{
+                @include sprites;
+                @include laba;
+
+                display: inline-block;
+                position: relative;
+                top: 4px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

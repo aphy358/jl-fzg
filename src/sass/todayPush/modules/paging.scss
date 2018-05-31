@@ -1,0 +1,75 @@
+.paging-box{
+	margin: 20px 0;
+	float: right;
+	*{
+		box-sizing: border-box;
+	}
+	button{
+		display: inline-block;
+		padding: 0 10px;
+		margin: 0 6px;
+		border: 1px solid #CCCCCC;
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		&:hover{
+			background-color: #336daa;
+			color: #ffffff;
+		}
+	}
+	.page-start{}
+	.last-page{}
+	.paging-list-box{
+		position: relative;
+		top: 10px;
+		width: 150px;
+		height: 30px;
+		display: inline-block;
+		overflow: hidden;
+		border-left: 1px solid #cccccc;
+		.paging-list{
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 30px;
+			line-height: 30px;
+			li{
+				float: left;
+				text-align: center;
+				cursor: pointer;
+				>a{
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+					border: 1px solid #CCCCCC;
+					margin: 0 0 -1px -1px;
+					color: #000;
+					text-decoration: none;
+					&:hover{
+						background-color: #336daa;
+						color: #ffffff;
+					}
+				}
+			}
+			.paging-selected{
+				background-color: #336daa;
+				>a{
+					color: #ffffff;
+				}
+			}
+		}
+	}
+	.next-page{}
+	.page-end{}
+	.to-page-box{
+		//float: left;
+		height: 30px;
+		line-height: 30px;
+		.to-page{
+			width: 40px;
+			height: 30px;
+			padding-left: 10px;
+		}
+	}
+	.go-to-page{}
+}

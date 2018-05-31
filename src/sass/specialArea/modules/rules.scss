@@ -1,0 +1,25 @@
+.activity-rules{
+	color: #ffffff;
+	width: 1020px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	
+	@at-root .rules-title{
+		margin: 100px auto 74px;
+		
+		@include special_area_sprite;
+		@include rules_title;
+	}
+	
+	@at-root .rules-text{
+		width: 730px;
+		font-size: 16px;
+		margin: 0 auto 60px;
+		line-height: 40px;
+		
+		.need-indent{
+			text-indent: 100px;
+		}
+	}
+}

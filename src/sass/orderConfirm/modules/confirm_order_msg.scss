@@ -1,0 +1,73 @@
+//订单确认信息
+.confirm-order-msg{
+	z-index: 100;
+	width: 800px;
+	background-color: #eff6fc;
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	margin-left: -400px;
+	box-shadow: 1px 1px 50px rgba(0,0,0,.3);
+	h5{
+		height: 42px;
+		line-height: 42px;
+		background-color: #33a6ff;
+		color: #ffffff;
+		padding-left: 20px;
+	}
+	@at-root .final-order-msg{
+		padding: 20px;
+		float: left;
+		max-height: 400px;
+		overflow: auto;
+		ul{
+			float: left;
+			li{
+				width: 100%;
+				font-size: 12px;
+				color: #000;
+				float: left;
+				display: block;
+				span{
+					display: inline-block;
+					float: left;
+					width: 126px;
+					font-weight: bold;
+					line-height: 30px;
+				}
+				p{
+					display: inline-block;
+					float: left;
+					width: 534px;
+					line-height: 30px;
+					.total-price{
+						font-size: 16px;
+						color: #fcb637;
+					}
+				}
+				@at-root .extra-add{
+					//max-height: 60px;
+					//overflow-y: auto;
+				}
+			}
+		}
+	}
+	.confirm-msg-bot{
+		width: 326px;
+		margin: 0 auto;
+		button{
+			width: 158px;
+			margin: 20px 0;
+			height: 30px;
+			line-height: 30px;
+			&:nth-child(1){
+				background-color: #5eb95e;
+				color: #ffffff;
+				border: 1px solid #5eb95e;
+			}
+			&:nth-child(2){
+				border: 1px solid #dddddd;
+			}
+		}
+	}
+}

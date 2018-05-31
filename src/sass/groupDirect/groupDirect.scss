@@ -1,0 +1,28 @@
+@import "./modules/banner.scss";
+
+
+// 雪碧图样式
+@import "../../static/sprites/jl_sprites.scss";
+@import "../../static/img/groupDirect/wanhao_sprites.scss";
+@import "../../static/img/groupDirect/xidawu_sprites.scss";
+@import "../../static/img/groupDirect/zhouji_sprites.scss";
+@import "../../static/img/groupDirect/bestwest_sprites.scss";
+
+
+@import "./modules/reset.scss";
+
+@import "./modules/main.scss";
+
+
+
+@import "./modules/switch_group.scss";
+
+
+
+@import "./modules/switch_brand.scss";
+
+@import "./modules/brand.scss";
+@import "./modules/wanhao_brand.scss";
+@import "./modules/xidawu_brand.scss";
+@import "./modules/zhouji_brand.scss";
+@import "./modules/bestwest_brand.scss";

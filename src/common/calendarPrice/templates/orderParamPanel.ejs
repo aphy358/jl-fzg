@@ -1,0 +1,48 @@
+<!-- 点击 "预定" 按钮时弹出的面板 -->
+<section>
+    <div class="order-pp-wrap">
+        <div class="opp-datepick-wrap">
+            <span class="label">入离日期</span>
+            <input type="text" class="oop-date-input checkin" value="<%= checkin %>" data-v="<%= checkin %>" readonly>
+            <span class="label2">至</span>
+            <input type="text" class="oop-date-input checkout" value="<%= checkout %>" data-v="<%= checkout %>" readonly>
+        </div>
+        <% if ( page && page.split('|')[0] === 'planeShuttle'){ %>
+        <div class="plane-price">接送机1辆（4人/辆）：￥<b class="overt-num"><%= page.split('|')[1] %></b></div>
+        <div class="total-price">总价 ：￥<b class="overt-num"><%= page.split('|')[1] %></b></div>
+        <% } %>
+        <div class="opp-children-str-wrap">
+            <span class="label">每间</span>
+            <input type="text" id="opp-children-input" class="adult-children-input" value="2成人" readonly data-adultnum="2" data-childrennum="0" data-childrenagestr="">
+        </div>
+        <a href="#" target="_blank" class="nd-order-confirm-btn" 
+                data-hotelid="<%= hotelId %>" 
+                data-startDate="<%= startDate %>" 
+                data-endDate="<%= endDate %>"
+                data-supplierId="<%= supplierId %>"
+                data-roomId="<%= roomId %>"
+                data-rateType="<%= rateType %>"
+                data-breakFastId="<%= breakFastId %>"
+                data-paymentType="<%= paymentType %>"
+                data-hotelName="<%= hotelName %>"
+                data-cityType="<%= cityType %>"
+                data-page="<%= page %>" >
+            确定
+        </a>
+    </div>
+
+    <!-- 价格日历 -->
+    <section class="calendar-price-wrap">
+        <div class="month-switch-bar-wrap">
+            <div class="month-switch-bar month-left hidden"></div>
+            <div class="month-switch-bar month-right"></div>
+        </div>
+    
+        <!-- 各月份的字符串 -->
+        <%= monthStr %>
+    </section>
+
+    <!-- 每间住客数，更多选项弹出框 -->
+    <%= childrenAdultSelector %>
+    
+</section>

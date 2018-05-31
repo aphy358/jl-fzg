@@ -1,0 +1,14 @@
+<div class="hotel-item" add-id="<%= addId %>" date="<%= everyDate %>"
+     count="<%= addNum %>" type="<%= ofType %>" name="<%= addType %>">
+    <div class="hotel-item-left fl">
+      <i class="hotel-add-date"><%= everyDate %></i>
+      <i class="hotel-add-type"></i><%= addType %>
+      <i class="hotel-add-num"><%= addNum %></i>份
+    </div>
+    <div class="hotel-item-right fr">
+      ￥
+      <i class="line-total">
+        <%= addPrice[everyDate] * addNum %>
+      </i>
+    </div>
+</div>

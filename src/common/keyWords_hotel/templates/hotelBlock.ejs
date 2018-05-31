@@ -1,0 +1,14 @@
+<!-- 酒店关键字模板酒店名称部分 -->
+<div class="kwh-block-title">酒店</div>
+<ul class="kwh-block-content-list hotel">
+    <% for(var i = 0; i < dataList.length; i++){ var o = dataList[i]; %>
+    <li class="kwh-block-content-item hotel" data-track="公共_关键字_酒店面板_酒店项">
+        <a href="<%= o.link %>" target="_blank" data-hotelid="<%= o.id %>">
+            <span class="kwh-hotel-name"><%= o.hotelStr %></span>
+            <span class="area"><%= o.countryName %></span>
+            <span class="area"><%= o.provinceName %></span>
+            <span class="area"><%= o.cityName %></span>
+        </a>
+    </li>
+    <% } %>
+</ul>

@@ -1,0 +1,101 @@
+<%
+function isChinese(str){  //判断是不是中文
+    var reCh=/[u00-uff]/;
+    return !reCh.test(str);
+}
+function lenStat(target){
+    var strlen=0; //初始定义长度为0
+    var txtval = $.trim(target);
+    for(var i=0;i<txtval.length;i++){
+        if(isChinese(txtval.charAt(i))==true){
+            if (txtval.charAt(i) == ' ' || txtval.charAt(i) == '"' || txtval.charAt(i) == '“' || txtval.charAt(i) == '”'){
+            	//空格不占字符
+            }else{
+                strlen=strlen+2;//中文为2个字符
+            }
+        }else{
+            strlen=strlen+1;//英文一个字符
+        }
+    }
+    strlen=Math.ceil(strlen/2);//中英文相加除2取整数
+    return strlen;
+}
+
+for (var p = 0; p < 20; p++) {
+    var everyProduct = products[p];
+    if (everyProduct){
+%>
+
+<tr class="per-product nd-hotel-detail-wrap">
+    <td
+            class="tb-city <% if (lenStat(everyProduct.cityName) > 3){%>tb-overflow<% } %>"
+            data-class="tb-city"
+            data-title="<%= everyProduct.cityName %>"
+    >
+        <span><%= everyProduct.cityName %></span>
+    </td>
+    <td
+            class="tb-hotel nd-hname1 <% if (lenStat(everyProduct.infoName) > 10){%>tb-overflow<% } %>"
+            data-class="tb-hotel"
+            data-title="<%= everyProduct.infoName %>"
+    >
+        <span><%= everyProduct.infoName %></span>
+    </td>
+    <td
+            class="tb-room <% if (lenStat(everyProduct.roomTypeName) > 10){%>tb-overflow<% } %>"
+            data-class="tb-room"
+            data-title="<%= everyProduct.roomTypeName %>"
+    >
+        <span><%= everyProduct.roomTypeName %></span>
+    </td>
+    <td
+            class="tb-breakfast <% if (lenStat(everyProduct.priceTypeName) > 6){%>tb-overflow<% } %>"
+            data-class="tb-breakfast"
+            data-title="<%= everyProduct.priceTypeName %>"
+    >
+        <span><%= everyProduct.priceTypeName %></span>
+    </td>
+    <td class="tb-peer"
+        data-class="tb-peer"
+        data-index="<%= p %>"
+        data-hasrequest="<%= everyProduct.hasRequest %>"
+        data-hotelid="<%= everyProduct.infoId %>"
+        data-supplierid="<%= everyProduct.suppId %>"
+        data-roomid="<%= everyProduct.roomType %>"
+        data-ratetype="<%= everyProduct.priceType %>"
+        data-checkin="<%= everyProduct.startDay %>"
+        data-checkout="<%= everyProduct.endDay %>"
+    >
+        <span><%= (everyProduct.showSalePrice ? everyProduct.showSalePrice : '暂无价格') %></span>
+    </td>
+    <td class="tb-outer" data-class="tb-outer">
+        <span><%= (everyProduct.netLowestPrice ? '￥' + everyProduct.netLowestPrice : '暂无价格') %></span>
+    </td>
+    <td class="tb-deadline" data-class="tb-deadline">
+        <span><%= everyProduct.checkInDate.split(' ')[0] %> - <%= everyProduct.checkOutDate.split(' ')[0] %></span>
+    </td>
+    <td
+            class="tb-remark <% if(everyProduct.remark){ if (lenStat(everyProduct.remark) > 16){%>tb-overflow<% } } %>"
+            data-class="tb-remark" data-title="<%= encodeURIComponent(everyProduct.remark) %>"
+    >
+        <span><%= everyProduct.remark %></span>
+    </td>
+    <td class="tb-option" data-class="tb-option">
+        <button
+                class="nd-hotel-order-btn"
+                data-hotelid="<%= everyProduct.infoId %>"
+                data-supplierid="<%= everyProduct.suppId %>"
+                data-roomid="<%= everyProduct.roomType %>"
+                data-ratetype="<%= everyProduct.priceType %>"
+                data-startdate="<%= everyProduct.checkInDate.split(' ')[0] %>"
+                data-enddate="<%= everyProduct.checkOutDate.split(' ')[0] %>"
+                data-paymenttype="<%= everyProduct.paymentType %>"
+                data-citytype="<%= everyProduct.cityType %>"
+        >
+            选择日期
+        </button>
+    </td>
+</tr>
+    <% } %>
+
+<% } %>

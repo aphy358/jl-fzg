@@ -1,0 +1,27 @@
+//个性化要求
+
+@at-root .personal-requirement {
+	width: 756px;
+	float: left;
+	background-color: #f7fcfd;
+	.personal-content {
+		padding-left: 20px;
+		p {
+			height: 50px;
+			line-height: 50px;
+		}
+		label {
+			display: inline-block;
+			line-height: 50px;
+			margin: 0 10px 0 0;
+			vertical-align: middle;
+			input {
+				height: 12px;
+				margin-right: 3px;
+			}
+		}
+		.personal-special {
+			color: #ff6600;
+		}
+	}
+}

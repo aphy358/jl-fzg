@@ -1,0 +1,42 @@
+//温馨提示
+
+@at-root .kindly-tips {
+	width: 756px;
+	float: left;
+	background-color: #f7fcfd;
+	> ul {
+		padding-left: 20px;
+		> li {
+			height: auto;
+			line-height: 50px;
+			> p {
+				display: inline-block;
+				float: left;
+			}
+			.kindly-tips1 {
+				width: 90px;
+				height: 100%;
+			}
+			.kindly-tips2 {
+				width: 560px;
+				margin-left: 50px;
+			}
+		}
+	}
+	
+	//expedia供应商入住提示特殊样式
+	.expedia-tips-box{
+		padding: 0 20px;
+		>p{
+			line-height: 30px;
+			>b{
+				line-height: 50px;
+			}
+		}
+		>ul{
+			>li{
+				line-height: 30px;
+			}
+		}
+	}
+}

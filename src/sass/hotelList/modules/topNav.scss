@@ -1,0 +1,20 @@
+
+// topNav
+
+.top-nav-wrap{
+    font-size: 14px;
+    background: white;
+    height: 30px;
+    line-height: 30px;
+    box-shadow: 0 0 5px #ddd;
+
+    @at-root .top-nav-inner{
+        color: #666666;
+        width: 1200px;
+        margin: auto;
+
+        @at-root .fzg-blue{
+            color: #339afc;
+        }
+    }
+}

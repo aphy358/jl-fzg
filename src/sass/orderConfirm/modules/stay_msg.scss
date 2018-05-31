@@ -1,0 +1,133 @@
+//入住信息
+@at-root .stay-msg {
+	width: 756px;
+	float: left;
+	background-color: #f7fcfd;
+	
+	@at-root .guest-group {
+		border-bottom: 1px solid #d7e8f5;
+		padding-top: 10px;
+		
+		&:last-child {
+			border-bottom: none;
+		}
+		
+		.guest {
+			float: left;
+			width: 100%;
+			padding-left: 20px;
+			margin-bottom: 8px;
+			position: relative;
+			
+			
+			&.guest-required:before{
+				position: absolute;
+				left: 10px;
+				line-height: 30px;
+				content: '*';
+				color: red;
+			}
+			
+			.guest-order {
+				margin-right: 20px;
+				line-height: 30px;
+			}
+			p {
+				float: left;
+				line-height: 50px;
+			}
+			@at-root .nation-box {
+				float: left;
+				position: relative;
+				.national-result-wrap {
+					position: relative;
+					display: none;
+					z-index: 99;
+					
+					.national-result-mask {
+						width: 100%;
+						height: 100%;
+						position: fixed;
+						top: 0;
+						left: 0;
+					}
+					ul {
+						position: absolute;
+						width: 198px;
+						top: 30px;
+						left: 0;
+						border-left: 1px solid #d3d3d3;
+						border-right: 1px solid #d3d3d3;
+						background-color: #fff;
+						z-index: 100;
+						li {
+							height: 25px;
+							line-height: 25px;
+							border-bottom: 1px solid #d3d3d3;
+							padding: 0 25px;
+							overflow: hidden;
+							cursor: context-menu;
+						}
+					}
+				}
+			}
+			input {
+				float: left;
+				width: 200px;
+				height: 30px;
+				line-height: 30px;
+				padding-left: 10px;
+			}
+			
+			
+			.guest-i-b{
+				width: 200px;
+				float: left;
+				margin: 0 10px;
+				.error-msg-outer{
+					display: none;
+					width: 100%;
+					height: 14px;
+					line-height: 14px;
+					margin-top: 6px;
+					font-size: 12px;
+					color: red;
+					
+					.icon-warning{
+						display: inline-block;
+						margin: 0 4px 2px 6px;
+						vertical-align: middle;
+						@include jl_sprites;
+						@include warning_red;
+					}
+				}
+			}
+		}
+	}
+	
+	@at-root .marketing-box{
+		padding: 0 20px;
+		line-height: 24px;
+		.marketing-info{
+			color: red;
+			line-height: 24px;
+			word-wrap: break-word;
+		}
+		.user-marketing-info{
+			width: 480px;
+			height: 70px;
+			margin: 10px 0;
+			padding: 10px;
+		}
+		.gift-phone{
+			width: 200px;
+			height: 30px;
+			line-height: 30px;
+			margin: 10px;
+			padding-left: 10px;
+		}
+		.hide{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<% if (returnCode == -400001){ %>
+<div class="prompt-box">
+    <h6 class="prompt-head">您还未登录房掌柜</h6>
+    <p class="prompt-text">请先登录后再重新操作</p>
+    <div class="btns">
+        <button class="see-soon">稍后再说</button>
+        <button class="login-now">现在登录</button>
+    </div>
+</div>
+<% }else{ %>
+<div class="prompt-box">
+    <h6 class="prompt-head"><%= returnMsg %></h6>
+    <button class="prompt-yes">确定</button>
+</div>
+<% } %>

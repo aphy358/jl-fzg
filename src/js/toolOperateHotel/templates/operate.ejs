@@ -1,0 +1,24 @@
+<div class="operate-staff">
+    <div class="per-line">
+        <span class="per-prefix">酒店id</span>
+        <p class="per-line-p" id="hotelId"><%= id %></p>
+    </div>
+    <div class="per-line">
+        <span class="per-prefix">酒店名称</span>
+        <p class="per-line-p" id="hotelName"><%= name %></p>
+    </div>
+    <label class="per-line" for="">
+        <span class="per-prefix">员工名字</span>
+        <select name="staffList" id="staffList">
+            <option value="">暂不分配</option>
+            <% for (var i = 0; i < dataList.length; i++) {
+                var o = dataList[i];
+            %>
+
+            <option value="<%= o.customerUserId %>" <%= o.customerUserId === cusid ? 'selected' : '' %> ><%= o.customerUserName %></option>
+
+            <% } %>
+        </select>
+
+    </label>
+</div>

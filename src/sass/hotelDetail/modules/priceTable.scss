@@ -1,0 +1,98 @@
+
+
+.price-table-outer{
+    padding-bottom: 20px;
+    background: white;
+    
+    @at-root .price-table-inner{
+        width: 1200px;
+        margin: auto;
+        
+        @at-root .hl-item{
+
+            @at-root .progress-outer{
+                position: relative;
+                box-shadow: 0 0 5px #dadada;
+                border: solid 1px #d0d0d0;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            
+            @at-root .hli-price-list-wrap{
+                
+                @at-root .hotel-price-table{
+                    border: none;
+                    border-bottom: 1px solid #E3E3E3;
+                    
+                    @at-root .hotel-price-thead{
+                        th{
+                            position: relative;
+                            font-size: 15px;
+                            color: #666;
+                            height: 40px;
+                            border: 1px solid #E3E3E3;
+                            background: #f4fbfe;
+                            
+                            span{
+                                display: table-cell!important;
+                                padding-left: 15px;
+                            }
+
+                            &.align-center{
+                                span{
+                                    display: inline-block!important;
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                    
+                    @at-root .hli-expand-inner{
+                        line-height: 30px;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #339afc;
+                        background: #f4fbfe;
+                        cursor: context-menu;
+
+                        &.fix-bottom{
+                            position: fixed;
+                            bottom: 0;
+                            width: 1198px;
+                            box-shadow: 0 0 5px #dadada;
+                            z-index: 9999;
+                        }
+                    }
+                    
+                    @at-root .auto-hide{
+                        //display: none;
+                    }
+                    
+                    @at-root .align-center{
+                        text-align: center;
+                    }
+                }
+    
+                @at-root .fzg-loading-wrap{
+                    max-width: 1200px;
+                    margin: auto;
+                    padding: 15px 0;
+                    background: white;
+    
+                    img{
+                        display: block;
+                        margin: auto;
+                    }
+                }
+    
+                @at-root .hli-error-msg{
+                    text-align: center;
+                    color: red;
+                    font-size: 16px;
+                    padding: 15px;
+                }
+            }                        
+        }
+    }   
+}

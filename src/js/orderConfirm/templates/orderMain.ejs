@@ -1,0 +1,363 @@
+<!--<div class="page-head">-->
+	<!--<a href="/user/bookHotel.do"><div class="jl-logo"></div></a>-->
+	<!--<div class="user-options">-->
+		<!--<ul>-->
+			<!--<li id="consumer" data-distrb="<%= customerUser.distrbId %>"><%= customerUser.customerUserName %>，您好</li>-->
+			<!--<li class="sign-out">退出</li>-->
+			<!--<li>帮助中心</li>-->
+			<!--<li>|</li>-->
+			<!--<li class="hot-line">0755-33397777</li>-->
+		<!--</ul>-->
+	<!--</div>-->
+<!--</div>-->
+<div class="page-content clearfix">
+	<div class="content-head">
+		<ul>
+			<li>1.填写信息</li>
+			<li></li>
+			<li>2.确认支付</li>
+			<li></li>
+			<li>3.预订成功</li>
+		</ul>
+	</div>
+	<% if(staticInfo.country != 70139 ){ %>
+	<div class="head-content-gap"></div>
+	<% } %>
+    <% if(staticInfo.country == 70139 ){ %>
+	<div class="special-cue">
+		<i class="iconfont icon-gonggao fl"></i>
+		<p class="fl">应马来西亚政府要求，所有星级的住宿场所和酒店将征收旅游税，外国游客需缴付MYR 10/房/晚，在客人办理离店时支付酒店前台！</p>
+	</div>
+	<% } %>
+	<div class="order-content">
+		<div class="content-left">
+			<form action="" id="orderForm" action="">
+				<ul>
+					<!--预订信息-->
+					<li>
+						<span>预订信息</span>
+						<div class="order-msg">
+							<ul>
+								<li>入离时间:</li>
+								<li class="start-date"><%= startDate %></li>
+								<li>至</li>
+								<li class="end-date"><%= endDate %></li>
+								<li class="day-count"><%= dateNum %>晚</li>
+							</ul>
+							<ul>
+								<li>房间数量:</li>
+								<li>
+									<!--<i class="reduce" data-track="订单填写_减间数">-</i>-->
+									<!--<input name="roomNum" id="room-num" value="<%= roomNum %>" readonly>-->
+									<!--<i class="increase" data-track="订单填写_加间数">+</i>-->
+
+									<input type="hidden" name="roomNum" value="<%= roomNum %>"/>
+									<% if (isChangeNum === true){ %>
+									<label for="">
+										<div class="drag-down-wrap">
+											<my-select class="room-num" unselectable="on"
+													   data-value="<%= roomNum %>"
+													   data-stock="<%= stock < 7 ? stock : 7 %>">
+												<%= roomNum %>间
+											</my-select>
+											<i class="drag-down"></i>
+										</div>
+									</label>
+									<% }else{ %>
+									<i class="room-num"><%= roomNum %>间</i>
+									<% } %>
+								</li>
+								<li class="order-room-max">最多可预订
+									<%= stock < 7 ? stock : 7%>
+									间（该房型每间最多入住
+									<%= hotelPrice.maxPersonNum %>
+									人）
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!--加早-->
+					<li class="breakfast-msg-box need-reload-box"></li>
+					<!--加床-->
+					<li class="bed-msg-box need-reload-box"></li>
+					<!--加宽带-->
+					<li class="network-msg-box need-reload-box"></li>
+					<!--入住信息-->
+					<li class="guest-msg-box need-reload-box"></li>
+					<!--个性化要求-->
+					<li>
+						<span>个性化要求</span>
+						<div class="personal-requirement">
+							<div class="personal-content">
+								<!--<p>请直接勾选喜好与要求，是否可满足以酒店确认为准</p>-->
+								<% for(var i = 0;i < specialReq.length;i++){ %>
+								<label><input name="specialReq" type="checkbox" value="<%= specialReq[i].optionname %>"><%= specialReq[i].optionname %></label>
+								<% } %>
+								<p class="personal-special">请直接勾选您的要求，我们会及时通知酒店并尽量协助安排，但要视酒店情况，不能确保满足</p>
+							</div>
+						</div>
+					</li>
+					<!--确认方式-->
+					<li>
+						<span>确认方式</span>
+						<div class="confirm-way">
+							<div class="confirm-select">
+								<label>
+									<input type="radio" checkType="9" class="other-confirm-way" name="checkType" value="在线确认" checked>在线确认
+								</label>
+								<label>
+									<input type="radio" checkType="1" class="other-confirm-way" name="checkType" confirm-way="email" value="电子邮件确认">电子邮件确认
+								</label>
+								<label>
+									<input type="radio" checkType="2" class="other-confirm-way" name="checkType" confirm-way="fax" value="传真确认">传真确认
+								</label>
+								<label>
+									<input type="radio" checkType="3" class="other-confirm-way" name="checkType" confirm-way="phone" value="短信确认">短信确认
+								</label>
+								<ul class="confirm-way-msg">
+									<li>
+										<span>Email</span>
+										<input type="text" name="voucherEmail" id="email" placeholder="邮箱" title="邮箱">
+										<i class="confirm-way-required">*</i>
+										<span class="error-msg-outer hidden">
+											<i class="icon-warning"></i>
+											<span class="warning-txt">该项不能为空</span>
+										</span>
+									</li>
+									<li>
+										<span>传真</span>
+										<input type="text" name="voucherFax" id="fax" placeholder="传真号码" title="传真号码">
+										<i class="confirm-way-required">*</i>
+										<span class="error-msg-outer hidden">
+											<i class="icon-warning"></i>
+											<span class="warning-txt">该项不能为空</span>
+										</span>
+									</li>
+									<li>
+										<span>手机</span>
+										<input type="text" name="voucherMobile" id="phone" placeholder="手机号码" title="手机号码">
+										<i class="confirm-way-required">*</i>
+										<span class="error-msg-outer hidden">
+											<i class="icon-warning"></i>
+											<span class="warning-txt">该项不能为空</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!--结算信息-->
+					<li>
+						<span>结算信息</span>
+						<div class="balance-msg">
+							<ul>
+								<li>
+									<span>客户订单号</span>
+									<input name="customerOrderCode" type="text">
+									<span class="error-msg-outer hidden">
+											<i class="icon-warning"></i>
+											<span class="warning-txt"></span>
+									</span>
+								</li>
+								<li>
+									<span>结算方式</span>
+                  					<% if(paymentType ==0){ %>
+									<select name="paymentTermSon" id="balance-way">
+										<% if(distributor.paymentTerm == 0){ %>
+										<option value="0">单结</option>
+										<% }else{ %>
+										<option value="<%= distributor.paymentTerm %>" selected>
+                      						<%= paymentTermName[distributor.paymentTerm + 1] %>
+                    					</option>
+                    					<option value="0">单结</option>
+                    					<% } %>
+                  					</select>
+                  					<% } %>
+								</li>
+                				<% if(distributor.paymentTerm == 0){ %>
+								<li>
+									<span>使用预收款</span>
+									<input id="usePerPayment" name="willUsedBalance" type="text">
+									<b class="per-payment-prompt"></b>
+									<span class="error-msg-outer hidden">
+											<i class="icon-warning"></i>
+											<span class="warning-txt">该项不能为空</span>
+										</span>
+								</li>
+                				<% } %>
+								<li>
+									<span>剩余预收款</span>
+									<p>RMB <b><%= balance %></b> 元</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!--温馨提示-->
+					<li>
+						<span>温馨提示</span>
+						<div class="kindly-tips">
+							<ul>
+								<li>
+									<p class="kindly-tips1">取消条款</p>
+									<p class="kindly-tips2"><%= hotelPrice.cancellationDesc %></p>
+								</li>
+								<li>
+									<p class="kindly-tips1">入住离店时间</p>
+									<% if(staticInfo.country == 70007){ %>
+									<p class="kindly-tips2">
+										酒店入住时间最早为<%=hotelPrice.arriveStartTime || "14:00"%>,
+										退房时间最晚为次日<%=hotelPrice.arriveEndTime || "12:00"%>
+									</p>
+									<% }else{ %>
+									<p class="kindly-tips2">
+										酒店入住时间最早为<%=hotelPrice.arriveStartTime || "14:00"%>,
+										入住最晚时间为<%=hotelPrice.arriveEndTime || "24:00"%>
+									</p>
+									<% } %>
+								</li>
+								<% if (hasOwnProperty('specialHintsSuppids') && specialHintsSuppids.indexOf(supplierId) !== -1){ %>
+								<li>
+									<p class="kindly-tips1">预订提示</p>
+									<p class="kindly-tips2">此房价为2人入住价格，若多人入住，则需在酒店前台支付相应费用</p>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+					</li>
+					<!--出行提示-->
+                    <% if (hasOwnProperty("isExpediaSupplier") && isExpediaSupplier == 1){ %>
+					<!--ExpediaSupplie供应商-->
+					<% if (hotelPrice.hasOwnProperty('checkInInstructions') && hotelPrice.checkInInstructions !== '' && hotelPrice.checkInInstructions !== undefined && hotelPrice.checkInInstructions !== null){ %>
+					<li>
+						<span>入住提示</span>
+						<div class="kindly-tips">
+                            <div class="expedia-tips-box">
+                                <%= hotelPrice.checkInInstructions %>
+							</div>
+						</div>
+					</li>
+					<% } %>
+                    <% if (hotelPrice.hasOwnProperty('specialCheckInInstructions') && hotelPrice.specialCheckInInstructions !== '' && hotelPrice.specialCheckInInstructions !== undefined && hotelPrice.specialCheckInInstructions !== null){ %>
+					<li>
+						<span>特殊入住提示</span>
+						<div class="kindly-tips">
+							<ul>
+								<li>
+									<p><%= hotelPrice.specialCheckInInstructions %></p>
+								</li>
+							</ul>
+						</div>
+					</li>
+                    <% } %>
+                    <% } %>
+				</ul>
+        <!--第一层对象-->
+        <input type="hidden" name="staticInfoId" value="<%= staticInfo.staticInfoId %>"/>
+        <input type="hidden" name="country" value="<%= staticInfo.country %>"/>
+        <input type="hidden" name="supplierId" value="<%= supplierId %>"/>
+        <input type="hidden" name="hotelName" value="<%= staticInfo.infoName %>"/>
+        <input type="hidden" name="adultNum" value="<%= hotelPrice.maxPersonNum %>"/>
+        <input type="hidden" name="childrenNum" value="<%= childrenNum %>"/>
+        <input type="hidden" name="childrenAgeStr" id="childrenAgeStr" value="<%= childrenAgeStr %>"/>
+        <input type="hidden" name="isQueryPrice" value=""/>
+        <input type="hidden" name="roomId" id="roomId" value="<%= roomId %>"/>
+        <input type="hidden" name="startDate" id="startDate" value="<%= startDate %>">
+        <input type="hidden" name="endDate" id="endDate" value="<%= endDate %>">
+        <input type="hidden" name="dateNum" value="<%= dateNum %>">
+        <input type="hidden" name="rateType" value="<%= rateType %>">
+        <input type="hidden" name="paymentType" value="<%= paymentType %>">
+        <input type="hidden" name="paymentTerm" value="<%= distributor.paymentTerm %>">
+        <input type="hidden" name="willUsedBalance" value="0"/>
+				<!--小礼包信息-->
+				<input type="hidden" id="isHasMarketing" value="<%= isHasMarketing %>">
+
+
+			</form>
+		</div>
+		<div class="content-right">
+			<div class="hotel-msg-top">
+				<h5 class="hotel-name">你的选择</h5>
+				<div class="hotel-logo">
+					<img src="<%= picSrcThumb %>" onerror=this.src="../static/img/nopic.png" alt="">
+				</div>
+				<div class="hotel-msg-right">
+					<div id="hotelName" class="hotel-name-Chinese"><%= staticInfo.infoName %></div>
+				</div>
+				<p><%=hotelPrice.roomName%><%= hotelPrice.hasOwnProperty('breakFastName') ? '[' + hotelPrice.breakFastName + ']' : ''%></p>
+				<ul>
+					<li>入住日期
+						<i><%= startDate %></i>
+					</li>
+					<li>退房日期
+						<i><%= endDate %></i>
+					</li>
+				</ul>
+			</div>
+			<div class="hotel-msg-mid">
+				<ul class="clearfix">
+					<li class="hotel-msg-breakfast hotel-msg clearfix" add-category="add-breakfast">
+						<span>加早</span>
+						<div class="hotel-breakfast-box hotel-item-box" add-category="add-breakfast">
+							<!--这里放加早餐的条目-->
+						</div>
+					</li>
+					<li class="hotel-msg-bed hotel-msg clearfix" add-category="add-bed">
+						<span>加床</span>
+						<div class="hotel-bed-box hotel-item-box" add-category="add-bed">
+							<!--这里放加床条目-->
+						</div>
+					</li>
+					<li class="hotel-msg-network hotel-msg clearfix" add-category="add-network">
+						<span>加宽带</span>
+						<div class="hotel-network-box hotel-item-box" add-category="add-network">
+							<!--这里放加宽带条目-->
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="hotel-msg-bot">
+				<span class="need-to-pay">需支付</span>
+				<ul>
+					<li>
+						<p class="fl">房费</p>
+						<p class="fr" id="roomCost"><%= payTotalMoney - taxesAndFeesRMB %></p>
+
+					</li>
+					<li>
+						<p class="fl">税和服务费</p>
+						<p class="fr" id="extraCost" data-extrafees="<%= taxesAndFeesRMB %>"><%= taxesAndFeesRMB %></p>
+					</li>.
+                    <% if (hasOwnProperty("isExpediaSupplier") && isExpediaSupplier == 1){ %>
+					<!--ExpediaSupplie供应商-->
+					<li class="small-lh" id="saleTax">
+						（已包含的销售税：<%= hotelPrice.salesTaxRMB %>）
+					</li>
+                    <% } %>
+					<li class="total-pay-li">
+						<span class="fl">总价</span>
+						<p class="fr total-pay" id="totalPay"><%= payTotalMoney %></p>
+            			<i class="fr">RMB </i>
+					</li>
+					<% if (hasOwnProperty("isExpediaSupplier") && isExpediaSupplier == 1){ %>
+						<!--ExpediaSupplie供应商-->
+						<% if (hotelPrice.hasOwnProperty("extraTaxesAndFeesDesc") && hotelPrice.extraTaxesAndFeesDesc !== null && hotelPrice.extraTaxesAndFeesDesc !== undefined && hotelPrice.extraTaxesAndFeesDesc !== ''){ %>
+						<li class="small-lh" id="totalExtraFeesDesc">
+							*上述报价不包含<%= hotelPrice.extraTaxesAndFeesDesc %>到酒店后另外支付给酒店（因汇率问题可能存在波动）
+						</li>
+                    	<% } %>
+                    <% } %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="warning">
+	<i class="warning-icon"></i>
+	<span class="warning-dialog">单结订单在您主动取消后将扣除相应的手续费。</span>
+	<div class="warning-detail">
+		<i class="warning-in">费用明细</i>
+	</div>
+</div>
+<div class="payment-confirm">
+	<button id="nextToPay">下一步，支付</button>
+</div>

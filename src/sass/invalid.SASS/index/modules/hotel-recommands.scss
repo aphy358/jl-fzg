@@ -1,0 +1,17 @@
+// 以下是 “国内酒店”、“国际酒店” 特制的一些样式
+.ads-inner-wrap.hotel-recommands{
+    height: 440px;
+
+    .ad-one-wrap{
+        &.last-child{
+            margin-top: -230px;
+            margin-right: 0;
+            height: 440px;
+
+            > div,
+            > p{
+                display: none;
+            }
+        }
+    }
+}

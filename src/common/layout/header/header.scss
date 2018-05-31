@@ -1,0 +1,138 @@
+// 顶部导航栏样式
+
+// 雪碧图样式
+@import "../../../static/sprites/jl_sprites.scss";
+
+
+.index-top-nav{
+    position: relative;
+    height: 60px;
+    z-index: 999;
+
+    @at-root .i-t-n-bg{
+        height: 100%;
+        background: #333;
+    }
+
+    @at-root .i-t-n-wrap{
+        position: relative;
+        width: 1200px;
+        height: 60px;
+        line-height: 60px;
+        margin: auto;
+        margin-top: -60px;
+
+        @at-root .jl-logo{
+            @include jl_sprites;
+            @include jl_logo;
+            float: left;
+            margin-top: 12px;
+            margin-right: 110px;
+        }
+
+        // 顶部三个导航按钮
+        @at-root .i-t-n-group{
+            font-size: 18px;
+
+            li{
+                float: left;
+                cursor: context-menu;
+
+                a{
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    padding: 0 19px;
+                }
+                
+                &:not([checked]):hover{
+                    a{
+                        color: #fea925;
+                    }
+                }
+                
+                &[checked]{
+                    background: #fea925;
+                }
+            }
+        }
+
+        // 右边热线电话、用户
+        @at-root .i-t-n-hotline{
+            float: right;
+            color: #fea925;
+            font-size: 14px;
+
+            &>*{
+                float: right;
+            }
+
+            @at-root .i-t-n-phone{
+                @include jl_sprites;
+                @include phone;
+                margin-top: 18px;
+                margin-right: 10px;
+            }
+
+            @at-root .i-t-n-user-wrap{
+                position: relative;
+                margin-left: 50px;
+                color: white;
+                padding: 0 10px;
+                cursor: context-menu;
+
+                &>*{
+                    float: right;
+                }               
+
+                @at-root .i-t-n-triangle{
+                    @include jl_sprites;
+                    @include triangle_down;
+                    margin-top: 26px;
+                    margin-left: 10px;
+                }
+
+                // 用户下拉框
+                @at-root .i-t-n-drop{
+                    position: absolute;
+                    display: none;
+                    width: 100%;
+                    top: 60px;
+                    left: 0;
+                    background: white;
+                    color: #333;
+                    box-shadow: 0 5px 10px #333;
+                    z-index: 9999;
+
+                    &>*{
+                        line-height: 30px;
+                        text-align: center;
+                        transition: all 0.2s linear 0s;
+                        
+                        a{
+                            display: block;
+                            color: #333;
+                        }
+
+                        &:hover{
+                            background: rgb(85, 163, 236);
+                            
+                            a{
+                                color: white;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover{
+                    background: #fea925;
+
+                    .i-t-n-drop{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

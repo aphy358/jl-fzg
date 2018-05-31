@@ -1,0 +1,61 @@
+<!--房型信息模板-->
+
+<div class="hotel-info-wrap">
+	<ul class="hotel-info-list">
+		<% if(roomName && roomName !== ''){ %>
+		<li class="hotel-info-item">
+			<i class="iconfont icon-home"></i>
+			<h1 class="roomName"><%= roomName %></h1>
+		</li>
+		<% } %>
+
+		<% if(floor && floor !== ''){ %>
+		<li class="hotel-info-item">
+			<label>楼层：</label>
+			<span><%= floor %>层</span>
+		</li>
+		<% } %>
+
+		<% if(acreage && acreage !== ''){ %>
+		<li class="hotel-info-item">
+			<label>面积：</label>
+			<span><%= acreage %>m²</span>
+		</li>
+		<% } %>
+
+		<% if(bedName && bedName !== ''){ %>
+		<li class="hotel-info-item">
+			<label>床型：</label>
+			<span><%= bedName %></span>
+		</li>
+		<% } %>
+
+		<% if(bedWidth && bedWidth !== ''){ %>
+		<li class="hotel-info-item">
+			<label>床型大小：</label>
+			<span><%= bedWidth %>m</span>
+		</li>
+		<% } %>
+
+		<% if(maximize && maximize > 0){ %>
+		<li class="hotel-info-item">
+			<label>最大入住人数：</label>
+			<span><%= maximize %>人</span>
+		</li>
+		<% } %>
+
+		<% if(facilities && facilities !== ''){ %>
+		<li class="hotel-info-item">
+			<label>房间设施：</label>
+			<span><%= facilities %></span>
+		</li>
+		<% } %>
+
+		<% if(comment && comment !== ''){ %>
+		<li class="hotel-info-item">
+			<label>房型备注：</label>
+			<span><%= comment %></span>
+		</li>
+		<% } %>
+	</ul>
+</div>

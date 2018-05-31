@@ -1,0 +1,20 @@
+@mixin nd_sprites_old{background:url(http://image.jladmin.cn/real_1506567823862.png) no-repeat; }
+@mixin nd-cloud{height:55px;width:286px;background-position: 0 -164px;}
+@mixin nd-title-internal{height:207px;width:543px;background-position: 0 -219px;}
+@mixin nd-title-gat{height:212px;width:641px;background-position: 0 -426px;}
+@mixin nd-title-external{height:210px;width:832px;background-position: 0 -638px;}
+@mixin nd-bottom-bg{height:273px;width:871px;background-position: 0 -848px;}
+
+
+@mixin nd_sprites{background:url(http://image.jladmin.cn/real_1508808970375.png) no-repeat; }
+@mixin star-empty{height:13px;width:14px;background-position: 0 0;}
+@mixin star-full{height:13px;width:14px;background-position: 0 -13px;}
+@mixin star-half{height:13px;width:14px;background-position: 0 -26px;}
+@mixin cr-gift{height:16px;width:16px;background-position: 0 -39px;}
+@mixin hui-tag{height:22px;width:22px;background-position: 0 -55px;}
+@mixin left_00{height:30px;width:30px;background-position: 0 -77px;}
+@mixin right_00{height:30px;width:30px;background-position: 0 -107px;}
+@mixin right_01{height:30px;width:30px;background-position: 0 -137px;}
+@mixin left_01{height:30px;width:30px;background-position: 0 -167px;}
+@mixin nd-hotel-tag{height:63px;width:148px;background-position: 0 -197px;}
+@mixin nd-jl-logo{height:40px;width:207px;background-position: 0 -260px;}

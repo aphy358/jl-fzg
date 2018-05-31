@@ -1,0 +1,97 @@
+<table class="hotel-price-table">
+	<thead class="hotel-price-thead">
+		<tr>
+			<th width="65"></th>
+			<th width="260"><span>房型</span></th>
+			<th><span>价格类型</span></th>
+			<th width="110" class="align-center"><span>床型/早餐</span></th>
+			<th><span>预订规则</span></th>
+			<th><span>取消规则</span></th>
+			<th><span>剩余数量</span></th>
+			<th width="150"><span>均价/总价</span></th>
+			<th width="100"></th>
+		</tr>
+	</thead>
+
+	<tbody class="hotel-price-tbody" data-infoid="<%= hotelId %>">
+		<% $.each([roomTypeBasesRecommend, roomTypeBases], function(index, roomTypeBases){ var typeText = index === 0 ? 'recommend' : 'others' %>
+			
+			<% for(var i = 0; i < roomTypeBases.length; i++){ var n = roomTypeBases[i]; %>
+				
+				<% for(var j = 0; j < n.roomTypePrices.length; j++){ var o = n.roomTypePrices[j]; %>
+					
+				<tr class="hotel-price-tr<%= j === 0 ? '' : ' auto-hide-tr' %>">
+					<% if(i === 0 && j === 0){ %>
+					<td class="first-td" rowspan="<%= roomTypeBases.rowSpan %>" data-type="<%= typeText %>"><%= index === 0 ? '推荐' : '其他' %></td>
+					<% } %>
+					<td class="<%= 
+						(j === 0 && n.roomTypePrices.length > 1) ? 'no-border-bottom-td' :
+						(j > 0 && j == n.roomTypePrices.length - 1) ? 'no-border-top-td' :
+						(j > 0 && j < n.roomTypePrices.length - 1) ? 'no-border-td' : ''
+					%>">
+						<span class="hp-roomName<%= j === 0 ? '' : ' hidden' %>" 
+							roomid="<%= o.roomId %>" 
+							hotelid="<%= o.hotelId %>" 
+							supplierid="<%= o.supplierId %>"
+							data-type="<%= typeText %>"
+							data-track="列表页_酒店项_展开房型" >
+							<%= o.roomName %>
+							
+							<% if(n.roomTypePrices.length > 1){ %>
+							<i class="room-type-icon drag-up"></i>
+							<% } %>
+						</span>
+					</td>
+					<td>
+						<span><%= o.rateTypeName || '' %></span>
+						
+						<% if(o.isHasMarketing){ %>
+						<i class="marketing-icon" data-tip="<%= encodeURIComponent(o.marketingInfo) %>"></i>
+						<% } %>
+
+						<% if(o.packageRequest){ %>
+						<i class="pagekage-icon"></i>
+						<% } %>
+					</td>
+					<td class="align-center">
+						<% if(o.bedTypeName){ %>
+						<p><span><%= o.bedTypeName.split('[')[0] %></span></p>
+						<% } %>
+						<p><span><%= o.breakFastName || '' %></span></p>
+					</td>
+					<td><span class="hp-order-clause">预定条款</span></td>
+					<td><span class="hp-cancel-clause" data-tip="<%= o.cancellationDesc %>"><%= o.cancellationText %></span></td>
+					<td><span class="hp-store-status"><%= o.roomStatusText %></span></td>
+					<td>
+						<span class="hp-currency">均 ￥<span class="hp-average-price-num"><%= o.averagePriceRMB.toFixed(2).replace(/(\.0+|0+)$/, '') %></span></span>
+						<br>
+						<span class="hp-total-price">总 ￥<span class="hp-total-price-num"><%= o.totalPriceRMB %></span></span>
+					</td>
+					<td >
+						<% if(o.isBook){ %>
+							<a href="javascript:;" class="hp-order-btn" target="_blank"
+								data-supplierId="<%= o.supplierId %>" 
+								data-hotelId="<%= o.hotelId %>" 
+								data-roomId="<%= o.roomId %>" 
+								data-breakFastId="<%= o.breakFastId %>" 
+								data-paymentType="<%= o.paymentType %>" 
+								data-rateType="<%= o.rateType %>" 
+								data-marketingStr="<%= o.marketingStr %>" >
+								
+								<span class="hidden nightlyPriceList"><%= window.JSON.stringify(o.nightlyPriceList) %></span>
+								<span class="hidden hotelPriceStrs"><%= encodeURIComponent( window.JSON.stringify(o) ) %></span>
+								预订
+							</a>
+						<% }else{ %>
+							<a href="javascript:;" class="hp-order-btn disabled"><span class="hidden nightlyPriceList"><%= window.JSON.stringify(o.nightlyPriceList) %></span><span class="hidden hotelPriceStrs"><%= o.hotelPriceStrs %></span>不可订</a>
+						<% } %>
+					</td>
+				</tr>
+				
+				<% } %>
+				
+			<% } %>
+			
+		<% }) %>
+	</tbody>
+</table>

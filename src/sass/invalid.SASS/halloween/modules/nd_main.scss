@@ -1,0 +1,67 @@
+// 主题内容样式，包括 "国内酒店"、"港澳台酒店"、"国外酒店"
+
+// 酒店左边图片部分的样式
+@import './nd_hotel_img.scss';
+
+// 每个酒店右边详情部分的样式
+@import './nd_hotel_detail.scss';
+
+
+.main-content-wrap{
+	background-color: #1C083B;
+
+	@at-root .hotel-region{
+		overflow: hidden;
+		background-size: 100%;
+	
+		&.internal{
+			background-image: url(http://image.jladmin.cn/real_1508743550065.png);
+			background-repeat: no-repeat;
+		}
+		&.gat{
+			background-image: url(http://image.jladmin.cn/real_1508744431585.png);
+		}
+		&.external{
+			background-image: url(http://image.jladmin.cn/real_1508744268479.png);
+			background-repeat: no-repeat;
+			background-position: bottom;
+		}
+	
+		@at-root .hotel-region-img{
+			@include halloween_sprites;
+			margin: 100px auto 0;
+	
+			&.internal{
+				@include halloween-title1;
+			}
+			&.gat{
+				@include halloween-title2;
+			}
+			&.external{
+				@include halloween-title3;
+			}
+			&.halloween-notes{
+				@include halloween_notes;
+				margin-bottom: 100px;
+			}
+			
+		}
+	
+		@at-root .hotel-region-inner{
+			width: 1180px;
+			margin: 30px auto 60px;
+			
+			@at-root .nd-hotel-item{
+				background: white;
+				overflow: hidden;
+				margin-bottom: 30px;
+				border: 3px solid #e4e2e2;
+				border-radius: 5px;
+	
+				&:hover{
+					border: 3px solid #d36c6c;
+				}
+			}
+		}
+	}
+}

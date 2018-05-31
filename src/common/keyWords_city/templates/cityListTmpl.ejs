@@ -1,0 +1,27 @@
+
+<!-- 城市模板，下面定义的 block 表示的是如 'ABCD'、'EFGHI'、'JKLM' 这样的块... -->
+<ul class="kwc-block-title-list">
+	<% for(key in cityList){ var block = cityList[key], checked = (key === '热门' || key === '港澳台') %>
+	<li data-track="公共_关键字_城市面板_城市分组切换" class="kwc-block-title-item" switch <%= checked ? 'checked' : '' %> name="kwc-<%= area %>-block-title" data-src="<%= area + key + '-kwc-block-title-item' %>" >
+		<%= key %>
+	</li>
+	<% } %>
+</ul>
+<ul class="kwc-city-block-list">
+	<% for(key in cityList){ var block = cityList[key], checked = (key === '热门' || key === '港澳台') %>
+	
+	<li class="kwc-city-block-item" switch <%= checked ? 'checked' : '' %> name="kwc-<%= area %>-city-block-item" data-for="<%= area + key + '-kwc-block-title-item' %>" >
+		<% for(var i = 0; i < block.length; i++){ %>
+		<div>
+			<label class="kwc-city-block-label"><%= block[i].w %></label>
+			<ul class="kwc-city-list">
+				<% for(var j = 0; j < block[i].item.length; j++){ var cItem = block[i].item[j]   %>
+				<li class="kwc-city-item" data-citytype="<%= cItem.t %>" data-cityid="<%= cItem.i %>" data-track="公共_关键字_城市面板_城市项"><%= cItem.n %></li>
+				<% } %>
+			</ul>
+		</div>
+		<% } %>
+	</li>
+	
+	<% } %>
+</ul>

@@ -1,0 +1,65 @@
+<div class="company-message">
+    <h6 class="company-title">用户信息</h6>
+
+    <ul class="message-list clearfix">
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">用户名</span>
+            </div>
+            <input name="customerName" type="text" class="fl submit-required" placeholder="请设置用户名，由4至16位数字或英文字母组成" data-brief="用户名">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">密码</span>
+            </div>
+            <input name="password" type="password" class="fl submit-required" placeholder="请设置密码，由4至16位字符组成" data-brief="密码">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">确认密码</span>
+            </div>
+            <input name="passwordAgain" type="password" class="fl submit-required" placeholder="请再次输入密码" data-brief="确认密码">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">姓名</span>
+            </div>
+            <input name="userName" type="text" class="fl submit-required" placeholder="请填写您的真实姓名" data-brief="姓名">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">手机</span>
+            </div>
+            <input name="mobile" type="text" class="fl submit-required" placeholder="请填写您的手机号码" data-brief="手机号">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">邮箱</span>
+            </div>
+            <input name="email" type="text" class="fl submit-required" placeholder="请填写您的邮箱地址" data-brief="邮箱">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title">推荐人信息</span>
+            </div>
+            <input name="recommendMessage" type="text" class="fl" placeholder="请填写您的推荐人信息">
+            <p class="warning"></p>
+        </li>
+        <li class="company-item">
+            <div class="fl item-l">
+                <span class="item-title message-required">验证码</span>
+            </div>
+            <div class="item-r fl">
+                <input name="vcode" type="text" class="fl submit-required" placeholder="请输入验证码" data-brief="验证码">
+                <img class="yzm-img" src="/user/getCheckcodeImg.do?time=<%=new Date().getTime()%>" alt=""/>
+            </div>
+            <p class="warning"></p>
+        </li>
+    </ul>
+</div>

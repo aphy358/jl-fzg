@@ -1,0 +1,202 @@
+@import "../../../static/sprites/jl_sprites.scss";
+
+.hotel-price-table{
+    width: 100%;
+    border: 1px solid #E3E3E3;
+    border-top: none;
+    margin-bottom: 20px;
+
+    @at-root .hotel-price-thead{
+        th{
+            span{
+                display: none;
+            }
+        }
+    }
+    
+    @at-root .hotel-price-tbody{
+        
+        @at-root .hotel-price-tr{
+
+            td{
+                position: relative;
+                font-size: 14px;
+                height: 50px;
+                border: 1px solid #E3E3E3;
+                padding: 0 15px;
+                
+                &.first-td{
+                    font-size: 16px;
+                }
+                
+                &.no-border-td{
+                    border: none;
+                }
+
+                &.no-border-bottom-td{
+                    border-bottom: none;
+                }
+
+                &.no-border-top-td{
+                    border-top: none;
+                }
+
+                &.force-border{
+                    border-bottom: 1px solid #E3E3E3;
+                }
+
+                &.align-center{
+                    text-align: center;
+
+                    p{
+                        line-height: 15px;
+                    }
+                }
+
+                @at-root .marketing-icon{
+                    @include jl_sprites;
+                    @include gift;
+                    
+                    display: inline-block;
+                    margin-bottom: -2px;
+                }
+
+                @at-root .pagekage-icon{
+                    @include jl_sprites;
+                    @include package;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                @at-root .hp-roomName{
+                    position: relative;
+                    text-decoration: underline;
+                    cursor: context-menu;
+
+                    &:hover{
+                        color: #339afc;
+                    }
+
+                    @at-root .room-type-icon{
+                        @include jl_sprites;
+                        position: absolute;
+                        right: -15px;
+                        top: 50%;
+                        margin-top: -3px;
+
+                        &.drag-down{
+                            @include triangle_blue_down;
+                        }
+
+                        &.drag-up{
+                            @include triangle_blue_up;
+                        }
+                    }
+                }
+                
+                @at-root .hp-order-clause,
+                .hp-cancel-clause{
+                    border-bottom: dashed 1px;
+                    cursor: context-menu;
+                    
+                    &:hover{
+                        color: #339afc;
+                    }
+                }
+                
+                @at-root .hp-store-status{
+                    cursor: context-menu;
+                    
+                    span{
+                        border-bottom: dashed 1px;
+                    }
+
+                    .red{
+                        color: #ff6666 ;
+                        
+                        &:hover{
+                            color: darken(#ff6666, 20%);
+                        }
+                    }
+
+                    .purple{
+                        color: #ffa825;
+
+                        &:hover{
+                            color: darken(#ffa825, 20%);
+                        }
+                    }
+
+                    .orange{
+                        color: orange;
+
+                        &:hover{
+                            color: darken(orange, 20%);
+                        }
+                    }
+
+                    .blue{
+                        color: #3366cc;
+
+                        &:hover{
+                            color: darken(#3366cc , 20%);
+                        }
+                    }
+
+                    .green{
+                        color: #4cba92;
+
+                        &:hover{
+                            color: darken(#4cba92, 20%);
+                        }
+                    }
+                }
+                
+                @at-root .hp-currency{
+                    color: #ffa825;
+                    border-bottom: dashed 1px;
+                    cursor: context-menu;
+                    
+                    @at-root .hp-average-price-num{
+                        font-size: 20px;
+                    }
+
+                    &:hover{
+                        color: orangered;
+                    }
+                }
+
+                @at-root .hp-total-price{
+                    font-size: 12px;
+                    color: #4cba92;
+
+                    @at-root .hp-total-price-num{
+                        font-size: 14px;
+                    }
+                }
+                
+                @at-root a.hp-order-btn{
+                    display: inline-block;
+                    width: 60px;
+                    text-align: center;
+                    padding: 4px 5px;
+                    background: #fea925;
+                    border-radius: 5px;
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.2s linear;
+                    
+                    &:hover{
+                        background: #cc8607;
+                    }
+                    
+                    &.disabled{
+                        background: #CCCCCC;
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+}

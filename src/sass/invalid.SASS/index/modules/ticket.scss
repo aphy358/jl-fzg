@@ -1,0 +1,31 @@
+// 以下是 “景点门票” 特制的一些样式
+.ads-inner-wrap.ticket{
+    height: 440px;
+
+    .ad-one-wrap{
+        &.first-child{
+            width: 460px;
+            height: 440px;
+
+            > div,
+            > p{
+                display: none;
+            }
+
+            img{
+                height: 440px;
+            }
+        }
+
+        &.last-child{
+            margin-top: -230px;
+            margin-right: 0;
+            height: 440px;
+
+            > div,
+            > p{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.switch-brand{
+	float: left;
+	height: 52px;
+	margin: 40px 0 50px;
+	border: 1px solid #e3e3e3;
+	
+	>li{
+		width: 238px;
+		height: 50px;
+		float: left;
+		
+		&.brand-line{
+			width: 1px;
+			height: 50px;
+			background-color: #e3e3e3;
+		}
+		
+		>a{
+			display: block;
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 16px;
+			color: #000;
+			text-align: center;
+			
+			&:hover{
+				text-decoration: none;
+				color: #ffffff;
+				background-color: #ffa825;
+			}
+			
+			&.selected{
+				text-decoration: none;
+				color: #ffffff;
+				background-color: #ffa825;
+			}
+		}
+	}
+}
+
+.main-brand{
+	float: left;
+	position: relative;
+	
+	.brand-introduce{
+		display: none;
+		&.shown{
+			display: block;
+		}
+		
+		@at-root .brand-summary{
+		
+		}
+	}
+}

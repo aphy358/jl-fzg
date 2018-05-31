@@ -1,0 +1,20 @@
+<div class="has-login-bg"></div>
+<div class="has-login-box">
+    <span class="company-name"><%= distributorAccount.distrbName %></span>
+    <div class="user-name-status">
+        <div class="status1 clearfix">
+            <span class="user-name"><%= user.customerUserName %></span>
+            <p class="user-status">
+                <% if (user.station != '请选择'){ %>
+                (<%= user.station %>)
+                <% } %>
+            </p>
+        </div>
+        <div class="status2 clearfix">
+            <p class="user-balance">余额：<span class="balance-acount">￥<%= distributorAccount.balance %></span></p>
+            <a href="/charge/userCharge.do?chargeType=charge" class="recharge" data-track="企业首页_登录框_快速充值">快速充值&gt;</a>
+        </div>
+    </div>
+    <a href="/user/bookHotel.do" class="go-fzg" data-track="企业首页_登录框_进入房掌柜">进入房掌柜</a>
+    <a class="login-out" href="javascript:void(0)" data-track="企业首页_退出登录">退出登录</a>
+</div>

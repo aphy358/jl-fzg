@@ -1,0 +1,31 @@
+
+// roomInfoTip
+
+.hotel-info-wrap{
+    
+    @at-root .hotel-info-list{
+        padding: 5px;
+        
+        @at-root .hotel-info-item{
+            
+            .iconfont{
+                float: left;
+                margin-right: 5px;
+                font-size: 18px;
+                color: #339afc;
+            }
+            
+            .roomName{
+                font-size: 14px;
+            }
+            
+            label{
+                color: #999;
+            }
+            
+            span{
+                
+            }
+        }
+    }
+}

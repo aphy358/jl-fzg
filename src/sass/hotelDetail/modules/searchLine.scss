@@ -1,0 +1,170 @@
+
+
+.search-line-outer{
+    background: white;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #ddd;
+
+    &.fix-top{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-width: 1400px;
+        background: white;
+        margin: 0 auto;
+        padding: 10px 0;
+        z-index: 9999;
+    }
+
+    @at-root .hotel-detail-title-wrap{
+        width: 1200px;
+    }
+    
+    @at-root .search-line-wrap{
+        width: 1200px;
+        font-size: 15px;
+        padding: 10px;
+        margin: 0 auto;
+        border: 1px solid #E3E3E3;
+        box-sizing: border-box;
+        background: white;
+    
+        &:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    
+        @at-root .search-item-wrap{
+            height: 35px;
+            line-height: 35px;
+            float: left;
+            margin-right: 20px;
+            border: solid 1px #cae0f5;
+            box-sizing: border-box;
+            background: white;
+            transition: all 0.2s linear 0s;
+    
+            &:hover,
+            &:active,
+            &:focus{
+                border-color: rgb(100, 191, 224);
+                box-shadow: 0 0 5px rgb(100, 191, 224);
+            }
+    
+            @at-root .s-i-label{
+                float: left;
+                color: #999;
+                line-height: 35px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+    
+            input{
+                float: left;
+                height: 33px;
+                line-height: 35px;
+                border: none;
+                padding-left: 10px;
+            }
+            
+            @at-root input.search-line-price{
+                float: left;
+                padding: 0 10px;
+                width: 45px;
+            }
+            
+            @at-root .search-line-seperator{
+                float: left;
+                display: inline-block;
+                height: 20px;
+                border-right: solid 1px #CCC;
+                margin-top: 7px;
+            }
+            
+            @at-root .s-i-keyword-input{
+    
+            }
+    
+            @at-root .s-i-dates-input{
+                min-width: 190px;
+            }
+        }
+    
+        @at-root .search-item-two-row-wrap{
+            float: left;
+            width: 95px;
+
+            @at-root .search-item-label{
+                float: left;
+                height: 35px;
+                line-height: 35px;
+                margin-right: 15px;
+                
+                input[type='checkbox'],
+                input[type='radio']{
+                    position: relative;
+                    top: 1px;
+                    margin-right: 3px;
+                }
+    
+                &.two-row{
+                    height: 17px;
+                    line-height: 17px;
+                }
+            }
+        }
+        
+        .drag-down-wrap{
+            float: left;
+            margin-right: 20px;
+    
+            @at-root .s-i-room-num,
+            input.s-i-adult-children{
+                width: 60px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 15px;
+                border: solid 1px #cae0f5;
+                border-radius: 0;
+                transition: all 0.2s linear 0s;
+    
+                &:hover,
+                &:active,
+                &:focus{
+                    border-color: rgb(100, 191, 224);
+                    box-shadow: 0 0 5px rgb(100, 191, 224);
+                }
+            }
+    
+            @at-root input.s-i-adult-children{
+                width: 130px;
+            }
+        }
+    
+        @at-root .search-line-btn{
+            float: right;
+            width: 80px;
+            height: 35px;
+            font-size: 16px;
+            color: white;
+            background: #339afc;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            margin-right: 10px;
+            padding-left: 2px;
+            transition: all 0.2s linear 0s;
+    
+            &:hover{
+                background: #216baf;
+            }
+
+            &.disabled{
+                background: #ccc;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

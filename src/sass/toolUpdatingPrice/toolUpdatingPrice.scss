@@ -1,0 +1,46 @@
+
+// 引入公共资源
+
+// 基础样式
+@import "../base.scss";
+
+// 雪碧图样式
+@import "../sprites.scss";
+
+// 雪碧图样式
+@import "../../static/sprites/jl_sprites.scss";
+
+
+
+
+// 顶部面包屑
+@import "./modules/crumbs.scss";
+
+// 左边酒店列表样式
+@import "./modules/hotelList.scss";
+
+// 右边上部的操作栏，'刷新' 按钮等
+@import "./modules/optLine.scss";
+
+// 右边下部的价格表
+@import "./modules/table.scss";
+
+
+.tool-page-main{
+    min-height: 500px;
+    background: white;
+    padding: 30px 0;
+
+    @at-root .tpm-inner{
+        width: 1200px;
+        margin: auto;
+        overflow: hidden;
+
+        @at-root .tpm-right{
+            margin-left: 20px;
+            float: left;
+            width: 938px;
+            min-height: 100px;
+        }
+    }
+}

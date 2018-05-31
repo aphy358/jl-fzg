@@ -1,0 +1,76 @@
+
+<ul class="hl-list">
+	<% for(var i = 0; i < datalist.length; i++){ var o = datalist[i]; %>
+	<li class="hl-item">
+		<div class="hli-info-wrap">
+			<div class="hli-img">
+				<a href="/hotel/toHotelDetail.do?hotelId=<%= o.infoId %>&checkin=<%= $.queryingHotelParams.startDate %>&checkout=<%= $.queryingHotelParams.endDate %>&ch=<%= $.queryingHotelParams.type %>" 
+					target="_blank" data-track="列表页_酒店项_查看详情_图片">
+					<img src="<%= o.picSrc.replace(/\/common\/images\/nopic.png/, 'https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1514016068416.png" style="height: 100%;width: auto;margin-left: 60px;') %>" />
+				</a>
+			</div>
+			
+			<div class="hli-info">
+				<div class="hli-hotel-name-wrap">
+					<a href="/hotel/toHotelDetail.do?hotelId=<%= o.infoId %>&checkin=<%= $.queryingHotelParams.startDate %>&checkout=<%= $.queryingHotelParams.endDate %>&ch=<%= $.queryingHotelParams.type %>"
+						target="_blank" data-track="列表页_酒店项_查看详情_酒店名">
+						<h1 class="hli-hotel-name1">
+							<%= o.infoName %>
+							<i class="hli-icon0 icon-star">
+								<%= 
+									~('50,55'.indexOf( o.star )) ? '豪华型' :
+									~('40,45'.indexOf( o.star )) ? '高档型' :
+									~('30,35'.indexOf( o.star )) ? '舒适型' : '经济型'
+								%>
+							</i>
+							<i class="hli-icon<%= o.displayFlag === '1' ? ' icon-jinpai' : o.displayFlag === '2' ? ' icon-tuiguang' : '' %> "></i>
+						</h1>
+						<br>
+						<h2 class="hli-hotel-name2"><%= o.enName || '' %></h2>
+					</a>
+				</div>
+				
+				<div class="hli-location">
+					<label>位置：</label>
+					<a title="map" class="hli-open-map" href="javascript:;" data-link="/biz/hotel/foreignhotel/googleMap.jsp?lon=<%= o.longitude || 0 %>&amp;lat=<%= o.latitude || 0 %>" data-hotelname="<%= o.infoName %>">
+						<span class="hli-location-text"><%= o.address.replace(/[： 。，！、:.!,]+$/g,'') || '' %></span>
+						<i class="hli-icon icon-location2" data-track="列表页_酒店项_定位"></i>
+					</a>
+				</div>
+				
+				<div class="hli-notice-wrap">
+					<i class="hli-icon icon-notice"></i>
+					<label>特别提示：</label>
+					<span class="hli-notice-text" data-title="<%= o.indicate %>"><%= o.indicate || '无' %></span>
+				</div>
+			</div>
+			
+			<div class="hli-check-detail">
+				<i class="hli-check-gz-icon <%= o.isMyFavorite == 1 ? 'icon-gz-on' : 'icon-gz-off' %>" data-hotelid="<%= o.infoId %>"></i>
+				<span class="hli-lowest-price-wrap">￥<span class="hli-lowest-price"><%= parseInt( (o.minPrice || 0) ) %></span>起</span>
+				<a href="/hotel/toHotelDetail.do?hotelId=<%= o.infoId %>&checkin=<%= $.queryingHotelParams.startDate %>&checkout=<%= $.queryingHotelParams.endDate %>&ch=<%= $.queryingHotelParams.type %>" 
+					target="_blank" class="hli-check-detail-btn" data-track="列表页_酒店项_查看详情">
+					查看详情
+				</a>
+			</div>
+		</div>
+		
+		<div class="hli-price-list-outer">
+			<div class="progress-outer"></div>
+	
+			<div class="hli-price-list-wrap">
+				<div class="fzg-loading-wrap">
+					<img src="https://qnb.oss-cn-shenzhen.aliyuncs.com/real_1514022140288.gif"/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hli-expand-wrap">
+			<div class="hli-expand-inner" data-hotelid="<%= o.infoId %>" data-track="列表页_酒店项_展开全部房型">
+				<span>展开全部房型</span>
+				<i class="hli-icon icon-down"></i>
+			</div>
+		</div>
+	</li>
+	<% } %>
+</ul>

@@ -1,0 +1,55 @@
+<span>加床信息</span>
+<div class="other-msg">
+	<ul>
+		<% for(var i=0;i<data[0].length;i++){ %>
+		<li>
+			<%=data[0][i].name %>
+			￥
+			<%=data[0][i].price %>
+			/张
+		</li>
+		<% } %>
+		<li class="open-detail-msg">+</li>
+	</ul>
+</div>
+<div class="open-add-msg">
+	<div class="add-msg-head">
+		<% for(var i=0;i<data[0].length;i++){ %>
+		<%=data[0][i].name %>
+		￥
+		<%=data[0][i].price %>
+		/ 张&nbsp;&nbsp;&nbsp;
+		<% } %>
+		此房型每间房最多加床<%= data[0][0].max %>张
+	</div>
+	<div class="add-msg-option">
+		<ul>
+			<li>
+				<input class="bed-start start-date" type="text" value="<%= startDate %>">
+			</li>
+			<li>至</li>
+			<li>
+				<input class="bed-end end-date" type="text" value="<%= endDate %>">
+			</li>
+			<li>
+				<select name="addType" class="add-type">
+					<% for(var i = 0;i < data[0].length;i++){ %>
+					<option value="<%= data[0][i].name %>"
+                  add-bed="<%= data[0][i].price %>"
+                  ofType="<%= ofType[i] %>">
+            <%= data[0][i].name %>
+          </option>
+					<% } %>
+				</select>
+			</li>
+			<li>
+				<select class="bed-num add-num" name="bed-num" id="bed-num">
+					<% for(var i=0;i< roomNum*data[0][0].max;i++){ %>
+					<option value="<%= i+1 %>"><%= i+1 %></option>
+					<% } %>
+				</select>
+			</li>
+			<li class="add-bed add-item" add-category="add-bed" data-str="<%= encodeURI( JSON.stringify(data) ) %>">+</li>
+		</ul>
+	</div>
+</div>
