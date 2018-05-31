@@ -10,3 +10,4 @@ selenium-debug.log
 *.svn
 .vscode/
 src/static/img/
+.idea/
